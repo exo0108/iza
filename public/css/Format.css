@@ -1,0 +1,174 @@
+body{
+    font-family: Microsoft JhengHei;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+.body{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    
+}
+.container-fluid{
+    margin: 0;
+    padding: 0;
+}
+
+.header{
+    width: 100%;
+    margin: 0;
+}
+.logo{
+    display: flex;
+    justify-content: center;
+    margin: 25px;
+}
+.logo a{
+    text-decoration: none;
+    color: #000;
+}
+.meun{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.header hr{
+    margin: auto;
+    width: 90%;
+    margin-bottom: 10px;
+}
+
+.header {
+    margin-bottom: 10px;
+}
+
+nav {/*整個上方區塊*/
+    margin: auto;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    }
+    
+    nav ul {/*第一層選單區域*/
+    z-index: 1;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    position: relative;
+    margin:0px;
+    }
+    
+    nav ul li {/*第一層選單項目*/
+    display: inline-block;
+    float: none;
+    white-space: nowrap;
+    }
+    
+    nav ul li a {/*最上層選單樣式*/
+    display: block;
+    padding: 0 10px;
+    color: rgb(0, 0, 0);
+    font-size: 18px;
+    line-height: 30px;
+    text-decoration: none;
+    
+    }
+    
+    
+    
+    nav a:hover {/*整個選單連結滑鼠移上去時的樣式*/
+    color: #FFF;
+    background-color: rgb(133, 127, 84);
+    transition: all .2s ease;
+    }
+    
+    nav ul ul {/*第一層子選單展開*/
+    position: absolute;
+    transition-property: transform;
+    transition-duration: 20ms;
+    transition-timing-function: ease-in;
+    transition-delay: 200ms;
+    transform: scale(1,0);
+    transform-origin: top center;
+    }
+    
+    
+    
+    nav ul li:hover>ul {/*選單滑鼠移上去的樣式變化*/
+    transition: all 300ms ease;
+    transform: scale(1,1);
+    }
+    
+    nav ul ul li {/*第一層子選單的樣式*/
+    min-width: 70px;
+    display: list-item;
+    position: relative;
+    background-color: rgb(247, 247, 247);
+    }
+    
+    nav ul ul ul {/*第二層子選單的區塊樣式*/
+    position: absolute;
+    top: 0;
+    left: 100%;
+    }
+
+footer{
+    background-color: rgba(240, 240, 240, 0.692);
+}
+.footer_content{
+    display: flex;
+    justify-content: center;
+    
+    
+}
+.footer-ul ul{
+    
+    display: flex;
+    justify-content: start;
+    padding-left: 4.5%;
+    padding-top: 5px;
+    
+}
+.footer-ul ul li{
+   list-style-type: none;
+  
+
+}
+
+.footer_txt{
+    display: flex;
+    justify-content: center;
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+.footer_phone{
+    display: flex;
+    justify-content: start;
+    padding-left: 5%;
+}
+.footer_right h1{
+    display: flex;
+    justify-content: start;
+    padding-top: 1%;
+    padding-left: 5%;
+    padding-bottom: 10px;
+}
+.footer_right{
+    width: 20%;
+    margin-right: 33%;
+    
+}
+.footer_center{
+    margin-right: 5%;
+    padding-top: 1%;
+}
+.footer_left img{
+    margin-left: 20%;
+    width: 70%;
+}
+footer hr{
+    margin-top: 0%;
+}

@@ -13,11 +13,26 @@
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                     <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
-                        {{ __('Dashboard') }}
+                        {{ __('IZA furry') }}
                     </x-nav-link>
                 </div>
             </div>
-
+            <nav>
+                <ul>
+                    <li><a href="#about">關於我們</a> </li>
+                    <li><a href="reserve.html">立即預約</a></li>
+                    <li><a href="shop.html">美容用品</a></li>
+                    <li><a href="car.html">購物車</a></li>
+                    <li><a href="orderRecord_final.html">訂單/預約查詢</a></li>
+                    <li><a href="">會員</a>
+                    <ul>
+                        <li><a href="member_a.html">會員資料</a></li>
+                        <li><a href="login.html">登出</a></li>
+                    </ul>
+                    </li>
+                    
+                </ul>
+                </nav>
             <!-- Settings Dropdown -->
             <div class="hidden sm:flex sm:items-center sm:ml-6">
                 <x-dropdown align="right" width="48">
