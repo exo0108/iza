@@ -1,0 +1,122 @@
+.line {
+    margin: 0 25px 0 25px;
+    width: 135px;
+    border-top: 2px solid rgb(217, 177, 116);
+}
+
+.title h2{
+    padding: 0;
+    margin: 0;
+    
+}
+.title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.body_center{
+    padding: 45px 0 45px 0;
+    background-color: rgb(249, 249, 249);
+    box-shadow: 0 -1px 5px rgb(153 153 153 / 20%);
+}
+.member_data{
+    color: rgb(133, 127, 84);
+    padding: 50px;
+    width: 100%;
+}
+.name ,.email ,.phone, .password {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 50px;
+    align-items: center;
+    margin-left: 23%;
+}
+form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+.cont{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input{
+    width: 50%;
+    height: 55px;
+    border: none;
+    letter-spacing: .15em;
+    
+}
+
+.password button{
+    margin-left: 30px;
+    width: 130px;
+    height: 55px;
+    background-color: rgb(110, 108, 91);
+    color: rgb(255, 255, 255);
+    border-color: #ffffff;
+}
+.submit{
+    display: flex;
+    justify-content: center;
+    
+}
+.submit button{
+    width: 40%;
+    height: 60px;
+    margin: 30px 50px 0 0;
+}
+.button{
+    background-color: rgb(133, 127, 84);
+    color: rgb(255, 255, 255);
+    border-color: #ffffff;
+}
+.submit a{
+    text-decoration: none;
+    margin-top: 10%;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    background-color: rgb(133, 127, 84);
+    width: 300px;
+    display: flex;
+    justify-content: center;
+}
+
+tr td:nth-child(1) h3{
+    text-align:right;
+    padding-bottom:4%;
+}
+
+
+tr td:nth-child(2){
+    width:20%;
+    padding-bottom: 20px;
+}
+
+
+tr td:nth-child(1){
+    width:15%;
+}
+
+tr td:nth-child(2) input{
+    font-size: 20px;
+    width: 50%;
+    background-color: rgb(249, 249, 249);
+}
+
+tr td:nth-child(2) input:focus {
+    border-color: #ffffff !important;
+
+}
+
+table input{
+    background: none;
+    border:0px;
+}
+

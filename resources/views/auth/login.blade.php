@@ -1,5 +1,24 @@
+<head>
+  
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/Format.css" >
+    <link rel="stylesheet" href="css/login.css" >
+    <link rel="icon" href="index_img/bgremove_logo.ico" type="image/x-icon" />
+    <title>IZA'Furry</title>
+  </head>
+
 <x-guest-layout>
-    <x-auth-card>
+    
+    
+    <div class="contain">
+        <div class="content_left">
+            <img src="img/login_img/left1.jpg" alt="" style="width: 100%; opacity: 0.7;">
+        </div>
+        <div class="st_line"></div>
+        <div class="content_right">
+        <x-auth-card >
         <x-slot name="logo">
             <a href="/">
                 <x-application-logo class="w-20 h-20 fill-current text-gray-500" />
@@ -52,5 +71,9 @@
                 </x-button>
             </div>
         </form>
+
+        
     </x-auth-card>
+        </div>
+    </div>
 </x-guest-layout>

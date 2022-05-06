@@ -23,4 +23,21 @@ Route::get('/dashboard', function () {
 Route::get('/index', function () {
     return view('index');
 });
+
+Route::get('/member_a', function () {
+    return view('member_a');
+});
+
+Route::get('/member', function () {
+    return view('member');
+});
+
+Route::get('/shop', function () {
+    return view('shop');
+});
+
+Route::get('/shop_content', function () {
+    return view('shop_content');
+});
 require __DIR__.'/auth.php';
+

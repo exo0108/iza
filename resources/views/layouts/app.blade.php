@@ -18,15 +18,53 @@
         <!-- Scripts -->
         <script src="{{ asset('js/app.js') }}" defer></script>
     </head>
-  
+    
         <body>
             @include('layouts.navigation') 
             
-
-                
             <main>
                 {{ $slot }}
             </main>
+
+            <footer>
+        <hr>
+        <div class="footer_content">
+        <div class="footer_right">
+          <h1>IZA'Furry</h1>
+          <div class="footer-ul">
+              <ul>
+                <li>
+                  <a href="#"><img src="img/index_img/Facebook.webp"></a>
+                </li>
+                <li>
+                  <a href="#"><img src="img/index_img/Twitter.webp"></a>
+                </li>
+                <li>
+                  <a href="#"><img src="img/index_img/LinkedIn.webp"></a>
+                </li>
+              </ul>
+              
+          </div>
+          
+        </div>
+        <div class="footer_center">
+          <h5>聯絡我們 </h5>
+          <hr>
+          <h6>台中市北區三民路87號 
+            <br> <br>連絡電話：04-2407-9887
+          </h6>
+        
+        </div>
+        <div class="footer_left">
+          <img src="img/index_img/Logo.png">
+
+        </div>
+      </div>
+          <div class="footer_txt">
+            ©2022 by IZA'Furry. Proudly created with .com
+          </div>
+
+         </footer>
         </body>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>

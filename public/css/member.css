@@ -1,0 +1,176 @@
+.line {
+    margin: 0 25px 0 25px;
+    width: 135px;
+    border-top: 2px solid rgb(217, 177, 116);
+}
+
+.title h2{
+    padding: 0;
+    margin: 0;
+    
+}
+.title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.body_center{
+    padding: 45px 0 45px 0;
+    background-color: rgb(249, 249, 249);
+    box-shadow: 0 -1px 5px rgb(153 153 153 / 20%);
+}
+.member_data{
+    color: rgb(133, 127, 84);
+    padding: 50px;
+    width: 90%;
+}
+.name ,.email ,.phone, .password {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 50px;
+    align-items: center;
+    margin-left: 23%;
+}
+form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.member_data input{
+    margin-left: 30px;
+    width: 50%;
+    height: 55px;
+    border: 1px solid #c6c6ba;
+    letter-spacing: .15em;
+}
+.member_data input:focus{ 
+    outline:none ;
+    border: 1px solid rgb(133, 127, 84);
+} 
+.password button{
+    margin-left: 30px;
+    width: 130px;
+    height: 55px;
+    background-color: rgb(110, 108, 91);
+    color: rgb(255, 255, 255);
+    border-color: #ffffff;
+}
+.submit{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.submit button{
+    width: 40%;
+    height: 60px;
+    margin: 0 50px 0 0;
+}
+.button1{
+    background-color: rgb(221, 221, 221);
+    color: rgb(31, 31, 31);
+    border-color: #ffffff;   
+}
+.button2{
+    
+    background-color: rgb(133, 127, 84);
+    color: rgb(255, 255, 255);
+    border-color: #ffffff;
+}
+.submit a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+}
+
+.item input{
+    height: 50%;
+    margin-bottom: 30px;
+}
+.btn-close{
+    width: 20%;
+}
+
+.modal-title{
+    font-weight: bold;
+}
+
+.btn:nth-child(2):hover{
+    background-color: rgb(110, 108, 91);
+}
+.modal-header button {
+    width: 30px;
+    height: 10px;
+    background-color: #ffffff;
+}
+
+.password button:focus {
+    color: #fff;
+    background-color:rgb(110, 108, 91) ;
+    border-color: rgb(110, 108, 91);
+    box-shadow: 0 0 0 0.25rem rgba(110, 108, 91, 0.748);
+}
+
+.btn-check:focus+.btn, .btn:focus {
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem rgb(110, 108, 91);
+    
+}
+
+
+
+table{
+    width: 60%;
+    
+    
+}
+
+tr td:nth-child(1) h3{
+    width: 100%;
+    text-align:center;
+    padding-bottom:5%;
+    margin-left: 20%;
+}
+
+
+tr td:nth-child(2){
+    width:70%;
+    padding-bottom: 20px;
+}
+tr td:nth-child(1){
+    width:30%;
+}
+
+tr td:nth-child(2) input{
+    width: 90%;
+    
+}
+tr td:nth-child(2) input :focus{
+    border-color: #ffffff !important;
+    
+}
+
+.pwbtn{
+    position:absolute;
+    left: 73%;
+    bottom:24%;
+}
+
+.btn{
+    background-color:rgb(110, 108, 91) !important;
+}
+
+.btn:hover{
+    background-color:rgb(110, 108, 91) !important;
+}
+
+.btn:focus{
+    background-color:rgb(110, 108, 91) !important;
+}
+

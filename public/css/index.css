@@ -1,0 +1,174 @@
+
+
+.img_toggle{
+    width: 90%;
+    margin: 0 0 100px 0;
+    margin: auto;
+    
+}
+
+.d-block {
+    width: 85%;
+    height: 80%;
+    object-fit: cover;
+}
+
+.about{
+    background-color: rgb(133, 127, 84);
+    width:100%;
+    height: 359px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.about p{
+    color: rgb(235, 233, 233);
+    width: 50%;
+    font-size: 19px;
+}
+.about_h1{
+    padding-right: 40px;
+    writing-mode: vertical-lr;
+    text-orientation: upright;
+    color: rgb(255, 255, 255);
+}
+
+.body_conter{
+    margin-top:50px;
+}
+
+.exhibit_img{
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 80px;
+    width: 90%;
+    
+}
+
+
+.exhibit{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.line {
+    margin: 0 25px 0 25px;
+    width: 135px;
+    border-top: 2px solid rgb(217, 177, 116);
+}
+
+.title h2{
+    padding: 0;
+    margin: 0;
+    
+}
+.title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+}
+.openhour{
+    width:90% ;
+    margin: auto;
+    padding: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.openhour img{
+    width: 60%;
+}
+
+.openhour_txt{
+    width: 500px;
+    text-align: center;
+    margin: 0 50px 0 50px;
+}
+.openhour h2{
+    margin-bottom: 20px;
+    font-weight:bold;
+    color: rgb(26, 26, 26);
+
+}
+.openhour h5{
+    margin-bottom: 20px;
+    font-weight:bold;
+    color: rgb(26, 26, 26);
+}
+.services h5{
+    font-weight:bold;
+    padding-bottom: 5px;
+    color: rgb(133, 127, 84);
+}
+.services_icon{
+
+    width: 100px;
+    margin: 10px 5px;
+    
+}
+.wrap{
+    display: flex;
+    justify-content: center;
+
+
+}
+.services{
+    margin: auto;
+    width: 90%;
+    padding: 50px 0 50px 0 ;
+}
+.services1{
+    display: flex;
+    justify-content: center;
+}
+
+.img__wrap {
+    position: relative;
+    height: 200px;
+    width: 257px;
+    
+  }
+.img__img{
+    
+    border-radius:8%;
+    width: 100%;
+    height: 256px;
+}
+  
+  .img__description_layer {
+    border-radius:8%;
+    height:256px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(201, 201, 201, 0.6);
+    color: #fff;
+    visibility: hidden;
+    opacity: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    /* transition effect. not necessary */
+    transition: opacity .2s, visibility .2s;
+  }
+  
+  .img__wrap:hover .img__description_layer {
+    visibility: visible;
+    opacity: 1;
+  }
+  
+  .img__description {
+    transition: .2s;
+    transform: translateY(1em);
+  }
+  
+  .img__wrap:hover .img__description {
+    transform: translateY(0);
+  }

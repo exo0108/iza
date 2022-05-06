@@ -28,6 +28,13 @@ body{
 }
 .logo a{
     text-decoration: none;
+    background-color: #FFF;
+    color: #000;
+}
+
+.logo :hover{
+    text-decoration: none;
+    background-color: #FFF;
     color: #000;
 }
 .meun{
@@ -43,6 +50,16 @@ body{
 
 .header {
     margin-bottom: 10px;
+}
+
+.hea{
+    display: flex;
+}
+
+.hidden{
+    position: absolute;
+    z-index: 1;
+    left: 85%;
 }
 
 nav {/*整個上方區塊*/
