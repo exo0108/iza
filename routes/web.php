@@ -39,5 +39,17 @@ Route::get('/shop', function () {
 Route::get('/shop_content', function () {
     return view('shop_content');
 });
+
+Route::get('/order_record', function () {
+    return view('order_record');
+});
+
+Route::get('/checkout', function () {
+    return view('checkout');
+});
+
+Route::get('/reserve', function () {
+    return view('reserve');
+});
 require __DIR__.'/auth.php';
 

@@ -4,25 +4,24 @@
 
     <div class="header">
             <div class="logo"> 
-              <a href="index.html"><h1>IZA'Furry</h1></a>
+            <a href="index.html"><h1>IZA'Furry</h1></a>
             </div>
             <hr>
             <div class="hea">
             <nav>
-              <ul>
+            <ul>
                 <li><a href="index#about">關於我們</a> </li>
                 <li><a href="reserve">立即預約</a></li>
                 <li><a href="shop">美容用品</a></li>
                 <li><a href="car">購物車</a></li>
-                <li><a href="orderRecord_final">訂單/預約查詢</a></li>
+                <li><a href="order_record">訂單/預約查詢</a></li>
                 <li><a href="">會員</a>
-                  <ul>
-                    <li><a href="member_a">會員資料</a></li>
-                    <li><a href="login">登出</a></li>
-                  </ul>
+                    <ul>
+                        <li><a href="member_a">會員資料</a></li>
+                        <li><a href="login">登出</a></li>
+                    </ul>
                 </li>
-                  
-              </ul>
+            </ul>
             </nav>
 
             <div class="hidden sm:flex sm:items-center sm:ml-6">
