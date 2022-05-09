@@ -4,7 +4,7 @@
 
     <div class="header">
             <div class="logo"> 
-              <a href="index.html"><h1>IZA'Furry</h1></a>
+              <a href="index"><h1>IZA'Furry</h1></a>
             </div>
             <hr>
             <div class="hea">

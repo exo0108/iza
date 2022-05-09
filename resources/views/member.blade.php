@@ -16,7 +16,7 @@
     </h2>
   </x-slot>
   <div class="body_center">
-            <div class="container">
+            <div class="cont">
                 <div class="title">
                     <div class="line"></div>
                     <h2>會員設定</h2>
@@ -29,27 +29,27 @@
                           <tr>
                             <td><h3>姓&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 名：</h3></td>
                             <td><input type="text" name="name"  value="白白" ></td>
+                            <td></td>
                           </tr>
 
                           <tr>
                             <td><h3>電子郵件：</h3></td>
                             <td><input type="email" name="email" value="a0910288299@gmail.com" ></td>
+                            <td></td>
                           </tr>
 
                           <tr>
                             <td><h3>電話號碼：</h3></td>
                             <td><input type="tel" name="Phone"  value="+886 0910****99" ></td>
+                            <td></td>
                           </tr>
 
                           <tr>
                             <td><h3>密&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 碼：</h3></td>
                             <td><input  type="password" name="password"  value="546546546556" ></td>
-                          </tr>
-                        </table>
-
-                        <div class="pwbtn">
+                            <td>  <div class="pwbtn">
                           <!-- Button trigger modal -->
-                          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                          <button type="button" class="btn btn-primary " data-bs-toggle="modal" data-bs-target="#exampleModal">
                             更改密碼
                           </button>
 
@@ -67,7 +67,7 @@
                                   <div class="item">確認新密碼：<input type="password" required></div>
                                 </div>
                                 <div class="modal-footer">
-                                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">取消</button>
+                                  <button type="button" class="btn btn-secondary " data-bs-dismiss="modal">取消</button>
                                   <button type="button" class="btn btn-primary">確定更改</button>
                                 </div>
                               </div>
@@ -75,15 +75,19 @@
                           </div>
 
 
-                        </div>
+                        </div><td>
+                          </tr>
+                        </table>
+
+                       
                             
                        
                         <div class="submit">
                           <a href="member_a">
-                            <input type="button" value="取消" class="button1" style="width: 361.75px; ackground-color: rgb(221, 221, 221); ">
+                            <input type="button" value="取消" class="button1" style="width: 361.75px; ackground-color: rgb(221, 221, 221);margin-left: 0; ">
                           </a>
                           <a href="member_a">
-                            <input type="button" value="儲存修改" class="button2" style="width: 361.75px;  background-color:rgb(110, 108, 91) ;">
+                            <input type="button" value="儲存修改" class="button2" style="width: 361.75px;  background-color:rgb(133, 127, 84)">
                           </a>
                             
                             

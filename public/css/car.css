@@ -1,13 +1,11 @@
 
 
-.container{
+.cont{
     width: 65%;
-    
+    margin: auto;
     
 }
-.body_center{
-    height: 70%;
-}
+
 .car_body img{
     width: 15%;
     margin: 10px 10px 10px 10px;
@@ -50,28 +48,27 @@
 .car_quantity form{
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 .qty {
     width: 40px;
     height: 35px;
     text-align: center;
     border: 0;
-    border-top: 1px solid #aaa;
-    border-bottom: 1px solid #aaa;
+    border: 1px solid rgb(133, 127, 84);
 }
 
-.input.qtyplus {
-    width: 25px;
-    height: 35px;
-    border: 1px solid #aaa;
-    background: #f8f8f8;
+.qtyplus {
+  
+    transform: scale(2);
+    margin-left: 30px;
+    color: rgb(133, 127, 84);
 }
-
-.input.qtyminus {
-    width: 25px;
-    height: 35px;
-    border: 1px solid #aaa;
-    background: #f8f8f8;
+.qtyminus {
+   
+    transform: scale(3);
+    margin-right: 30px;
+    color: rgb(133, 127, 84);
 }
 .price{
     margin-right: 5%;
@@ -82,8 +79,9 @@
 }
 
 .car_footer{
+    margin: auto;
     background-color: rgb(255, 255, 255);
-    width:100%;
+    width:65%;
     height:70px;
     position: sticky;
     bottom: 0;

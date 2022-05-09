@@ -97,6 +97,7 @@ tr td:nth-child(1) h3{
 tr td:nth-child(2){
     width:20%;
     padding-bottom: 20px;
+   
 }
 
 
@@ -107,7 +108,8 @@ tr td:nth-child(1){
 tr td:nth-child(2) input{
     font-size: 20px;
     width: 50%;
-    background-color: rgb(249, 249, 249);
+    background-color: rgb(249, 249, 249); 
+    --tw-ring-shadow: unset !important;
 }
 
 tr td:nth-child(2) input:focus {

@@ -39,5 +39,10 @@ Route::get('/shop', function () {
 Route::get('/shop_content', function () {
     return view('shop_content');
 });
+
+Route::get('/car', function () {
+    return view('car');
+});
+
 require __DIR__.'/auth.php';
 
