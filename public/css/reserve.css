@@ -1,0 +1,190 @@
+.reserve_content{
+    width: 100%;
+    padding: 3% 5%;
+}
+
+.choose{
+    width: 100%;
+    padding: 5% 0;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border: 2px solid rgba(192, 194, 194, 0.242);
+    background-color: rgba(240, 240, 240, 0.322);
+}
+
+.choicedt{
+    width: 300px;
+}
+
+.time{
+    display: flex;
+    width: 400px;
+    margin-top: 10px;
+    align-items: center;
+}
+
+.time input[type="radio"] 
+{
+    display: none; 
+}
+
+.DTime{
+    border-color:rgb(222, 221, 221) ;
+    background-color: rgba(240, 240, 240, 0.692);
+    padding: 20px 10px 20px 10px;
+    width: 40% !important;
+}
+
+.time input:checked + .button {
+    background: rgba(133, 127, 84); 
+    border: 1px solid rgb(255, 255, 255);
+    color: rgb(255, 255, 255);
+    cursor: default; 
+}
+
+.time label{
+    margin: 0 0 0 2%;
+}
+
+.time .round {
+    border-radius: 5px; 
+}
+
+.time .button {
+    display: inline-block; 
+    width: 100%;
+    padding: 5px 10px; 
+    border: 1px solid rgba(133, 127, 84);
+    background-color: rgb(255, 255, 255);
+    color: #333; 
+    cursor: pointer; 
+}
+
+.time .button:hover {
+    width: 100%;
+    background-color: rgba(133, 127, 84);
+    color: rgb(255, 255, 255); 
+    margin: 0 0 0 3%;
+}
+
+.choice a input{
+    background-color: rgb(133, 127, 84);
+    height: 65px;
+    padding: 20px 50px 20px 50px;
+    color: rgb(255, 255, 255);
+    margin-top: 33px;
+    font-weight:bold;
+}
+
+select{
+    margin-top: 10px;
+    padding: 20px 10px 20px 10px;
+    border-color:rgb(222, 221, 221) ;
+    background-color: rgba(240, 240, 240, 0.692);
+    width: 200px;
+    
+}
+.choice :nth-child(2){
+    margin-top: 10px;
+    padding: 20px 10px 20px 10px;
+    width: 200px;
+}
+input{
+    
+    border-color: rgba(192, 194, 194, 0.242);
+    background-color: rgba(240, 240, 240, 0.692);
+}
+
+a input{
+    background-color: rgba(240, 240, 240, 0.692);
+}
+
+.casepic_other{
+    display: flex;
+    justify-content: center;
+    margin: 3%;
+}
+
+.casepic{
+    width: 100%;
+    height: 100%;
+    /* display: block; */
+    display: flex;
+    justify-content: space-around;
+    /* padding: 5%; */
+    /* margin: 3%; */
+}
+
+.casepic img{
+    width: 20%;
+    /* height: 250px; */
+    border-radius: 5px;
+}
+
+hr{
+    width: 70%;
+    margin: 2% auto !important;
+    margin-bottom: 0;
+    color:rgb(120, 121, 121);
+}
+
+.hr{
+    width: 70%;
+    margin: 2% auto;
+    color:rgba(192, 194, 194);
+}
+
+.content_bottom{
+    /* border: 1px solid blue; */
+    display: flex;
+    justify-content: center;
+    margin: 2% 0;
+}
+
+.introduce{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    background-image:url(https://pic.52112.com/2019/06/03/JPG-190603_125/F7WnalHFXB_small.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-bottom: 3%;
+}
+
+.introduce .caseitem {
+    display: flex;
+    /* justify-content: left; */
+    width: 50%;
+}
+
+.caseitem{
+    margin: auto;
+    width: 100%;
+    padding: 3% 0 0 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.i1{
+    width: 70%;
+}
+
+.i1 h5,.i2 h5{
+    margin: 0 0 3% 0;
+}
+
+.i2{
+    width:30%;
+    text-align: right;
+}
+
+.caseitem h5{
+    font-weight:bold;
+    /* padding-bottom: 5px; */
+    color: rgb(133, 127, 84);
+}
+
+footer hr{
+    width: 100%;    
+}

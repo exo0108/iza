@@ -44,5 +44,16 @@ Route::get('/car', function () {
     return view('car');
 });
 
+Route::get('/order_record', function () {
+    return view('order_record');
+});
+
+Route::get('/checkout', function () {
+    return view('checkout');
+});
+
+Route::get('/reserve', function () {
+    return view('reserve');
+});
 require __DIR__.'/auth.php';
 
