@@ -14,12 +14,16 @@ class CreateReserveTable extends Migration
 public function up()
 {
     Schema::create('reserve', function (Blueprint $table) {
-        $table->bigIncrements('id');
-        $table->id('memberID');
-        $table->id('periodID');
-        $table->timestamp('date');
-        $table->id('caseID');
+        $table->id()->unique();    
+        $table->bigInteger('memberID')->unsigned();
+        $table->bigInteger('periodID')->unsigned();      
+        $table->bigInteger('caseID')->unsigned();      
+        $table->date('date');    
         $table->string('status');
+        
+        $table->foreign('memberID')->references('id')->on('users');
+        $table->foreign('periodID')->references('id')->on('period');
+        $table->foreign('caseID')->references('id')->on('case');
     });
 }
 

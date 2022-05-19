@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateCartTable extends Migration
+class CreatePeriodTable extends Migration
 {
 /**
  * Run the migrations.
@@ -13,12 +13,10 @@ class CreateCartTable extends Migration
  */
 public function up()
 {
-    Schema::create('cart', function (Blueprint $table) {
-        $table->bigIncrements('id');
-        $table->id('memberID');
-        $table->id('goodID');
-        $table->string('amount');
-        $table->string('total');
+    Schema::create('period', function (Blueprint $table) {
+        $table->id()->unique();
+        $table->time('time');
+        $table->timestamps();
     });
 }
 
@@ -29,6 +27,6 @@ public function up()
  */
 public function down()
 {
-    Schema::dropIfExists('cart');
+    Schema::dropIfExists('period');
 }
 }

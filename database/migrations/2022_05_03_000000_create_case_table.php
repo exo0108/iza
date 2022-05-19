@@ -14,7 +14,7 @@
     public function up()
     {
         Schema::create('case', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->id()->unique();
             $table->string('name');
             $table->integer('price');
             $table->string('describe');

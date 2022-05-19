@@ -14,10 +14,11 @@ class CreateGoodsTable extends Migration
 public function up()
 {
     Schema::create('goods', function (Blueprint $table) {
-        $table->bigIncrements('id')->unsigned();
+        $table->id()->unique();
         $table->string('name');
         $table->integer('price');
         $table->string('img');
+        $table->string('describe');
     });
 }
 
