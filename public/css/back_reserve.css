@@ -1,0 +1,56 @@
+.reserve{
+    width: 80%;
+    margin: auto;
+    margin-top: 4%;
+}
+thead{
+    background-color: rgb(133, 127, 84);
+    color: rgb(255, 255, 255);
+}
+.btn{
+    background-color: rgba(161, 154, 84, 0.749);
+    color: rgb(255, 255, 255);
+    border: none;
+    box-shadow: none;
+    --tw-ring-shadow: unset !important;
+}
+button{
+    --tw-ring-shadow: unset !important;
+}
+.btn:hover{
+    background-color: rgba(161, 154, 84, 0.749);
+    color: rgb(255, 255, 255);
+    border: none;
+}
+.btn:focus{
+    background-color: rgba(161, 154, 84, 0.749);
+    color: rgb(255, 255, 255);
+    border: none;
+}
+input{
+    margin-right: 30px;
+}
+
+.line {
+    margin: 0 25px 0 25px;
+    width: 135px;
+    border-top: 2px solid rgb(217, 177, 116);
+}
+
+.title h2{
+    padding: 0;
+    margin: 0;
+    
+}
+.title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+
+.re_hr{
+    margin-top: 10px !important;
+    width: 99% !important;
+}
