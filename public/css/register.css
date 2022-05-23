@@ -69,13 +69,14 @@ html{
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 20px;
-    /* border: #000 1px solid; */
+    margin-bottom: 12%;
+    /* margin: 0 0 0 -35%; */
+    /* border: 1px solid rebeccapurple; */
 }
 
 .line {
     /* margin: 0 25px 0 25px; */
-    width:30%;
+    width: 28%;
     border-top: 3px solid rgb(138, 113, 75);
 }
 

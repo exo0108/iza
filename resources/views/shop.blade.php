@@ -14,7 +14,6 @@
     <h2 class="font-semibold text-xl text-gray-800 leading-tight">
       {{ __('IZY Furry') }}
     </h2>
-
     
   </x-slot>
   <div class="body_center">
@@ -58,123 +57,22 @@
               
             </div>
 
+            
             <div class="body_right">
+              @foreach  ($goods->chunk(4) as $chunk)
                 <div class="card-bag">
+                @foreach ($chunk as $good)
                   <a href="shop_content" class="card" style="width: 18rem;">
                     <img src="img/shop_content/shop1.webp" >
                     <hr>
                     <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
-                      <p class="card-text">NT.120</p>
+                      <h5 class="card-title">{{$good->name}}</h5>
+                      <p class="card-text">{{$good->price}}</p>
                     </div>
                   </a>
-
-                  <a href="shop_content" class="card" style="width: 18rem;">
-                    <img src="img/shop_content/shop1.webp" >
-                    <hr>
-                    <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
-                      <p class="card-text">NT.120</p>
-                    </div>
-                  </a>
-
-                  <a href="shop_content" class="card" style="width: 18rem;">
-                    <img src="img/shop_content/shop1.webp" >
-                    <hr>
-                    <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
-                      <p class="card-text">NT.120</p>
-                    </div>
-                  </a>
-
-                  <a href="shop_content" class="card" style="width: 18rem;">
-                    <img src="img/shop_content/shop1.webp" >
-                    <hr>
-                    <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
-                      <p class="card-text">NT.120</p>
-                    </div>
-                  </a>
-              </div>
-
-              <div class="card-bag">
-                <a href="shop_content" class="card" style="width: 18rem;">
-                  <img src="img/shop_content/shop1.webp" >
-                  <hr>
-                  <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">NT.120</p>
-                  </div>
-                </a>
-
-                <a href="shop_content" class="card" style="width: 18rem;">
-                  <img src="img/shop_content/shop1.webp" >
-                  <hr>
-                  <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">NT.120</p>
-                  </div>
-                </a>
-
-                <a href="shop_content" class="card" style="width: 18rem;">
-                  <img src="img/shop_content/shop1.webp" >
-                  <hr>
-                  <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">NT.120</p>
-                  </div>
-                </a>
-
-                <a href="shop_content" class="card" style="width: 18rem;">
-                  <img src="img/shop_content/shop1.webp" >
-                  <hr>
-                  <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">NT.120</p>
-                  </div>
-                </a>
-            </div>
-
-            <div class="card-bag">
-              <a href="shop_content" class="card" style="width: 18rem;">
-                <img src="img/shop_content/shop1.webp" >
-                <hr>
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">NT.120</p>
+                  @endforeach
                 </div>
-              </a>
-
-              <a href="shop_content" class="card" style="width: 18rem;">
-                <img src="img/shop_content/shop1.webp" >
-                <hr>
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">NT.120</p>
-                </div>
-              </a>
-
-              <a href="shop_content" class="card" style="width: 18rem;">
-                <img src="img/shop_content/shop1.webp" >
-                <hr>
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">NT.120</p>
-                </div>
-              </a>
-
-              <a href="shop_content" class="card" style="width: 18rem;">
-                <img src="img/shop_content/shop1.webp" >
-                <hr>
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">NT.120</p>
-                </div>
-              </a>
-          </div>
-          
-              
-              
+              @endforeach
             </div>
         </div>
 

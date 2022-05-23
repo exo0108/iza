@@ -1,6 +1,6 @@
 .reserve_content{
     width: 100%;
-    padding: 3% 5%;
+    padding: 0 5%;
 }
 
 .choose{
@@ -30,7 +30,6 @@
 }
 
 .DTime{
-    border-color:rgb(222, 221, 221) ;
     background-color: rgba(240, 240, 240, 0.692);
     padding: 20px 10px 20px 10px;
     width: 40% !important;
@@ -124,7 +123,6 @@ a input{
 
 hr{
     width: 70%;
-    margin: 2% auto !important;
     margin-bottom: 0;
     color:rgb(120, 121, 121);
 }

@@ -21,7 +21,7 @@
                     
             <img src="img/car_img/car1.webp">
 
-            <a href="shop_content.html" class="car_text">
+            <a href="shop_content" class="car_text">
                 <h6>汪喵星球 濕式衛生紙 可沖馬桶 46抽/包 寵物溼紙巾 12包特價$750 毛孩專用濕巾 【KT222517】</h6>
             </a>
                 
@@ -46,33 +46,7 @@
                     
             <img src="img/car_img/car1.webp">
 
-            <a href="shop_content.html" class="car_text">
-                <h6>汪喵星球 濕式衛生紙 可沖馬桶 46抽/包 寵物溼紙巾 12包特價$750 毛孩專用濕巾 【KT222517】</h6>
-            </a>
-                
-            <div class="car_quantity">
-                <form id='myform' method='POST' action='#'>
-                    <label for="">
-
-                    </label>
-                    <input type='button' value='-' class='qtyminus' field='quantity' /><!--
-                    --><input type='text' name='quantity' value='0' class='qty'/><!--
-                    --><input type='button' value='+' class='qtyplus' field='quantity'/>
-                    </form>
-
-            </div>
-                
-                <div class="price">
-                    <H5>NT.</H5><span><h5>120</h5></span>
-                </div>
-        </div>
-
-
-        <div class="car_body">
-                    
-            <img src="img/car_img/car1.webp">
-
-            <a href="shop_content.html" class="car_text">
+            <a href="shop_content" class="car_text">
                 <h6>汪喵星球 濕式衛生紙 可沖馬桶 46抽/包 寵物溼紙巾 12包特價$750 毛孩專用濕巾 【KT222517】</h6>
             </a>
                 
@@ -98,7 +72,7 @@
                     
             <img src="img/car_img/car1.webp">
 
-            <a href="shop_content.html" class="car_text">
+            <a href="shop_content" class="car_text">
                 <h6>汪喵星球 濕式衛生紙 可沖馬桶 46抽/包 寵物溼紙巾 12包特價$750 毛孩專用濕巾 【KT222517】</h6>
             </a>
                 
@@ -124,7 +98,33 @@
                     
             <img src="img/car_img/car1.webp">
 
-            <a href="shop_content.html" class="car_text">
+            <a href="shop_content" class="car_text">
+                <h6>汪喵星球 濕式衛生紙 可沖馬桶 46抽/包 寵物溼紙巾 12包特價$750 毛孩專用濕巾 【KT222517】</h6>
+            </a>
+                
+            <div class="car_quantity">
+                <form id='myform' method='POST' action='#'>
+                    <label for="">
+
+                    </label>
+                    <input type='button' value='-' class='qtyminus' field='quantity' /><!--
+                    --><input type='text' name='quantity' value='0' class='qty'/><!--
+                    --><input type='button' value='+' class='qtyplus' field='quantity'/>
+                    </form>
+
+            </div>
+                
+                <div class="price">
+                    <H5>NT.</H5><span><h5>120</h5></span>
+                </div>
+        </div>
+
+
+        <div class="car_body">
+                    
+            <img src="img/car_img/car1.webp">
+
+            <a href="shop_content" class="car_text">
                 <h6>汪喵星球 濕式衛生紙 可沖馬桶 46抽/包 寵物溼紙巾 12包特價$750 毛孩專用濕巾 【KT222517】</h6>
             </a>
                 

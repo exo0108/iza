@@ -50,6 +50,8 @@ body{
 
 .header {
     margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
 }
 
 .hea{
@@ -189,4 +191,12 @@ footer{
 }
 footer hr{
     margin-top: 0%;
+}
+
+a:hover{
+    text-decoration: none;
+}
+
+.login:hover{
+    background: none;
 }

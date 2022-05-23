@@ -11,3 +11,4 @@ class Controller extends BaseController
 {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
 }
+//    $drinks = Goods::where('type','口腔清潔')orderBy('created_at')->get();
