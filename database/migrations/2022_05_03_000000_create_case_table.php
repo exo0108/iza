@@ -13,12 +13,11 @@
      */
     public function up()
     {
-        Schema::create('case', function (Blueprint $table) {
+        Schema::create('cases', function (Blueprint $table) {
             $table->id()->unique();
             $table->string('name');
             $table->integer('price');
             $table->string('describe');
-            $table->string('img');
         });
     }
 

@@ -13,7 +13,7 @@ class CreateOrderTable extends Migration
      */
     public function up()
     {
-        Schema::create('order', function (Blueprint $table) {
+        Schema::create('orders', function (Blueprint $table) {
             $table->id()->unique();
             $table->bigInteger('memberID')->unsigned();
             $table->bigInteger('goodsID')->unsigned();

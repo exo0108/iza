@@ -13,7 +13,7 @@ class CreateReserveTable extends Migration
  */
 public function up()
 {
-    Schema::create('reserve', function (Blueprint $table) {
+    Schema::create('reservations', function (Blueprint $table) {
         $table->id()->unique();    
         $table->bigInteger('memberID')->unsigned();
         $table->bigInteger('periodID')->unsigned();      
@@ -22,8 +22,7 @@ public function up()
         $table->string('status');
         
         $table->foreign('memberID')->references('id')->on('users');
-        $table->foreign('periodID')->references('id')->on('period');
-        $table->foreign('caseID')->references('id')->on('case');
+        $table->foreign('caseID')->references('id')->on('cases');
     });
 }
 

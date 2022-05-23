@@ -16,9 +16,11 @@ public function up()
     Schema::create('goods', function (Blueprint $table) {
         $table->id()->unique();
         $table->string('name');
+        $table->string('type');
         $table->integer('price');
         $table->string('img');
-        $table->string('describe');
+        $table->text('describe');
+        $table->timestamps();
     });
 }
 
