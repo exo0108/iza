@@ -17,139 +17,100 @@
 </x-slot>
 <div class="body_center">
     <div class="cont">
-        <div class="car_body">
-                    
-            <img src="img/car_img/car1.webp">
-
-            <a href="shop_content" class="car_text">
-                <h6>汪喵星球 濕式衛生紙 可沖馬桶 46抽/包 寵物溼紙巾 12包特價$750 毛孩專用濕巾 【KT222517】</h6>
-            </a>
-                
-            <div class="car_quantity">
-                <form id='myform' method='POST' action='#'>
-                    <label for="">
-
-                    </label>
-                    <input type='button' value='-' class='qtyminus' field='quantity' /><!--
-                    --><input type='text' name='quantity' value='0' class='qty'/><!--
-                    --><input type='button' value='+' class='qtyplus' field='quantity'/>
-                    </form>
-
-            </div>
-                
-                <div class="price">
-                    <H5>NT.</H5><span><h5>120</h5></span>
-                </div>
-        </div>
-
-        <div class="car_body">
-                    
-            <img src="img/car_img/car1.webp">
-
-            <a href="shop_content" class="car_text">
-                <h6>汪喵星球 濕式衛生紙 可沖馬桶 46抽/包 寵物溼紙巾 12包特價$750 毛孩專用濕巾 【KT222517】</h6>
-            </a>
-                
-            <div class="car_quantity">
-                <form id='myform' method='POST' action='#'>
-                    <label for="">
-
-                    </label>
-                    <input type='button' value='-' class='qtyminus' field='quantity' /><!--
-                    --><input type='text' name='quantity' value='0' class='qty'/><!--
-                    --><input type='button' value='+' class='qtyplus' field='quantity'/>
-                    </form>
-
-            </div>
-                
-                <div class="price">
-                    <H5>NT.</H5><span><h5>120</h5></span>
-                </div>
-        </div>
-
-
-        <div class="car_body">
-                    
-            <img src="img/car_img/car1.webp">
-
-            <a href="shop_content" class="car_text">
-                <h6>汪喵星球 濕式衛生紙 可沖馬桶 46抽/包 寵物溼紙巾 12包特價$750 毛孩專用濕巾 【KT222517】</h6>
-            </a>
-                
-            <div class="car_quantity">
-                <form id='myform' method='POST' action='#'>
-                    <label for="">
-
-                    </label>
-                    <input type='button' value='-' class='qtyminus' field='quantity' /><!--
-                    --><input type='text' name='quantity' value='0' class='qty'/><!--
-                    --><input type='button' value='+' class='qtyplus' field='quantity'/>
-                    </form>
-
-            </div>
-                
-                <div class="price">
-                    <H5>NT.</H5><span><h5>120</h5></span>
-                </div>
-        </div>
-
-
-        <div class="car_body">
-                    
-            <img src="img/car_img/car1.webp">
-
-            <a href="shop_content" class="car_text">
-                <h6>汪喵星球 濕式衛生紙 可沖馬桶 46抽/包 寵物溼紙巾 12包特價$750 毛孩專用濕巾 【KT222517】</h6>
-            </a>
-                
-            <div class="car_quantity">
-                <form id='myform' method='POST' action='#'>
-                    <label for="">
-
-                    </label>
-                    <input type='button' value='-' class='qtyminus' field='quantity' /><!--
-                    --><input type='text' name='quantity' value='0' class='qty'/><!--
-                    --><input type='button' value='+' class='qtyplus' field='quantity'/>
-                    </form>
-
-            </div>
-                
-                <div class="price">
-                    <H5>NT.</H5><span><h5>120</h5></span>
-                </div>
-        </div>
-
-
-        <div class="car_body">
-                    
-            <img src="img/car_img/car1.webp">
-
-            <a href="shop_content" class="car_text">
-                <h6>汪喵星球 濕式衛生紙 可沖馬桶 46抽/包 寵物溼紙巾 12包特價$750 毛孩專用濕巾 【KT222517】</h6>
-            </a>
-                
-            <div class="car_quantity">
-                <form id='myform' method='POST' action='#'>
-                    <label for="">
-
-                    </label>
-                    <input type='button' value='-' class='qtyminus' field='quantity' /><!--
-                    --><input type='text' name='quantity' value='0' class='qty'/><!--
-                    --><input type='button' value='+' class='qtyplus'  field='quantity'/>
-                    </form>
-
-            </div>
-                
-                <div class="price">
-                    <H5>NT.</H5><span><h5>120</h5></span>
-                </div>
-        </div>
- 
+    <div class="bar">
+        <div class="t-checkbox">
+            <div class="cart-checkbox">
+                <input type="checkbox" id="allchecked" onclick="setAll()">
+                <label for></label>
+            </div>全選</div>
+       
     </div>
+    
+
+    <div class="item-list" id="item-list">
+        <div class="item" id="007">
+            <div class="p-checkbox">
+                <input type="checkbox" name="p-radio" ><label for></label>
+            </div>
+    
+            <div class="p-goods">
+                <div class="p-img"><img src="img/car_img/car1.webp"></div>
+            </div>
+    
+            <div class="p-shop">汪喵星球 濕式衛生紙 可沖馬桶 46抽/包 寵物溼紙巾 12包特價$750 毛孩專用濕巾 【KT222517】</div>
+    
+            <div class="p-price">NT.<span class="onlyPrice">120</span></div>
+    
+            <div class="p-quantity">
+                <input type="button" class="decrease" value="-">
+               <input type="text" class="quantity" value="1"/>
+               <input type="button" class="increase" value="+">
+            </div>
+    
+            <div class="p-sum">NT.<span class="onlySum">120</span></div>
+    
+            <div class="p-action">
+                <input type="button" class="deleteItem" value="删除"/>
+            </div>
+        </div>
+
+        <div class="item-list" id="item-list">
+        <div class="item" id="007">
+            <div class="p-checkbox">
+                <input type="checkbox" name="p-radio" ><label for></label>
+            </div>
+    
+            <div class="p-goods">
+                <div class="p-img"><img src="img/car_img/car1.webp"></div>
+            </div>
+    
+            <div class="p-shop">汪喵星球 濕式衛生紙 可沖馬桶 46抽/包 寵物溼紙巾 12包特價$750 毛孩專用濕巾 【KT222517】</div>
+    
+            <div class="p-price">NT.<span class="onlyPrice">120</span></div>
+    
+            <div class="p-quantity">
+                <input type="button" class="decrease" value="-">
+               <input type="text" class="quantity" value="1"/>
+               <input type="button" class="increase" value="+">
+            </div>
+    
+            <div class="p-sum">NT.<span class="onlySum">120</span></div>
+    
+            <div class="p-action">
+                <input type="button" class="deleteItem" value="删除"/>
+            </div>
+        </div>
+
+        <div class="item-list" id="item-list">
+        <div class="item" id="007">
+            <div class="p-checkbox">
+                <input type="checkbox" name="p-radio" ><label for></label>
+            </div>
+    
+            <div class="p-goods">
+                <div class="p-img"><img src="img/car_img/car1.webp"></div>
+            </div>
+    
+            <div class="p-shop">汪喵星球 濕式衛生紙 可沖馬桶 46抽/包 寵物溼紙巾 12包特價$750 毛孩專用濕巾 【KT222517】</div>
+    
+            <div class="p-price">NT.<span class="onlyPrice">120</span></div>
+    
+            <div class="p-quantity">
+                <input type="button" class="decrease" value="-">
+               <input type="text" class="quantity" value="1"/>
+               <input type="button" class="increase" value="+">
+            </div>
+    
+            <div class="p-sum">NT.<span class="onlySum">120</span></div>
+    
+            <div class="p-action">
+                <input type="button" class="deleteItem" value="删除"/>
+            </div>
+        </div>
 
             <div class="car_footer">
                     <div class="car_momey"> 
-                    <h5>總金額:</h5>
+                    <h5>總金額：</h5>
                     <h4>NT$120</h4>
                     </div>
                     <div>
@@ -167,6 +128,167 @@
 
 
 
+<script>
+      window.onload=function(){
 
+//获取所有+按钮
+var increment=document.getElementsByClassName("increase");
+
+for(var i=0;i<increment.length;i++)
+{
+    //为a标签添加index属性，用于记录下标
+    increment[i].index=i;
+
+    //点击+数量增加的功能函数
+    increment[i].onclick=function()
+    {
+        var flag=this.index;
+        //获取当前a标签对应的数量框
+       var q=document.getElementsByClassName("quantity")[flag];
+
+       var newvalue=parseInt(q.value)+1;
+
+       //用q.value=parseInt(q.value)+1
+       //会导致数值只在点击的一瞬间发生变化，然后又跳回1
+       q.setAttribute('value',newvalue);
+
+       //更新此商品对应的‘小计’
+       changeSum(flag,newvalue);
+    }
+}
+
+//获取所有-按钮
+var decrement=document.getElementsByClassName('decrease');
+
+//点击-数量减少的功能函数
+for(var j=0;j<decrement.length;j++)
+{
+    decrement[j].index=j;
+
+    decrement[j].onclick=function()
+    {
+        var flag=this.index;
+         //获取当前a标签对应的那个数量框
+       var q=document.getElementsByClassName("quantity")[flag];
+
+       if(parseInt(q.value)>1)
+       {
+        var newvalue=parseInt(q.value)-1;
+
+        q.setAttribute('value',newvalue);
+
+        changeSum(flag,newvalue);
+       }
+    }
+}
+
+
+//结算功能
+var calculate=document.getElementById('calculate');
+
+calculate.onclick=function(){
+    var radios=document.getElementsByName('p-radio');
+
+    var sumPrice=0;
+
+    var p=document.getElementsByClassName('onlySum');
+
+    for(var m=0;m<radios.length;m++)
+    {
+        if(radios[m].checked==true)
+        {
+            sumPrice=sumPrice+parseInt(p[m].innerHTML);
+        }
+    }
+
+    document.getElementsByClassName("sum-price")[0].innerHTML=sumPrice;
+}
+
+
+//提交订单的功能
+var submit=document.getElementById("submit-order");
+
+submit.onclick=function(){
+
+    var data=[];
+    var radios=document.getElementsByName('p-radio');
+    var count=document.getElementsByClassName("quantity");
+    var items=document.getElementsByClassName("item");
+
+    for(var m=0;m<radios.length;m++)
+    {
+        if(radios[m].checked==true)
+        {
+            var item={};
+            item.tradeid=items[m].getAttribute('id');
+            item.amount=count[m].value;
+            
+            data.push(item);
+        }
+    }
+
+    var result=JSON.stringify(data);
+
+    $.ajax({
+        type : "post",
+
+        url : '',//后台请求地址
+
+        data : result,
+
+        contentType: "application/json", //如果提交的是json数据类型，则必须有此参数,表示提交的数据类型 
+
+        async : false,//异步请求
+
+        success : function(){         },
+
+        error :function(){alert("订单总额为");   }
+
+    });
+}
+}
+
+
+//更新每个商品的‘小计’
+function changeSum(flag,num){
+//获取对应单价所在的标签
+var temp=document.getElementsByClassName("onlyPrice")[flag];
+
+//获取单价
+var unitPrice=temp.innerHTML;
+
+//计算新的小计价格
+var newPrice=parseInt(unitPrice)*num;
+
+var sum=document.getElementsByClassName("onlySum")[flag];
+
+sum.innerHTML=newPrice;
+}
+
+
+//设置全选/全不选的功能
+function setAll(){
+var box=document.getElementById('allchecked');
+
+var radios=document.getElementsByName('p-radio');
+
+//alert(box.checked);
+
+if(box.checked==false)
+{
+    for(var i=0;i<radios.length;i++)
+    {
+        radios[i].checked=false;
+    }
+}else{
+    for(var i=0;i<radios.length;i++)
+    {
+        radios[i].checked=true;
+    }
+}
+}
+
+
+    </script>
 
 </x-app-layout>

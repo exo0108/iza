@@ -39,19 +39,19 @@
 
             <!-- Name -->
             <div>
-                <x-input id="name" class="block mt-1 w-full" type="text" name="name" placeholder="姓名：" :value="old('name')" required autofocus />
+                <x-input id="name" class="block mt-1 w-full" type="text" name="name" placeholder="姓名" :value="old('name')" required autofocus />
             </div>
 
             <!-- Email Address -->
             <div class="mt-4">
                 
-                <x-input id="email" class="block mt-1 w-full" type="email" name="email" placeholder="電子郵件：" :value="old('email')" required />
+                <x-input id="email" class="block mt-1 w-full" type="email" name="email" placeholder="電子郵件" :value="old('email')" required />
             </div>
 
             <!-- Phone -->
             
             <div class="mt-4">
-                <x-input id="phone" class="block mt-1 w-full" type="tel" name="phone" placeholder="行動電話：" :value="old('phone')" required  />
+                <x-input id="phone" class="block mt-1 w-full" type="tel" name="phone" placeholder="行動電話" :value="old('phone')" required  />
             </div>
 
             <!-- Password -->
@@ -61,7 +61,7 @@
                 <x-input id="password" class="block mt-1 w-full"
                                 type="password"
                                 name="password"
-                                placeholder="密碼："
+                                placeholder="密碼"
                                 required autocomplete="new-password" />
             </div>
 
@@ -72,7 +72,7 @@
                 <x-input id="password_confirmation" class="block mt-1 w-full"
                                 type="password"
                                 name="password_confirmation" 
-                                placeholder="確定密碼："
+                                placeholder="確定密碼"
                                  required />
             </div>
 

@@ -51,23 +51,22 @@
     display: flex;
     justify-content: flex-start;
 }
-.qty {
+.quantity {
     width: 40px;
     height: 35px;
     text-align: center;
-    border: 0;
-    border-top: 1px solid #aaa;
-    border-bottom: 1px solid #aaa;
+    border: 1px solid #aaa;
+    
 }
 
-.qtyplus {
+.decrease {
     width: 35px;
     height: 35px;
     border: 1px solid #aaa;
     background: #f8f8f8;
 }
 
-.qtyminus {
+.increase {
     width: 35px;
     height: 35px;
     border: 1px solid #aaa;
@@ -97,14 +96,20 @@
     margin-top:1%;
     display: flex;
     flex-direction: column;
-    margin: auto;
     margin-bottom: 1%;
+    
     
 
 }
 .txt{
-    width: 75%;
+    width: 70%;
     display: flex;
     flex-direction: column;
     margin: auto;
+}
+
+.d-block{
+    object-fit: contain;
+    width: 100%;
+    height: 90%;
 }

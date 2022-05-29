@@ -4,25 +4,37 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Http\Services\ShopService;
+use App\Models\Goods;
+use Illuminate\Support\Facades\Auth;
 
 class ShopController extends Controller
 {
+
+
     public function __construct(
         ShopService $service
-    ){
+    ) {
         $this->service = $service;
-        
     }
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
+
+
     public function index()
     {
-        $goods= $this->service->get_goods();
-        return view('shop')->with('goods',$goods);
+        // $user = Auth::user();
+        // dd($user,$user->name,123);
+        $goods = $this->service->get_goods();
         
+        $menuItem = ['電剪、針梳、指甲剪', '毛髮清潔、護膚保養', '口腔清潔', '耳朵清潔', '除臭液、除臭劑、清潔劑、香水'];
+        // return view('shop')->with('goods', $goods, 'menuItem', $menu);
+        return view('shop', [
+            'goods' => $goods,
+            'menuItem' => $menuItem
+        ]);
     }
 
     /**
@@ -54,7 +66,9 @@ class ShopController extends Controller
      */
     public function show($id)
     {
-        //
+        $good = $this->service->get_good($id);
+
+        return view('shop_content')->with('good', $good);
     }
 
     /**
@@ -89,5 +103,19 @@ class ShopController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    public function searchType(Request $request)
+    {
+        $type = $request->input('type');
+        $goods = $this->service->get_good_type($type);
+        
+        $menuItem = ['電剪、針梳、指甲剪', '毛髮清潔、護膚保養', '口腔清潔', '耳朵清潔', '除臭液、除臭劑、清潔劑、香水'];
+        // dd($goods, $request->input('type'));
+
+        return view('shop', [
+            'goods' => $goods,
+            'menuItem' => $menuItem
+        ]);
     }
 }

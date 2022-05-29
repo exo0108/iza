@@ -235,6 +235,8 @@
             </div>
         </div>
         </div>
+        {{ Auth::user()->id }}
+            {{ Auth::user()->phone }}
     </div>
 
     <script>

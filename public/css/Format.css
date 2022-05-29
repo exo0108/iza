@@ -69,6 +69,7 @@ nav {/*整個上方區塊*/
     width: 90%;
     display: flex;
     justify-content: center;
+    align-items: center;
     }
     
     nav ul {/*第一層選單區域*/
@@ -198,5 +199,19 @@ a:hover{
 }
 
 .login:hover{
+    background: none;
+}
+.back{
+    color: rgb(133, 127, 84);
+    border:2px rgb(133, 127, 84) solid ;
+    font-size: 18px;
+    padding: 0 10px;
+    z-index: 1;
+    position: absolute;
+    left: 10%;
+    text-decoration: none !important;
+}
+
+.back :hover{
     background: none;
 }

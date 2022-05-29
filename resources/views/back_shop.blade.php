@@ -20,8 +20,12 @@
             <div style="display: flex;align-items: center;" >
                 <nav>
                     <ul>
-                        <li><a href="back_reserve">客戶預約紀錄</a> </li>
-                        <li><a href="back_shop">商品資料</a></li>
+                      <li><a href="back_reserve">客戶預約紀錄</a> </li>
+                      <li><a href="#">客戶訂單紀錄</a> </li>
+                      <li><a href="back_shop">商品資料</a></li>
+                      <li><a href="#">會員資料</a></li>
+                      <li><a href="#">美容方案</a></li>
+
                     </ul>
                 </nav>
     </div>
@@ -29,7 +33,8 @@
             
             
             <div class="during" style="display: flex; align-items: center; justify-content: flex-start;">
-                <input type="text" value="客戶名稱" class="inp">
+                <input type="text" value="商品名稱" class="inp">
+                <input type="text" value="商品編號" class="inp">
                 <input type="button" value="查詢" class="btn">
             </div>
           
@@ -37,38 +42,38 @@
           <table class="table table-sm">
             <thead>
               <tr>
-                <th scope="col">#</th>
-                <th scope="col">客戶名稱</th>
-                <th scope="col">預約地點</th>
-                <th scope="col">預約日期</th>
-                <th scope="col">預約時段</th>
-                <th scope="col">預約方案</th>
+                <th scope="col">商品編號</th>
+                <th scope="col">商品圖片</th>
+                <th scope="col">商品名稱</th>
+                <th scope="col">商品內容</th>
+                <th scope="col">商品價格</th>
+                <th scope="col">編輯</th>
               </tr>
             </thead>
 
             <tbody>
                 <tr>
-                    <th scope="row">1</th>
-                    <th >bb</th>
-                    <th >一中店</th>
-                    <th >2022/05/08</th>
-                    <th >上午</th>
+                    <th scope="row">#12654</th>
+                    <th >img</th>
+                    <th >沐浴乳</th>
+                    <th >123123132132</th>
+                    <th >231</th>
                     <td><button type="button" class="btn btn-outline-info">Edit</button></td>
                 </tr>
                 <tr>
-                    <th scope="row">1</th>
-                    <th >bb</th>
-                    <th >一中店</th>
-                    <th >2022/05/08</th>
-                    <th >上午</th>
+                    <th scope="row">#12654</th>
+                    <th >img</th>
+                    <th >沐浴乳</th>
+                    <th >123123132132</th>
+                    <th >231</th>
                     <td><button type="button" class="btn btn-outline-info">Edit</button></td>
                 </tr>
                 <tr>
-                    <th scope="row">1</th>
-                    <th >bb</th>
-                    <th >一中店</th>
-                    <th >2022/05/08</th>
-                    <th >上午</th>
+                    <th scope="row">#12654</th>
+                    <th >img</th>
+                    <th >沐浴乳</th>
+                    <th >123123132132</th>
+                    <th >231</th>
                     <td><button type="button" class="btn btn-outline-info">Edit</button></td>
                 </tr>
             </tbody>
