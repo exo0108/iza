@@ -2,11 +2,11 @@
 
 namespace App\Http\Services;
 
-use App\Models\Good;
+use App\Models\Goods;
 
 class ShopService{ 
     public function get_goods(){
-        return Good::get();
+        return Goods::get();
     }
 
 
