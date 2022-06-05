@@ -1,7 +1,7 @@
 <?php
 
 namespace Database\Seeders;
-use App\Models\Stores;
+use App\Models\Store;
 use Carbon\Carbon;
 
 use Illuminate\Database\Seeder;
@@ -16,11 +16,11 @@ class StoresSeeder extends Seeder
     public function run()
     {
         //
-        $Stores = Stores::create([
+        $Store = Store::create([
             'name' => '一中店',
         ]);
 
-        $Stores = Stores::create([
+        $Store = Store::create([
             'name' => '逢甲分店',
         ]);
     }
