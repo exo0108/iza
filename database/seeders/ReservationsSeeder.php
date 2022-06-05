@@ -1,7 +1,7 @@
 <?php
 
 namespace Database\Seeders;
-use App\Models\Reservations;
+use App\Models\Reservation;
 use Carbon\Carbon;
 
 use Illuminate\Database\Seeder;
@@ -16,7 +16,7 @@ class ReservationsSeeder extends Seeder
     public function run()
     {
         //
-        $Reservations = Reservations::create([
+        $Reservation = Reservation::create([
             'memberID' => 1,
             'caseID' => 4,
             'date' => '2022-07-01',
@@ -24,7 +24,7 @@ class ReservationsSeeder extends Seeder
             'status' => '未完成',
         ]);
         
-        $Reservations = Reservations::create([
+        $Reservation = Reservation::create([
             'memberID' => 2,
             'caseID' => 1,
             'date' => '2022-07-10',
@@ -32,7 +32,7 @@ class ReservationsSeeder extends Seeder
             'status' => '未完成',
         ]);
         
-        $Reservations = Reservations::create([
+        $Reservation = Reservation::create([
             'memberID' => 2,
             'caseID' => 2,
             'date' => '2022-08-15',
@@ -40,7 +40,7 @@ class ReservationsSeeder extends Seeder
             'status' => '未完成',
         ]);
         
-        $Reservations = Reservations::create([
+        $Reservation = Reservation::create([
             'memberID' => 2,
             'caseID' => 3,
             'date' => '2022-09-07',
@@ -48,7 +48,7 @@ class ReservationsSeeder extends Seeder
             'status' => '未完成',
         ]);
         
-        $Reservations = Reservations::create([
+        $Reservation = Reservation::create([
             'memberID' => 3,
             'caseID' => 3,
             'date' => '2022-07-25',
@@ -56,7 +56,7 @@ class ReservationsSeeder extends Seeder
             'status' => '未完成',
         ]);
         
-        $Reservations = Reservations::create([
+        $Reservation = Reservation::create([
             'memberID' => 3,
             'caseID' => 2,
             'date' => '2022-09-22',

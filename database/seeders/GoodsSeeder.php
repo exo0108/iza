@@ -3,7 +3,7 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
-use App\Models\Goods;
+use App\Models\Good;
 use Carbon\Carbon;
 
 class GoodsSeeder extends Seeder
@@ -16,7 +16,7 @@ class GoodsSeeder extends Seeder
     public function run()
     {
         //
-        $Goods = Goods::create([
+        $Good = Good::create([
             'name' => '汪喵星球 濕式衛生紙 可沖馬桶 46抽/包 寵物溼紙巾 毛孩專用濕巾',
             'type' => '耳朵清潔',
             'price' => 120,
@@ -35,7 +35,7 @@ class GoodsSeeder extends Seeder
             
         ]);
 
-        $Goods = Goods::create([
+        $Good = Good::create([
             'name' => 'Petz Route 沛滋露 水果村系列橡膠順毛梳 寵物皮膚/寵物梳',
             'type' => '電剪、針梳、指甲剪',
             'price' => 419,
@@ -58,7 +58,7 @@ class GoodsSeeder extends Seeder
         ]);
 
 
-        $Goods = Goods::create([
+        $Good = Good::create([
             'type' => '電剪、針梳、指甲剪',
             'name' => 'Petz Route 沛滋露 水果村系列備長炭順毛梳 寵物皮膚/寵物梳',
             'price' => 419,
@@ -81,7 +81,7 @@ class GoodsSeeder extends Seeder
         ]);
 
 
-        $Goods = Goods::create([
+        $Good = Good::create([
             'type' => '毛髮清潔、護膚保養',
             'name' => '西莎絨情蜜意寵物犬貓用吸水超細纖維毛巾 米色/藍色 130*80cm',
             'price' => 250,
@@ -93,7 +93,7 @@ class GoodsSeeder extends Seeder
         ]);
 
 
-        $Goods = Goods::create([
+        $Good = Good::create([
             'img' => 'img\shop_content\shop6.png',
             'type' => '毛髮清潔、護膚保養',
             'name' => '日本TAURUS 金牛座 愛貓用 EM微生物潔毛噴霧 250ml',
@@ -104,7 +104,7 @@ class GoodsSeeder extends Seeder
         ]);
 
 
-        $Goods = Goods::create([
+        $Good = Good::create([
             'img' => 'img\shop_content\shop7.png',
             'type' => '毛髮清潔、護膚保養',
             'name' => '355ml Dechra 德瑪沛燕麥洗毛精',
@@ -118,7 +118,7 @@ class GoodsSeeder extends Seeder
         ]);
 
 
-        $Goods = Goods::create([
+        $Good = Good::create([
             'img' => 'img\shop_content\shop8.png',
             'type' => '毛髮清潔、護膚保養',
             'name' => "K'9 NatureHolic天然無毒洗劑 蠟菊護色寵物洗毛精 476ml",
@@ -136,7 +136,7 @@ class GoodsSeeder extends Seeder
         ]);
 
 
-        $Goods = Goods::create([
+        $Good = Good::create([
             'img' => 'img\shop_content\shop9.png',
             'type' => '毛髮清潔、護膚保養',
             'name' => '美國TropiClean 巧倍麗潔耳布-50抽',
@@ -155,7 +155,7 @@ class GoodsSeeder extends Seeder
         ]);
 
 
-        $Goods = Goods::create([
+        $Good = Good::create([
             'img' => 'img\shop_content\shop10.png',
             'type' => '毛髮清潔、護膚保養',
             'name' => '美國Tropiclean 水精靈/巧倍麗 潔面慕斯 狗用乾洗澡(不流淚配方) 7.4oz(220ml)',
@@ -170,7 +170,7 @@ class GoodsSeeder extends Seeder
         ]);
 
 
-        $Goods = Goods::create([
+        $Good = Good::create([
             'img' => 'img\shop_content\shop11.webp',
             'type' => '口腔清潔',
             'name' => '法國維克C.E.T 酵素免洗牙膏 強效型寵物牙膏70g 牛肉口味',
@@ -200,7 +200,7 @@ class GoodsSeeder extends Seeder
         ]);
 
 
-        $Goods = Goods::create([
+        $Good = Good::create([
             'img' => 'img\shop_content\shop12.webp',
             'type' => '口腔清潔',
             'name' => '【BONE BONE】 金牛座 日本TAURUS 愛貓專用牙膏/21g',
@@ -227,7 +227,7 @@ class GoodsSeeder extends Seeder
         ]);
 
 
-        $Goods = Goods::create([
+        $Good = Good::create([
             'img' => 'img\shop_content\shop13.webp',
             'type' => '口腔清潔',
             'name' => '樂健飛 L.C.F 超級褐藻潔牙粉 毛小孩專用/狗用 20g',
@@ -262,7 +262,7 @@ class GoodsSeeder extends Seeder
         ]);
 
 
-        $Goods = Goods::create([
+        $Good = Good::create([
             'img' => 'img\shop_content\shop14.webp',
             'type' => '口腔清潔',
             'name' => '金牛座齒垢清光光旋轉牙刷(小型犬用)-山切行單輪',
@@ -276,7 +276,7 @@ class GoodsSeeder extends Seeder
         ]);
 
 
-        $Goods = Goods::create([
+        $Good = Good::create([
             'img' => 'img\shop_content\shop15.webp',
             'type' => '口腔清潔',
             'name' => '樂健飛 L.C.F 超級褐藻潔牙粉 毛小孩專用/貓用 40g',
@@ -311,7 +311,7 @@ class GoodsSeeder extends Seeder
         ]);
 
 
-        $Goods = Goods::create([
+        $Good = Good::create([
             'img' => 'img\shop_content\shop16.png',
             'type' => '口腔清潔',
             'name' => '日本製 五指型刷牙手套 1枚入 刷牙手套/牙刷套',
@@ -333,7 +333,7 @@ class GoodsSeeder extends Seeder
         ]);
 
 
-        $Goods = Goods::create([
+        $Good = Good::create([
             'img' => 'img\shop_content\shop17.png',
             'type' => '耳朵清潔',
             'name' => '美國TropiClean 巧倍麗神奇柔膚巾(深層潔淨)(敏感膚質) -100抽',
@@ -351,7 +351,7 @@ class GoodsSeeder extends Seeder
         ]);
 
 
-        $Goods = Goods::create([
+        $Good = Good::create([
             'img' => 'img\shop_content\shop18.png',
             'type' => '耳朵清潔',
             'name' => "日本Pet Paradise授權正品 [Pet'y Soin] 絲蛋白愛犬用濕紙巾【小型犬用】 25枚入",
@@ -375,7 +375,7 @@ class GoodsSeeder extends Seeder
         ]);
 
 
-        $Goods = Goods::create([
+        $Good = Good::create([
             'img' => 'img\shop_content\shop19.png',
             'type' => '耳朵清潔',
             'name' => "日本Pet Paradise授權正品 [Pet'y Soin] 絲蛋白每日清潔紙巾【中大型犬用】15枚入",
@@ -399,7 +399,7 @@ class GoodsSeeder extends Seeder
         ]);
 
 
-        $Goods = Goods::create([
+        $Good = Good::create([
             'img' => 'img\shop_content\shop20.png',
             'type' => '耳朵清潔',
             'name' => 'yu有機蘆薈保養潔耳液 175ml',
@@ -413,7 +413,7 @@ class GoodsSeeder extends Seeder
         ]);
 
 
-        $Goods = Goods::create([
+        $Good = Good::create([
             'img' => 'img\shop_content\shop21.png',
             'type' => '耳朵清潔',
             'name' => '118ml Dechra德瑪沛 醋酸清耳液',
@@ -428,7 +428,7 @@ class GoodsSeeder extends Seeder
         ]);
 
 
-        $Goods = Goods::create([
+        $Good = Good::create([
             'img' => 'img\shop_content\shop22.png',
             'type' => '耳朵清潔',
             'name' => '118ml Dechra德瑪沛 翠絲清耳液',
@@ -441,7 +441,7 @@ class GoodsSeeder extends Seeder
                             注意事項：須經專業獸醫師指示使用',
         ]);
 
-        $Goods = Goods::create([
+        $Good = Good::create([
             'img' => 'img\shop_content\shop23.png',
             'type' => '除臭液、除臭劑、清潔劑、香水',
             'name' => '汪喵星球 寵物環境除臭消臭抗菌噴霧 300ML',
