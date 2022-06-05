@@ -9,10 +9,5 @@ class Reserves extends Model
 {
     use HasFactory;
 
-    protected $fillable = [
-        'name',
-        'email',
-        'phone',
-        'password',
-    ];
+    protected $guarded = [];
 }

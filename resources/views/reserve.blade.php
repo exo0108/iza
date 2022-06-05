@@ -8,7 +8,6 @@
     <title>IZA'Furry</title>
 </head>
 
-<!-- 白白不可以瑟瑟 -->
 
 <x-app-layout>
 
