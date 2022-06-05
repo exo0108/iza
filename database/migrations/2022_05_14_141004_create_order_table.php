@@ -16,14 +16,12 @@ class CreateOrderTable extends Migration
         Schema::create('orders', function (Blueprint $table) {
             $table->id()->unique();
             $table->bigInteger('memberID')->unsigned();
-            $table->bigInteger('goodsID')->unsigned();
             $table->string('payWay');
-            $table->integer('amount')->unsigned();
             $table->integer('total')->unsigned();
             $table->string('status');
+            $table->timestamps();
 
             $table->foreign('memberID')->references('id')->on('users');
-            $table->foreign('goodsID')->references('id')->on('goods');
         });
     }
 
