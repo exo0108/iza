@@ -19,6 +19,7 @@ public function up()
         $table->bigInteger('goodsID')->unsigned();       
         $table->string('amount');
         $table->string('total');
+        $table->timestamps();
 
         $table->foreign('memberID')->references('id')->on('users');
         $table->foreign('goodsID')->references('id')->on('goods');

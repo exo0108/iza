@@ -44,7 +44,7 @@
       <div class="card-bag">
         @foreach ($chunk as $good)
 
-        <a href="{{ route('shop_content',['id'=>$good->id]) }}" class="card" style="width: 18rem;">
+        <a href="{{ route('shop_content',['id'=>$good->id]) }}" class="card" >
           <img class="card_img" src="{{ $good->img }}">
           <hr>
           <div class="card-body">
@@ -57,6 +57,9 @@
       </div>
       @endforeach
     </div>
+
+
+    
   </div>
 
 

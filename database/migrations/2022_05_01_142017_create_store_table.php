@@ -18,6 +18,7 @@ class CreateStoreTable extends Migration
             
             $table->id()->unique();
             $table->string('name');
+            $table->timestamps();
         });
     }
 

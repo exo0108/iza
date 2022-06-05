@@ -53,4 +53,25 @@ input{
 .re_hr{
     margin-top: 10px !important;
     width: 99% !important;
+
+}
+
+.item input{
+    width: 100%;
+}
+.img{
+    width: 20%;
+    margin-left:2%;
+}
+.img img{
+    width: 100%;
+}
+
+.modal-body{
+    display: flex;
+    justify-content: start;
+}
+.itembody{
+    margin-left:10%;
+   
 }

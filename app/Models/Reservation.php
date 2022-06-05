@@ -5,14 +5,15 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Orders extends Model
+class Reservations extends Model
 {
     use HasFactory;
 
     protected $fillable = [
-        'payWay',
-        'amount',
-        'total',
+        'memberID',
+        'caseID',
+        'date',
+        'period',
         'status',
     ];
 }

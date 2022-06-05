@@ -61,24 +61,7 @@
                     <th >方案一</th>
                     <td><button type="button" class="btn btn-outline-info">Edit</button></td>
                 </tr>
-                <tr>
-                    <th scope="row">1</th>
-                    <th >bb</th>
-                    <th >一中店</th>
-                    <th >2022/05/08</th>
-                    <th >上午</th>
-                    <th >方案一</th>
-                    <td><button type="button" class="btn btn-outline-info">Edit</button></td>
-                </tr>
-                <tr>
-                    <th scope="row">1</th>
-                    <th >bb</th>
-                    <th >一中店</th>
-                    <th >2022/05/08</th>
-                    <th >上午</th>
-                    <th >方案一</th>
-                    <td><button type="button" class="btn btn-outline-info">Edit</button></td>
-                </tr>
+                
             </tbody>
         </table>
 </div>

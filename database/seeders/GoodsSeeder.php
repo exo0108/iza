@@ -17,7 +17,7 @@ class GoodsSeeder extends Seeder
     {
         //
         $Goods = Goods::create([
-            'name' => '汪喵星球 濕式衛生紙 可沖馬桶 46抽/包 寵物溼紙巾 12包特價$750 毛孩專用濕巾',
+            'name' => '汪喵星球 濕式衛生紙 可沖馬桶 46抽/包 寵物溼紙巾 毛孩專用濕巾',
             'type' => '耳朵清潔',
             'price' => 120,
             'img' => 'img\shop_content\shop1.webp',
@@ -31,9 +31,8 @@ class GoodsSeeder extends Seeder
 
                             3.貨到付款除需收取運費外 ，每筆加收60元貨到付款手續費<br>
 
-                            4.本系統保留取消訂單權利',
-            'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
-            'updated_at' => Carbon::now()->format('Y-m-d H:i:s'),
+                            4.本系統保留取消訂單權利',       
+            
         ]);
 
         $Goods = Goods::create([
@@ -55,9 +54,7 @@ class GoodsSeeder extends Seeder
                             1.在為貓狗梳理的過程中,針梳反覆磨擦皮膚,能夠促進愛寵的血液循環,增加皮屬抵抗力,消除愛寵身體疲勞,<br>
                             2.減低掉毛量,會梳理掉脫落的死毛,防止毛髪打結·<br>
                             3.保證愛寵更好的毛質、毛量,讓愛寵被毛順滑有光澤,<br>
-                            4.在梳毛的過程中,如發現貓狗身上有外傷皮膚問題,請及時就醫。',
-            'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
-            'updated_at' => Carbon::now()->format('Y-m-d H:i:s'),
+                            4.在梳毛的過程中,如發現貓狗身上有外傷皮膚問題,請及時就醫。',            
         ]);
 
 
@@ -80,9 +77,7 @@ class GoodsSeeder extends Seeder
                             1.在為貓狗梳理的過程中,針梳反覆磨擦皮膚,能夠促進愛寵的血液循環,增加皮屬抵抗力,消除愛寵身體疲勞,<br>
                             2.減低掉毛量,會梳理掉脫落的死毛,防止毛髪打結·<br>
                             3.保證愛寵更好的毛質、毛量,讓愛寵被毛順滑有光澤,<br>
-                            4.在梳毛的過程中,如發現貓狗身上有外傷皮膚問題,請及時就醫。',
-            'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
-            'updated_at' => Carbon::now()->format('Y-m-d H:i:s'),
+                            4.在梳毛的過程中,如發現貓狗身上有外傷皮膚問題,請及時就醫。',            
         ]);
 
 
@@ -94,9 +89,7 @@ class GoodsSeeder extends Seeder
             'describe' => '1.雙面超細纖維毛料，觸感柔軟舒服。<br>
                             2.採用吸濕排汗技術，可瞬間吸水、快速乾燥。<br>
                             *使用前請先以溫水及中性洗衣精洗滌，增加吸水度與柔軟度。<br>
-                            *為避免破壞纖維組織，請勿使用漂白水或柔軟精清洗。',
-            'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
-            'updated_at' => Carbon::now()->format('Y-m-d H:i:s'),
+                            *為避免破壞纖維組織，請勿使用漂白水或柔軟精清洗。',            
         ]);
 
 
@@ -108,8 +101,6 @@ class GoodsSeeder extends Seeder
             'describe' => '●特色：活性有益微生物群可長時間抑制寵物皮毛裡的壞菌，產品不添加化學成分，適合皮膚敏感的寵物使用<br>
                             ●成分：光合作用菌種、乳酸菌、酵母菌、線狀菌、放線菌等菌類<br>
                             ●使用方式：每日1~2次請以微濕潤的程度噴在皮膚毛髮上，並給予適度的搓揉。受傷比較嚴重的地方請等噴霧乾燥後再噴一次並再給予適度的搓揉<br>',
-            'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
-            'updated_at' => Carbon::now()->format('Y-m-d H:i:s'),
         ]);
 
 
@@ -124,8 +115,6 @@ class GoodsSeeder extends Seeder
                             1.添加水溶性燕麥及紅花油等天然成分，不含香精及人工止癢成份，溫和不刺激肌膚。<br>
                             2.添加高級保濕成分賽洛美，增加毛髮洗浴後的柔順，不再乾澀。<br>
                             注意事項：須經專業獸醫師指示使用。<br>',
-            'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
-            'updated_at' => Carbon::now()->format('Y-m-d H:i:s'),
         ]);
 
 
@@ -144,8 +133,6 @@ class GoodsSeeder extends Seeder
                             使用方法：<br>
                             取適量洗毛精於沾濕的毛髮上，輕輕搓揉出細緻泡沫，待洗淨毛髮後，再以清水沖洗乾淨即可<br>
                             用途：寵物毛髮洗淨及滋潤',
-            'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
-            'updated_at' => Carbon::now()->format('Y-m-d H:i:s'),
         ]);
 
 
@@ -165,8 +152,6 @@ class GoodsSeeder extends Seeder
                             尺寸:約15 cm X 19.2 cm<br>
                             成分<br>
                             純水,甘油,水楊酸,丙二醇,蘋果酸,聚山梨醇酯 20,金縷梅精華,苯甲酸,蘆薈精華<br>',
-            'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
-            'updated_at' => Carbon::now()->format('Y-m-d H:i:s'),
         ]);
 
 
@@ -182,8 +167,6 @@ class GoodsSeeder extends Seeder
                             請避免直接塗抹在寵物的眼睛,本產品亦可使用於脖子,外耳!<br>
                             主要成分:<br>
                             純水,溫和清潔液,有機(藍莓精華,小黃瓜精華,白茶精華,燕麥精華)<br>',
-            'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
-            'updated_at' => Carbon::now()->format('Y-m-d H:i:s'),
         ]);
 
 
@@ -214,8 +197,6 @@ class GoodsSeeder extends Seeder
                             #酵素牙膏<br>
                             #狗用牙膏<br>
                             #貓用牙膏',
-            'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
-            'updated_at' => Carbon::now()->format('Y-m-d H:i:s'),
         ]);
 
 
@@ -243,8 +224,6 @@ class GoodsSeeder extends Seeder
                         請於下標前利用問與答來詢問顏色/現貨/尺寸狀況^^<br>
                         超過5公斤需以宅配收件<br>
                         ◆備註說明：本商品一經拆封使用，恕無法辦理退貨，敬請見諒！退貨的商品必須為全新狀態且完整包裝(需自付運費）。',
-            'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
-            'updated_at' => Carbon::now()->format('Y-m-d H:i:s'),
         ]);
 
 
@@ -280,8 +259,6 @@ class GoodsSeeder extends Seeder
                             請存放於乾燥陰涼處。<br>
                             為維持保健，請按時按量使用。<br>
                             若有特殊疾病，使用前請先諮詢獸醫。',
-            'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
-            'updated_at' => Carbon::now()->format('Y-m-d H:i:s'),
         ]);
 
 
@@ -296,8 +273,6 @@ class GoodsSeeder extends Seeder
                             成分:尼龍、飽和聚酯樹脂<br>
                             規格:0.07mm極細毛約有13200本<br>
                             產地:日本',
-            'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
-            'updated_at' => Carbon::now()->format('Y-m-d H:i:s'),
         ]);
 
 
@@ -333,8 +308,6 @@ class GoodsSeeder extends Seeder
                             請存放於乾燥陰涼處。<br>
                             為維持保健，請按時按量使用。<br>
                             若有特殊疾病，使用前請先諮詢獸醫。',
-            'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
-            'updated_at' => Carbon::now()->format('Y-m-d H:i:s'),
         ]);
 
 
@@ -357,8 +330,6 @@ class GoodsSeeder extends Seeder
                             2. 請由寵物較親近的人使用，避免咬傷手指<br>
                             3. 若寵物隊節牙手套反感，可先從碰觸嘴巴周圍開始，循序漸進<br>
                             4. 洗滌時務必放入洗衣袋，請勿使用烘乾機、熨斗及漂白水',
-            'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
-            'updated_at' => Carbon::now()->format('Y-m-d H:i:s'),
         ]);
 
 
@@ -377,8 +348,6 @@ class GoodsSeeder extends Seeder
                                 將柔膚巾直接在有髒污的地方擦拭!可每天使用<br>
                                 主要成分<br>
                                 純水,甘油,椰子油清潔劑,蘆薈精華,丙二醇,苯甲酸,金縷梅<br>',
-            'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
-            'updated_at' => Carbon::now()->format('Y-m-d H:i:s'),
         ]);
 
 
@@ -403,8 +372,6 @@ class GoodsSeeder extends Seeder
                             請勿使用在其他用途。<br>
                             在小型狗和人的皮膚有傷口、異常如皮炎，請勿使用，因為它可能造成惡化。<br>
                             使用本品若有異常請停止使用，接受醫生或獸醫的治療。',
-            'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
-            'updated_at' => Carbon::now()->format('Y-m-d H:i:s'),
         ]);
 
 
@@ -429,8 +396,6 @@ class GoodsSeeder extends Seeder
                             請勿使用在其他用途。<br>
                             在小型狗和人的皮膚有傷口、異常如皮炎，請勿使用，因為它可能造成惡化。<br>
                             使用本品若有異常請停止使用，接受醫生或獸醫的治療。',
-            'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
-            'updated_at' => Carbon::now()->format('Y-m-d H:i:s'),
         ]);
 
 
@@ -445,8 +410,6 @@ class GoodsSeeder extends Seeder
                             ◆ 不含清潔劑、不含酒精、不含香精<br>
                             ◆ 適用於：犬、貓<br>
                             ◆ 全球唯一寵物保養榮獲世界年度品牌獎',
-            'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
-            'updated_at' => Carbon::now()->format('Y-m-d H:i:s'),
         ]);
 
 
@@ -462,8 +425,6 @@ class GoodsSeeder extends Seeder
                             2.酸化耳道→提供不利微生物生長的環境<br>
                             3.加入甘油、可避免耳道過於乾燥<br>
                             注意事項：須經專業獸醫師指示使用。',
-            'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
-            'updated_at' => Carbon::now()->format('Y-m-d H:i:s'),
         ]);
 
 
@@ -473,13 +434,11 @@ class GoodsSeeder extends Seeder
             'name' => '118ml Dechra德瑪沛 翠絲清耳液',
             'price' => 450,
             'describe' => '原廠：Dechra<br>
-                                成分：TrizEDTA〈tromethamine USP、disodium EDTA dihydrate〉<br>
-                                產品特色： <br>
-                                1.能螯合細菌細胞膜上的金屬離子<br>
-                                2.鹼性配方：能製造讓抗生素發揮最佳效果的環境<br>
-                                注意事項：須經專業獸醫師指示使用',
-            'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
-            'updated_at' => Carbon::now()->format('Y-m-d H:i:s'),
+                            成分：TrizEDTA〈tromethamine USP、disodium EDTA dihydrate〉<br>
+                            產品特色： <br>
+                            1.能螯合細菌細胞膜上的金屬離子<br>
+                            2.鹼性配方：能製造讓抗生素發揮最佳效果的環境<br>
+                            注意事項：須經專業獸醫師指示使用',
         ]);
 
         $Goods = Goods::create([
@@ -488,13 +447,11 @@ class GoodsSeeder extends Seeder
             'name' => '汪喵星球 寵物環境除臭消臭抗菌噴霧 300ML',
             'price' => 320,
             'describe' => '真正安全，有感消臭<br>
-                                            無酒精、無香精、無刺激性<br>
-                                            植萃成分 + 天然酵素，快速包覆分解臭源<br>
-                                            如何使用<br>
-                                            先擦去犬貓的便便或尿尿，轉開卡榫<br>
-                                            均匀噴灑，距離異味物體約 15~20cm，於通風處使用可加速噴霧揮發，效果更佳',
-            'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
-            'updated_at' => Carbon::now()->format('Y-m-d H:i:s'),
+                            無酒精、無香精、無刺激性<br>
+                            植萃成分 + 天然酵素，快速包覆分解臭源<br>
+                            如何使用<br>
+                            先擦去犬貓的便便或尿尿，轉開卡榫<br>
+                            均匀噴灑，距離異味物體約 15~20cm，於通風處使用可加速噴霧揮發，效果更佳',
         ]);
     }
 }

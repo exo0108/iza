@@ -18,6 +18,7 @@
             $table->string('name');
             $table->integer('price');
             $table->string('describe');
+            $table->timestamps();
         });
     }
 

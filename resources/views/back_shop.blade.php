@@ -7,9 +7,28 @@
 
     <link rel="stylesheet" href="css/back_reserve.css">
     <link rel="stylesheet" href="css/Format.css">
-    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <link rel="icon" href="index_img/bgremove_logo.ico" type="image/x-icon" />
     <title>IZA'Furry</title>
+    <script type="text/javascript">
+        //按鈕監聽
+        $(document).ready(function () {
+            $(".edit_btn").click(function() { 
+                console.log($(this));
+                
+                var id = $(this).data('id'); 
+                var name = $(this).data('name'); 
+                var price = $(this).data('price'); 
+                var img = $(this).data('img'); 
+
+                $('#modal_img').attr('src', img);
+                $('#modal_id').val(id);
+                $('#modal_name').val(name);
+                $('#modal_price').val(price);
+                $('#myModal').modal('show'); 
+            });
+        });
+    </script>
   </head>
 
     <div class="header">
@@ -18,66 +37,95 @@
             </div>
             <hr>
             <div style="display: flex;align-items: center;" >
-                <nav>
+            <nav>
+                  <a class="back" href="index">返回</a>
                     <ul>
-                      <li><a href="back_reserve">客戶預約紀錄</a> </li>
-                      <li><a href="#">客戶訂單紀錄</a> </li>
+                    <li><a href="back_reserve">客戶預約紀錄</a> </li>
+                      <li><a href="back_checkout">客戶訂單紀錄</a> </li>
                       <li><a href="back_shop">商品資料</a></li>
-                      <li><a href="#">會員資料</a></li>
-                      <li><a href="#">美容方案</a></li>
-
+                      <li><a href="back_member">會員資料</a></li>
+                      <li><a href="back_program">美容方案</a></li>
                     </ul>
                 </nav>
     </div>
-<div class="reserve">
+    <div class="reserve">
             
-            
-            <div class="during" style="display: flex; align-items: center; justify-content: flex-start;">
+            <div style="display: flex; align-items: center; justify-content: flex-start; ">
+            <div class="during" >
                 <input type="text" value="商品名稱" class="inp">
                 <input type="text" value="商品編號" class="inp">
                 <input type="button" value="查詢" class="btn">
             </div>
-          
+
+            <div class="during" style="  padding-left:60%;">
+                <input type="button" value="新增" class="btn" style="  background-color: rgb(102, 141, 127);">
+            </div>
+            </div>
           <hr class="re_hr">
           <table class="table table-sm">
             <thead>
               <tr>
                 <th scope="col">商品編號</th>
-                <th scope="col">商品圖片</th>
                 <th scope="col">商品名稱</th>
-                <th scope="col">商品內容</th>
                 <th scope="col">商品價格</th>
                 <th scope="col">編輯</th>
               </tr>
             </thead>
 
             <tbody>
-                <tr>
-                    <th scope="row">#12654</th>
-                    <th >img</th>
-                    <th >沐浴乳</th>
-                    <th >123123132132</th>
-                    <th >231</th>
-                    <td><button type="button" class="btn btn-outline-info">Edit</button></td>
-                </tr>
-                <tr>
-                    <th scope="row">#12654</th>
-                    <th >img</th>
-                    <th >沐浴乳</th>
-                    <th >123123132132</th>
-                    <th >231</th>
-                    <td><button type="button" class="btn btn-outline-info">Edit</button></td>
-                </tr>
-                <tr>
-                    <th scope="row">#12654</th>
-                    <th >img</th>
-                    <th >沐浴乳</th>
-                    <th >123123132132</th>
-                    <th >231</th>
-                    <td><button type="button" class="btn btn-outline-info">Edit</button></td>
-                </tr>
+            
+                @foreach ($goods as $good)
+                  <tr>
+                      <th scope="row">{{$good->id}}</th>
+                      <th >{{$good->name}}</th>
+                      <th >NT.{{$good->price}}</th>
+                      <td> 
+                        <button data id="btn_{{$good->id}}" type="button" class="btn btn-outline-info edit_btn" data-name="{{$good->name}}" data-price="{{$good->price}}" data-img="{{$good->img}}" data-id="{{$good->id}}">Edit</button></td>
+                  </tr>
+                @endforeach
+                
             </tbody>
+
+
         </table>
+
+        <div class="modal fade bd-example-modal-lg" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-lg">
+          <form action=" {{ route('back_shop') }} " method="POST">
+          @csrf
+            <div id="tmpModal" class="modal-content">
+              
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">修改商品</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                
+                <div class="modal-body">
+                  <div class="img">
+                  <img id="modal_img">
+                  <input type="file" name="po_image" >
+
+                  </div>
+                  <div class="itembody">
+                    <div class="item">商品編號：<input type="text" id="modal_id" required></div>
+                    <div class="item">商品名稱：<input type="text" id="modal_name" required></div>
+                    <div class="item">商品價格：<input type="text" id="modal_price" required></div>
+                  </div>
+                </div>
+                
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary " data-bs-dismiss="modal" style="background-color: rgb(205, 205, 205);">取消</button>
+                  <button type="submit" class="btn btn-primary">確定更改</button>
+                </div>
+              
+            </div>  
+          </form>
+          </div>
+        
+        </div>
+        
+        
+       
 </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>

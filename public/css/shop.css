@@ -1,6 +1,6 @@
 .body_center{
     display: flex;
-    height: 90%;
+    bottom: 0;
 }
 
 .body_left{
@@ -11,6 +11,7 @@
 }
 .translate{
     padding: 20px;
+    
 }
 .translate h5{
     padding:  0 0 0 25px ;
@@ -33,20 +34,24 @@
     background-color: rgb(249, 249, 249);
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
 .card hr{
     margin: 0;
 }
 .card-bag{
+    width: 100%;
+    margin: auto;
     display: flex;
     justify-content:flex-start;
-    padding-left: 7%;
+    align-items: flex-start;
 }
 .card{
     margin: 10px 20px 10px 20px;
     text-decoration: none;
     color: rgb(0, 0, 0);
+    width: 18em;
 }
 .card:hover{
     color: rgb(0, 0, 0);
