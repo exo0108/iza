@@ -14,7 +14,5 @@ class Goods extends Model
         'price',
         'img',
         'describe',
-        'created_at',
-        'updated_at',
     ];
 }
