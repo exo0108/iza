@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ShopController;
+use App\Http\Controllers\MemberController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -29,6 +30,7 @@ Route::get('/shopSearch', [ShopController::class, 'searchType']);
 Route::get('/shop_content/{id}', [ShopController::class, 'show'])->name('shop_content');
 
 
+
 Route::get('/reserve', function () {
     return view('reserve');
 })->name('reserve');
@@ -42,10 +44,16 @@ Route::middleware(['auth', 'back'])->group(function () {
     Route::get('/back_reserve', function () {
         return view('back_reserve');
     });
+    Route::get('/back_member', [MemberController ::class, 'back_member']);
 
-    Route::get('/back_shop', function () {
-        return view('back_shop');
+    Route::get('/back_checkout', function () {
+        return view('back_checkout');
     });
+    Route::get('/back_program', function () {
+        return view('back_program');
+    });
+    Route::post('back_shop', [ShopController::class, 'update']);
+    Route::get('/back_shop', [ShopController::class, 'editshop'])->name('back_shop');
 });
 Route::middleware('auth')->group(function () {
 
@@ -54,16 +62,16 @@ Route::middleware('auth')->group(function () {
     })->name('dashboard');
 
 
+    Route::get('/member_a', [MemberController::class, 'index'])->name('member_a');
+    // Route::get('/member_a', function () {
+    //     return view('member_a');
+    // });
+    
+    Route::post('member', [MemberController::class, 'update'])->name('membr_update');
 
-    Route::get('/member_a', function () {
-        return view('member_a');
-    });
+    Route::get('/member', [MemberController::class, 'edit'])->name('member');
 
-    Route::get('/member', function () {
-        return view('member');
-    });
-
-
+ 
     Route::get('/car', function () {
         return view('car');
     })->name('car');
@@ -76,6 +84,7 @@ Route::middleware('auth')->group(function () {
         return view('checkout');
     })->name('checkout');
 });
+Route::get('haha', [MemberController::class, 'haha']);
 
 
 

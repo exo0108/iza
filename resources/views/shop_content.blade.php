@@ -70,9 +70,11 @@
             
             
                 <div class="txt">
+                    <hr>
                     <h3>商品說明</h3>
                     <br>
-                    <h6>{!!$good->describe!!}
+                    <h6>
+                        {!!$good->describe!!}
                     </h6>
                 </div>
             </div>

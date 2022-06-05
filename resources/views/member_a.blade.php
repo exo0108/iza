@@ -22,33 +22,33 @@
                     <h2>會員設定</h2>
                     <div class="line"></div>
                 </div>
-
+                
                 <div class="member_data"> 
                     <form>
                       <table>
                         <tr>
                           <td><h3>姓&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 名：</h3></td>
-                          <td><input  type="text" name="name"  value="白白" readonly></td>
+                          <td><input  type="text" name="name"  value="{{$member->name}}" readonly></td>
                         </tr>
 
                         <tr>
                           <td><h3>電子郵件：</h3></td>
-                          <td><input type="email" name="email" value="a0910288299@gmail.com" readonly></td>
+                          <td><input type="email" name="email" value="{{$member->email}}" readonly></td>
                         </tr>
 
                         <tr>
                           <td><h3>電話號碼：</h3></td>
-                          <td><input type="tel" name="Phone"  value="+886 0910****99" readonly></td>
+                          <td><input type="tel" name="Phone"  value="{{$member->phone}}" readonly></td>
                         </tr>
 
                         <tr>
                           <td><h3>密&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 碼：</h3></td>
-                          <td><input type="password" name="password"  value="546546546556" readonly></td>
+                          <td><input type="password" name="password"  value="o05060506" readonly></td>
                           
                         </tr>
                       </table>
                         <div class="submit">
-                                <a href="member">
+                                <a href="{{ route('member')}}">
                                 <input class="button" type="button" value="修改資料" >
                                 </a>
                         </div>

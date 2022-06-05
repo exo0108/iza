@@ -25,12 +25,10 @@ class ShopController extends Controller
 
     public function index()
     {
-        // $user = Auth::user();
-        // dd($user,$user->name,123);
+       
         $goods = $this->service->get_goods();
         
         $menuItem = ['電剪、針梳、指甲剪', '毛髮清潔、護膚保養', '口腔清潔', '耳朵清潔', '除臭液、除臭劑、清潔劑、香水'];
-        // return view('shop')->with('goods', $goods, 'menuItem', $menu);
         return view('shop', [
             'goods' => $goods,
             'menuItem' => $menuItem
@@ -71,15 +69,20 @@ class ShopController extends Controller
         return view('shop_content')->with('good', $good);
     }
 
-    /**
+   /**
      * Show the form for editing the specified resource.
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit()
     {
-        //
+        $back_shop = $this->service->updateShop();
+
+        return view('back_shop',[
+            'back_shop' => $back_shop,
+
+        ]);
     }
 
     /**
@@ -89,9 +92,14 @@ class ShopController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request )
     {
-        //
+        
+        $result = $this->service->updateShop($request);
+       
+         return redirect()->route('back_shop', ['result'=>$result]);
+
+        
     }
 
     /**
@@ -118,4 +126,17 @@ class ShopController extends Controller
             'menuItem' => $menuItem
         ]);
     }
+
+
+    public function editshop()
+    {
+       
+        $goods = $this->service->get_goods();
+        
+        return view('back_shop', [
+            'goods' => $goods,
+        ]);
+    }
+
+
 }

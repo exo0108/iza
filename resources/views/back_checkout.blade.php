@@ -41,13 +41,11 @@
           <table class="table table-sm">
             <thead>
               <tr>
-                <th scope="col">#</th>
+                <th scope="col">訂單編號</th>
                 <th scope="col">客戶名稱</th>
-                <th scope="col">預約地點</th>
-                <th scope="col">預約日期</th>
-                <th scope="col">預約時段</th>
-                <th scope="col">預約方案</th>
-                <th scope="col">編輯</th>
+                <th scope="col">付款方式</th>
+                <th scope="col">金額</th>
+               
               </tr>
             </thead>
 
@@ -56,29 +54,9 @@
                     <th scope="row">1</th>
                     <th >bb</th>
                     <th >一中店</th>
-                    <th >2022/05/08</th>
-                    <th >上午</th>
-                    <th >方案一</th>
                     <td><button type="button" class="btn btn-outline-info">Edit</button></td>
                 </tr>
-                <tr>
-                    <th scope="row">1</th>
-                    <th >bb</th>
-                    <th >一中店</th>
-                    <th >2022/05/08</th>
-                    <th >上午</th>
-                    <th >方案一</th>
-                    <td><button type="button" class="btn btn-outline-info">Edit</button></td>
-                </tr>
-                <tr>
-                    <th scope="row">1</th>
-                    <th >bb</th>
-                    <th >一中店</th>
-                    <th >2022/05/08</th>
-                    <th >上午</th>
-                    <th >方案一</th>
-                    <td><button type="button" class="btn btn-outline-info">Edit</button></td>
-                </tr>
+                
             </tbody>
         </table>
 </div>

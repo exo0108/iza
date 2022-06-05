@@ -14,14 +14,14 @@
 
     <div class="header">
             <div class="logo"> 
-              <a href="index.html"><h1>客戶預約紀錄</h1></a>
+              <a href="index.html"><h1>會員資料</h1></a>
             </div>
             <hr>
             <div style="display: flex;align-items: center;" >
                 <nav>
                   <a class="back" href="index">返回</a>
                     <ul>
-                    <li><a href="back_reserve">客戶預約紀錄</a> </li>
+                      <li><a href="back_reserve">客戶預約紀錄</a> </li>
                       <li><a href="back_checkout">客戶訂單紀錄</a> </li>
                       <li><a href="back_shop">商品資料</a></li>
                       <li><a href="back_member">會員資料</a></li>
@@ -41,44 +41,23 @@
           <table class="table table-sm">
             <thead>
               <tr>
-                <th scope="col">#</th>
-                <th scope="col">客戶名稱</th>
-                <th scope="col">預約地點</th>
-                <th scope="col">預約日期</th>
-                <th scope="col">預約時段</th>
-                <th scope="col">預約方案</th>
-                <th scope="col">編輯</th>
+                <th scope="col">編號</th>
+                <th scope="col">姓名</th>
+                <th scope="col">電子郵件</th>
+                <th scope="col">行動電話</th>
               </tr>
             </thead>
 
             <tbody>
-                <tr>
-                    <th scope="row">1</th>
-                    <th >bb</th>
-                    <th >一中店</th>
-                    <th >2022/05/08</th>
-                    <th >上午</th>
-                    <th >方案一</th>
-                    <td><button type="button" class="btn btn-outline-info">Edit</button></td>
-                </tr>
-                <tr>
-                    <th scope="row">1</th>
-                    <th >bb</th>
-                    <th >一中店</th>
-                    <th >2022/05/08</th>
-                    <th >上午</th>
-                    <th >方案一</th>
-                    <td><button type="button" class="btn btn-outline-info">Edit</button></td>
-                </tr>
-                <tr>
-                    <th scope="row">1</th>
-                    <th >bb</th>
-                    <th >一中店</th>
-                    <th >2022/05/08</th>
-                    <th >上午</th>
-                    <th >方案一</th>
-                    <td><button type="button" class="btn btn-outline-info">Edit</button></td>
-                </tr>
+                @foreach ($member as $user)
+                  <tr>
+                      <th scope="row">{{$user->id}}</th>
+                      <th >{{$user->name}}</th>
+                      <th >{{$user->email}}</th>
+                      <th >{{$user->phone}}</th>
+                        
+                  </tr>
+                @endforeach
             </tbody>
         </table>
 </div>

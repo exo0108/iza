@@ -70,9 +70,8 @@ form{
 
 }
 .submit button{
-    width: 40%;
-    height: 60px;
-    margin: 0 50px 0 0;
+    height: 55px;
+    margin: 0 50px 0 50px;
 }
 .button1{
     background-color: rgb(221, 221, 221);
@@ -81,7 +80,7 @@ form{
 }
 .button2{
     
-    background-color: rgb(133, 127, 84);
+    background-color: rgb(133, 127, 84) !important;
     color: rgb(255, 255, 255);
     border-color: #ffffff;
 }
