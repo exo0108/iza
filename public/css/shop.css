@@ -1,5 +1,6 @@
 .body_center{
     display: flex;
+    height: 90%;
 }
 
 .body_left{
@@ -39,7 +40,8 @@
 }
 .card-bag{
     display: flex;
-    justify-content: center;
+    justify-content:flex-start;
+    padding-left: 7%;
 }
 .card{
     margin: 10px 20px 10px 20px;
@@ -48,4 +50,9 @@
 }
 .card:hover{
     color: rgb(0, 0, 0);
+}
+
+.card_img{
+    object-fit: contain;
+    height: 260px;
 }

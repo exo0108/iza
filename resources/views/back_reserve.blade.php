@@ -20,8 +20,11 @@
             <div style="display: flex;align-items: center;" >
                 <nav>
                     <ul>
-                    <li><a href="back_reserve">客戶預約紀錄</a> </li>
-                    <li><a href="back_shop">商品資料</a></li>
+                      <li><a href="back_reserve">客戶預約紀錄</a> </li>
+                      <li><a href="#">客戶訂單紀錄</a> </li>
+                      <li><a href="back_shop">商品資料</a></li>
+                      <li><a href="#">會員資料</a></li>
+                      <li><a href="#">美容方案</a></li>
                     </ul>
                 </nav>
     </div>

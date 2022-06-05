@@ -20,7 +20,7 @@ class GoodsSeeder extends Seeder
             'name' => '汪喵星球 濕式衛生紙 可沖馬桶 46抽/包 寵物溼紙巾 12包特價$750 毛孩專用濕巾',
             'type' => '耳朵清潔',
             'price' => 120,
-            'img' => 'img\shop_content\shop1.jpg',
+            'img' => 'img\shop_content\shop1.webp',
             'describe' => '1.本網站僅提供台灣本島寄送服務(不接受郵政信箱地址)，指定商品採新竹物流配送，(暫無提供離島/店到店服務/郵局寄送) ，確認付款完成我們會於1~3個工作日內將商品寄到您的收貨地址<br>
                             #黑貓宅急便固定周日不配送<br>
                             #無夜間6點後配送服務<br>
@@ -31,14 +31,14 @@ class GoodsSeeder extends Seeder
 
                             3.貨到付款除需收取運費外 ，每筆加收60元貨到付款手續費<br>
 
-                            4.本系統保留取消訂單權利',       
+                            4.本系統保留取消訂單權利',
             'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
             'updated_at' => Carbon::now()->format('Y-m-d H:i:s'),
         ]);
 
         $Goods = Goods::create([
             'name' => 'Petz Route 沛滋露 水果村系列橡膠順毛梳 寵物皮膚/寵物梳',
-            'type' => '電剪/針梳/指甲剪',
+            'type' => '電剪、針梳、指甲剪',
             'price' => 419,
             'img' => 'img\shop_content\shop3.jpg',
             'describe' => '★「簡單使用且輕刷的梳子」的概念<br>
@@ -55,14 +55,14 @@ class GoodsSeeder extends Seeder
                             1.在為貓狗梳理的過程中,針梳反覆磨擦皮膚,能夠促進愛寵的血液循環,增加皮屬抵抗力,消除愛寵身體疲勞,<br>
                             2.減低掉毛量,會梳理掉脫落的死毛,防止毛髪打結·<br>
                             3.保證愛寵更好的毛質、毛量,讓愛寵被毛順滑有光澤,<br>
-                            4.在梳毛的過程中,如發現貓狗身上有外傷皮膚問題,請及時就醫。',      
+                            4.在梳毛的過程中,如發現貓狗身上有外傷皮膚問題,請及時就醫。',
             'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
             'updated_at' => Carbon::now()->format('Y-m-d H:i:s'),
         ]);
 
 
         $Goods = Goods::create([
-            'type' => '電剪/針梳/指甲剪',
+            'type' => '電剪、針梳、指甲剪',
             'name' => 'Petz Route 沛滋露 水果村系列備長炭順毛梳 寵物皮膚/寵物梳',
             'price' => 419,
             'img' => 'img\shop_content\shop4.webp',
@@ -80,14 +80,14 @@ class GoodsSeeder extends Seeder
                             1.在為貓狗梳理的過程中,針梳反覆磨擦皮膚,能夠促進愛寵的血液循環,增加皮屬抵抗力,消除愛寵身體疲勞,<br>
                             2.減低掉毛量,會梳理掉脫落的死毛,防止毛髪打結·<br>
                             3.保證愛寵更好的毛質、毛量,讓愛寵被毛順滑有光澤,<br>
-                            4.在梳毛的過程中,如發現貓狗身上有外傷皮膚問題,請及時就醫。',              
+                            4.在梳毛的過程中,如發現貓狗身上有外傷皮膚問題,請及時就醫。',
             'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
             'updated_at' => Carbon::now()->format('Y-m-d H:i:s'),
         ]);
 
 
         $Goods = Goods::create([
-            'type' => '毛髮清潔/護膚保養',
+            'type' => '毛髮清潔、護膚保養',
             'name' => '西莎絨情蜜意寵物犬貓用吸水超細纖維毛巾 米色/藍色 130*80cm',
             'price' => 250,
             'img' => 'img\shop_content\shop5.png',
@@ -102,12 +102,12 @@ class GoodsSeeder extends Seeder
 
         $Goods = Goods::create([
             'img' => 'img\shop_content\shop6.png',
-            'type' => '毛髮清潔/護膚保養',
+            'type' => '毛髮清潔、護膚保養',
             'name' => '日本TAURUS 金牛座 愛貓用 EM微生物潔毛噴霧 250ml',
             'price' => 315,
             'describe' => '●特色：活性有益微生物群可長時間抑制寵物皮毛裡的壞菌，產品不添加化學成分，適合皮膚敏感的寵物使用<br>
                             ●成分：光合作用菌種、乳酸菌、酵母菌、線狀菌、放線菌等菌類<br>
-                            ●使用方式：每日1~2次請以微濕潤的程度噴在皮膚毛髮上，並給予適度的搓揉。受傷比較嚴重的地方請等噴霧乾燥後再噴一次並再給予適度的搓揉<br>',              
+                            ●使用方式：每日1~2次請以微濕潤的程度噴在皮膚毛髮上，並給予適度的搓揉。受傷比較嚴重的地方請等噴霧乾燥後再噴一次並再給予適度的搓揉<br>',
             'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
             'updated_at' => Carbon::now()->format('Y-m-d H:i:s'),
         ]);
@@ -115,7 +115,7 @@ class GoodsSeeder extends Seeder
 
         $Goods = Goods::create([
             'img' => 'img\shop_content\shop7.png',
-            'type' => '毛髮清潔/護膚保養',
+            'type' => '毛髮清潔、護膚保養',
             'name' => '355ml Dechra 德瑪沛燕麥洗毛精',
             'price' => 500,
             'describe' => '原廠：Dechra<br>
@@ -123,7 +123,7 @@ class GoodsSeeder extends Seeder
                             產品特色：<br>
                             1.添加水溶性燕麥及紅花油等天然成分，不含香精及人工止癢成份，溫和不刺激肌膚。<br>
                             2.添加高級保濕成分賽洛美，增加毛髮洗浴後的柔順，不再乾澀。<br>
-                            注意事項：須經專業獸醫師指示使用。<br>',                     
+                            注意事項：須經專業獸醫師指示使用。<br>',
             'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
             'updated_at' => Carbon::now()->format('Y-m-d H:i:s'),
         ]);
@@ -131,7 +131,7 @@ class GoodsSeeder extends Seeder
 
         $Goods = Goods::create([
             'img' => 'img\shop_content\shop8.png',
-            'type' => '毛髮清潔/護膚保養',
+            'type' => '毛髮清潔、護膚保養',
             'name' => "K'9 NatureHolic天然無毒洗劑 蠟菊護色寵物洗毛精 476ml",
             'price' => 550,
             'describe' => '［還原護色／滋潤豐盈］<br>
@@ -151,7 +151,7 @@ class GoodsSeeder extends Seeder
 
         $Goods = Goods::create([
             'img' => 'img\shop_content\shop9.png',
-            'type' => '毛髮清潔/護膚保養',
+            'type' => '毛髮清潔、護膚保養',
             'name' => '美國TropiClean 巧倍麗潔耳布-50抽',
             'price' => 420,
             'describe' => '1.直接擦拭使用方便,溫和無酒精<br>
@@ -172,7 +172,7 @@ class GoodsSeeder extends Seeder
 
         $Goods = Goods::create([
             'img' => 'img\shop_content\shop10.png',
-            'type' => '毛髮清潔/護膚保養',
+            'type' => '毛髮清潔、護膚保養',
             'name' => '美國Tropiclean 水精靈/巧倍麗 潔面慕斯 狗用乾洗澡(不流淚配方) 7.4oz(220ml)',
             'price' => 370,
             'describe' => '產品特色:<br>
@@ -181,7 +181,7 @@ class GoodsSeeder extends Seeder
                             將泡沫直接塗抹在寵物的臉部髒污或皺褶的地方,並加以按摩搓揉,再用紙巾擦拭乾淨即可!<br>
                             請避免直接塗抹在寵物的眼睛,本產品亦可使用於脖子,外耳!<br>
                             主要成分:<br>
-                            純水,溫和清潔液,有機(藍莓精華,小黃瓜精華,白茶精華,燕麥精華)<br>',            
+                            純水,溫和清潔液,有機(藍莓精華,小黃瓜精華,白茶精華,燕麥精華)<br>',
             'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
             'updated_at' => Carbon::now()->format('Y-m-d H:i:s'),
         ]);
@@ -213,7 +213,7 @@ class GoodsSeeder extends Seeder
                             #免洗牙膏<br>
                             #酵素牙膏<br>
                             #狗用牙膏<br>
-                            #貓用牙膏',    
+                            #貓用牙膏',
             'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
             'updated_at' => Carbon::now()->format('Y-m-d H:i:s'),
         ]);
@@ -242,7 +242,7 @@ class GoodsSeeder extends Seeder
 
                         請於下標前利用問與答來詢問顏色/現貨/尺寸狀況^^<br>
                         超過5公斤需以宅配收件<br>
-                        ◆備註說明：本商品一經拆封使用，恕無法辦理退貨，敬請見諒！退貨的商品必須為全新狀態且完整包裝(需自付運費）。',       
+                        ◆備註說明：本商品一經拆封使用，恕無法辦理退貨，敬請見諒！退貨的商品必須為全新狀態且完整包裝(需自付運費）。',
             'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
             'updated_at' => Carbon::now()->format('Y-m-d H:i:s'),
         ]);
@@ -295,7 +295,7 @@ class GoodsSeeder extends Seeder
                             本產品還附有貼心的折疊設計,方便收納。<br><br>
                             成分:尼龍、飽和聚酯樹脂<br>
                             規格:0.07mm極細毛約有13200本<br>
-                            產地:日本',  
+                            產地:日本',
             'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
             'updated_at' => Carbon::now()->format('Y-m-d H:i:s'),
         ]);
@@ -339,7 +339,7 @@ class GoodsSeeder extends Seeder
 
 
         $Goods = Goods::create([
-            'img' => 'img\shop_content\shop16.webp',
+            'img' => 'img\shop_content\shop16.png',
             'type' => '口腔清潔',
             'name' => '日本製 五指型刷牙手套 1枚入 刷牙手套/牙刷套',
             'price' => 199,
@@ -402,7 +402,7 @@ class GoodsSeeder extends Seeder
                             素材:人造纖維不織布<br>
                             請勿使用在其他用途。<br>
                             在小型狗和人的皮膚有傷口、異常如皮炎，請勿使用，因為它可能造成惡化。<br>
-                            使用本品若有異常請停止使用，接受醫生或獸醫的治療。',            
+                            使用本品若有異常請停止使用，接受醫生或獸醫的治療。',
             'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
             'updated_at' => Carbon::now()->format('Y-m-d H:i:s'),
         ]);
@@ -428,7 +428,7 @@ class GoodsSeeder extends Seeder
                             素材:人造纖維不織布<br>
                             請勿使用在其他用途。<br>
                             在小型狗和人的皮膚有傷口、異常如皮炎，請勿使用，因為它可能造成惡化。<br>
-                            使用本品若有異常請停止使用，接受醫生或獸醫的治療。',            
+                            使用本品若有異常請停止使用，接受醫生或獸醫的治療。',
             'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
             'updated_at' => Carbon::now()->format('Y-m-d H:i:s'),
         ]);
@@ -444,7 +444,7 @@ class GoodsSeeder extends Seeder
                             ◆ 有機柳蘭、天竺葵精華油平衡油脂分泌<br>
                             ◆ 不含清潔劑、不含酒精、不含香精<br>
                             ◆ 適用於：犬、貓<br>
-                            ◆ 全球唯一寵物保養榮獲世界年度品牌獎',            
+                            ◆ 全球唯一寵物保養榮獲世界年度品牌獎',
             'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
             'updated_at' => Carbon::now()->format('Y-m-d H:i:s'),
         ]);
@@ -461,7 +461,7 @@ class GoodsSeeder extends Seeder
                             1.清潔、收斂角質細胞、解油膩→去除耳垢<br>
                             2.酸化耳道→提供不利微生物生長的環境<br>
                             3.加入甘油、可避免耳道過於乾燥<br>
-                            注意事項：須經專業獸醫師指示使用。',            
+                            注意事項：須經專業獸醫師指示使用。',
             'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
             'updated_at' => Carbon::now()->format('Y-m-d H:i:s'),
         ]);
@@ -477,14 +477,14 @@ class GoodsSeeder extends Seeder
                                 產品特色： <br>
                                 1.能螯合細菌細胞膜上的金屬離子<br>
                                 2.鹼性配方：能製造讓抗生素發揮最佳效果的環境<br>
-                                注意事項：須經專業獸醫師指示使用',            
+                                注意事項：須經專業獸醫師指示使用',
             'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
             'updated_at' => Carbon::now()->format('Y-m-d H:i:s'),
         ]);
 
         $Goods = Goods::create([
             'img' => 'img\shop_content\shop23.png',
-            'type' => '除臭液/除臭劑/清潔劑/香水',
+            'type' => '除臭液、除臭劑、清潔劑、香水',
             'name' => '汪喵星球 寵物環境除臭消臭抗菌噴霧 300ML',
             'price' => 320,
             'describe' => '真正安全，有感消臭<br>
