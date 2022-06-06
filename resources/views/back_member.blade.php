@@ -33,8 +33,11 @@
             
             
             <div class="during" style="display: flex; align-items: center; justify-content: flex-start;">
-                <input type="text" value="客戶名稱" class="inp">
-                <input type="button" value="查詢" class="btn">
+              <form action=" {{ route('member_search') }} " method="GET">
+                @csrf
+                  <input type="text" name="phone" placeholder="行動電話" class="inp">
+                  <input type="submit" value="查詢" class="btn">
+              </form>
             </div>
           
           <hr class="re_hr">

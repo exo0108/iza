@@ -97,12 +97,20 @@ class MemberController extends Controller
     public function back_member()
     {
         $member = $this->service->members();
-
+        
         return view('back_member',[
             'member' => $member,
-
+           
         ]);
+    }
 
-
+    public function member_search(Request $request)
+    {
+        $phone = $request->phone;
+        $member = $this->service->search($phone);
+        return view('back_member',[
+            'phone' => $phone,
+            'member' => $member,
+        ]);
     }
 }
