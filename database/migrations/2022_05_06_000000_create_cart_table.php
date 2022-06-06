@@ -16,9 +16,7 @@ public function up()
     Schema::create('carts', function (Blueprint $table) {
         $table->id()->unique();
         $table->bigInteger('memberID')->unsigned();
-        $table->bigInteger('goodsID')->unsigned();       
-        $table->string('amount');
-        $table->string('total');
+        $table->bigInteger('goodsID')->unsigned();
         $table->timestamps();
 
         $table->foreign('memberID')->references('id')->on('users');
