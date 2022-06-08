@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ShopController;
+use App\Http\Controllers\CasesController;
+use App\Http\Controllers\StoreController;
 use App\Http\Controllers\MemberController;
 /*
 |--------------------------------------------------------------------------
@@ -30,11 +32,9 @@ Route::get('/shopSearch', [ShopController::class, 'searchType']);
 Route::get('/shop_content/{id}', [ShopController::class, 'show'])->name('shop_content');
 
 
+Route::get('/reserve',[CasesController::class,'index'])->name('reserve');
 
-Route::get('/reserve', function () {
-    return view('reserve');
-})->name('reserve');
-
+// 
 Route::get('/index', function () {
     return view('index');
 })->name('index');
@@ -86,6 +86,6 @@ Route::middleware('auth')->group(function () {
 });
 Route::get('haha', [MemberController::class, 'haha']);
 
-
+// Route::apiResource('cases', CasesController::class);
 
 require __DIR__ . '/auth.php';

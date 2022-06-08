@@ -123,13 +123,14 @@ a input{
 
 hr{
     width: 70%;
+    margin: 2rem auto !important;
     margin-bottom: 0;
     color:rgb(120, 121, 121);
 }
 
 .hr{
     width: 70%;
-    margin: 2% auto;
+    margin: 2rem auto;
     color:rgba(192, 194, 194);
 }
 
@@ -148,6 +149,7 @@ hr{
     background-repeat: no-repeat;
     background-size: cover;
     padding-bottom: 3%;
+    padding-top: 3%;
 }
 
 .introduce .caseitem {
@@ -159,7 +161,7 @@ hr{
 .caseitem{
     margin: auto;
     width: 100%;
-    padding: 3% 0 0 0;
+    padding: 0;
     display: flex;
     justify-content: space-between;
 }
