@@ -8,20 +8,27 @@
     <title>IZA'Furry</title>
 </head>
 
-<!-- 白白不可以瑟瑟 -->
 
 <x-app-layout>
 
 
     <div class="reserve_content">
         <div>
+            <?php
+                $link=mysqli_connect("localhost","root","","iza")
+                or die("無法開啟資料庫連接");
+
+
+
+                mysqli_close($link);
+            ?>
             <form class="choose">
                 <div class="choice">
                     選擇地點<br>
                     <select name="place" id="place">
-                        <option value="0">請選擇預約地點</option>
-                        <option value="1">一中店</option>
-                        <option value="2">逢甲分店</option>
+                        @foreach($stores as $store)
+                        <option value="{{$store->id}}">{{$store->name}}</option>
+                        @endforeach
                     </select>
                 </div>
                 <div class="choicedt">
@@ -44,12 +51,9 @@
                 <div class="choice">
                     選擇方案<br>
                     <select name="case" id="case">
-                        <option value="0">請選擇預約方案</option>
-                        <option value="1">一般修剪</option>
-                        <option value="2">一般小美容洗澡護理</option>
-                        <option value="3">全身大美容護理</option>
-                        <option value="4">全身純手工技術剪</option>
-                        <option value="5">包月洗澡方案</option>
+                        @foreach($cases as $case)
+                        <option value="{{$case->id}}">{{$case->name}}</option>
+                        @endforeach
                     </select>
                 </div>
                 @if(Auth::user())
@@ -74,18 +78,21 @@
         <hr class="hr">
         <div class="content_bottom">
             <div class="introduce">
+                @foreach($cases as $case)
                 <div class="caseitem">
                     <div class="i1">
-                        <h5>一般修剪</h5>
-                        全身修剪（手剪頭型/電剪剃身體）
+                        <h5>{{$case->name}}</h5>
+                        {{$case->describe}}
                     </div>
                     <div class="i2">
                         <h5>價格</h5>
-                        <p>200元</p>
+                        <p>{{$case->price}}</p>
                     </div>
                 </div>
                 <hr>
-                <div class="caseitem">
+                @endforeach
+
+                <!-- <div class="caseitem">
                     <div class="i1">
                         <h5>一般小美容洗澡護理</h5>
                         洗澡：二次洗毛+潤絲
@@ -130,7 +137,7 @@
                         <h5>價格</h5>
                         <p>1800元</p>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
     </div>
