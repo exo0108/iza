@@ -102,14 +102,14 @@
                 
                 <div class="modal-body">
                   <div class="img">
-                  <img id="modal_img">
+                  <img id="modal_img" name="img">
                   <input type="file" name="po_image" >
 
                   </div>
                   <div class="itembody">
-                    <div class="item">商品編號：<input type="text" id="modal_id" required></div>
-                    <div class="item">商品名稱：<input type="text" id="modal_name" required></div>
-                    <div class="item">商品價格：<input type="text" id="modal_price" required></div>
+                    <div class="itemNot">商品編號：<input type="text" name="id" id="modal_id" readonly  ></div>
+                    <div class="item">商品名稱：<input type="text" name="name" id="modal_name" required></div>
+                    <div class="item">商品價格：<input type="text" name="price" id="modal_price" required></div>
                   </div>
                 </div>
                 

@@ -59,6 +59,13 @@ input{
 .item input{
     width: 100%;
 }
+
+.itemNot input{
+    border: none;
+}
+input:focus{
+    outline: none;
+}
 .img{
     width: 20%;
     margin-left:2%;

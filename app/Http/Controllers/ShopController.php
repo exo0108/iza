@@ -78,7 +78,7 @@ class ShopController extends Controller
     public function edit()
     {
         $back_shop = $this->service->updateShop();
-
+        
         return view('back_shop',[
             'back_shop' => $back_shop,
 
@@ -96,8 +96,8 @@ class ShopController extends Controller
     {
         
         $result = $this->service->updateShop($request);
-       
-         return redirect()->route('back_shop', ['result'=>$result]);
+        
+        return redirect()->route('back_shop', ['result'=>$result]);
 
         
     }
@@ -138,5 +138,8 @@ class ShopController extends Controller
         ]);
     }
 
-
+    public function AddToCar()
+    {
+        
+    }
 }

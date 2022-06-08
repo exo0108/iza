@@ -17,7 +17,9 @@ class MemberService
   public function members(){
     return User::get();
 }
-
+public function search($phone){
+  return User::where('phone','like','%'.$phone.'%')->get();
+}
 
   public function updateMember(Request $request)
   {
