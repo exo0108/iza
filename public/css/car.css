@@ -1,9 +1,9 @@
 
 
-.container{
-    width: 65%;
-    
-    
+.cont{
+    width: 70%;
+    margin: auto;
+
 }
 .body_center{
     height: 70%;
@@ -127,20 +127,22 @@
     height: 100px;
     padding: 10px 0 10px 0;
     border-bottom: 1px solid #f1f1f1;
+    display: flex;
+    align-items: center;
 }
 
 .item .p-checkbox {
     float: left;
     width: 22px;
-    /* margin-right: 10px; */
+    margin-left: 1%;
 }
 
 .item .p-goods {
     
-    width: 338px;
+  
     color: #333;
     font-size: 14px;
-    /* margin-right: 100px; */
+ 
 }
 
 .p-goods .p-img {
@@ -160,6 +162,7 @@
 
 .p-goods .p-img img {
     height: 82px;
+    margin-left: 30%;
 }
 
 .item .p-shop {
@@ -230,11 +233,13 @@
 .bar .t-checkbox {
     float: left;
     width: 152px;
+    margin-left: 1%;
 }
 
 .t-checkbox .cart-checkbox {
     float: left;
     margin-right: 5px;
+    
 }
 
 .bar .t-goods {

@@ -88,9 +88,15 @@
     font-size: 18px;
     font-weight:bold;
 
-}.buy a{
+}
+.car:active{
+    background-color:rgb(85, 77, 20) ;
+      
+}
+
+.buy a{
     text-decoration:none;
-    color: rgb(236, 236, 236);
+    color: rgb(236, 236, 236) !important;
 }
 .illustrate{
     margin-top:1%;
@@ -122,3 +128,4 @@ h6{
     width: 80%;
     line-height: 30px !important;
 }
+

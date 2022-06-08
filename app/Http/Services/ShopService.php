@@ -32,4 +32,9 @@ class ShopService{
       );
       return $result;
     }
+
+
+    public function search($type,$name,$id){
+      return Good::where('type','like','%'.$type.'%')->where('name','like','%'.$name.'%')->where('id','like','%'.$id.'%')->get();
+    }
 }

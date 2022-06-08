@@ -50,16 +50,20 @@
     </div>
     <div class="reserve">
             
-            <div style="display: flex; align-items: center; justify-content: flex-start; ">
-            <div class="during" >
-                <input type="text" value="商品名稱" class="inp">
-                <input type="text" value="商品編號" class="inp">
-                <input type="button" value="查詢" class="btn">
-            </div>
+            <div style="display: flex;justify-content: flex-start;">
+              <div class="during" >
+                <form action=" {{ route('shop_search') }} " method="GET">
+                  @csrf
+                  <input type="text" name="id" placeholder="商品編號" class="inp">
+                    <input type="text" name="type" placeholder="商品分類" class="inp">
+                    <input type="text" name="name" placeholder="商品名稱" class="inp">
+                    <input type="submit" value="查詢" class="btn">
+                </form>
+              </div>
 
-            <div class="during" style="  padding-left:60%;">
-                <input type="button" value="新增" class="btn" style="  background-color: rgb(102, 141, 127);">
-            </div>
+              <div class="edit" >
+                  <input type="button" value="新增" class="btn" style="  background-color: rgb(102, 141, 127);">
+              </div>
             </div>
           <hr class="re_hr">
           <table class="table table-sm">
@@ -67,6 +71,7 @@
               <tr>
                 <th scope="col">商品編號</th>
                 <th scope="col">商品名稱</th>
+                <th scope="col">商品分類</th>
                 <th scope="col">商品價格</th>
                 <th scope="col">編輯</th>
               </tr>
@@ -76,9 +81,10 @@
             
                 @foreach ($goods as $good)
                   <tr>
-                      <th scope="row">{{$good->id}}</th>
-                      <th >{{$good->name}}</th>
-                      <th >NT.{{$good->price}}</th>
+                      <td scope="row">{{$good->id}}</td>
+                      <td >{{$good->name}}</td>
+                      <td >{{$good->type}}</td>
+                      <td >NT.{{$good->price}}</td>
                       <td> 
                         <button data id="btn_{{$good->id}}" type="button" class="btn btn-outline-info edit_btn" data-name="{{$good->name}}" data-price="{{$good->price}}" data-img="{{$good->img}}" data-id="{{$good->id}}">Edit</button></td>
                   </tr>

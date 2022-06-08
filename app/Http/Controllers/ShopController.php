@@ -142,4 +142,19 @@ class ShopController extends Controller
     {
         
     }
+
+
+    public function shop_search(Request $request)
+    {
+        $type = $request->type;
+        $name = $request->name;
+        $id = $request->id;
+        $goods = $this->service->search($type,$name,$id);
+        return view('back_shop',[
+            'type' => $type,
+            'name'=>$name,
+            'id'=>$id,
+            'goods' => $goods,
+        ]);
+    }
 }

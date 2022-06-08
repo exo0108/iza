@@ -55,6 +55,7 @@ Route::middleware(['auth', 'back'])->group(function () {
     });
     Route::post('back_shop', [ShopController::class, 'update']);
     Route::get('/back_shop', [ShopController::class, 'editshop'])->name('back_shop');
+    Route::get('/shop_search', [ShopController ::class, 'shop_search',])->name('shop_search');
 });
 Route::middleware('auth')->group(function () {
 

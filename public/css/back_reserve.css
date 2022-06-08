@@ -80,5 +80,20 @@ input:focus{
 }
 .itembody{
     margin-left:10%;
+    
    
+}
+.during{
+    width: 100%;
+}
+
+
+td{
+    padding-top: 1em !important;
+    padding-bottom: 1em !important;
+   
+}
+
+.table td, .table th{
+    vertical-align: middle;
 }
