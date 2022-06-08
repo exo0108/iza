@@ -8,16 +8,16 @@ use Illuminate\Http\Request;
 
 class ShopService{ 
     public function get_goods(){
-        return Goods::get();
+        return Good::get();
     }
 
     public function get_good($id){
-        return Goods::find($id);
+        return Good::find($id);
     }
 
     public function get_good_type($type){
 
-        return Goods::query()->where('type', 'like', $type)->get();
+        return Good::query()->where('type', 'like', $type)->get();
         
     }
 
