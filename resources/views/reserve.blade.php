@@ -85,52 +85,7 @@
                 <hr>
                 @endforeach
 
-                <!-- <div class="caseitem">
-                    <div class="i1">
-                        <h5>一般小美容洗澡護理</h5>
-                        洗澡：二次洗毛+潤絲
-                        （含：剪指甲、清耳朵、小修頭型、小修足緣、剃腳底毛、剃肛門毛擠肛門腺）
-                    </div>
-                    <div class="i2">
-                        <h5>價格</h5>
-                        <p>500元</p>
-                    </div>
-                </div>
-                <hr>
-                <div class="caseitem">
-                    <div class="i1">
-                        <h5>全身大美容護理</h5>
-                        一般小美容洗澡護理+全身造型剪剃（手剪頭型/電剪剃身體）
-                        （含：剪指甲、清耳朵、小修頭型、小修足緣、剃腳底毛、剃肛門毛擠肛門腺）
-                    </div>
-                    <div class="i2">
-                        <h5>價格</h5>
-                        <p>1000元</p>
-                    </div>
-                </div>
-                <hr>
-                <div class="caseitem">
-                    <div class="i1">
-                        <h5>全身純手工技術剪</h5>
-                        一般小美容洗澡護理+全身造型純手工剪（頭部和全身）
-                        （含：剪指甲、清耳朵、小修頭型、小修足緣、剃腳底毛、剃肛門毛擠肛門腺）
-                    </div>
-                    <div class="i2">
-                        <h5>價格</h5>
-                        <p>1500元</p>
-                    </div>
-                </div>
-                <hr>
-                <div class="caseitem">
-                    <div class="i1">
-                        <h5>包月洗澡方案</h5>
-                        四次小美容護理（如需大美容差額另計）
-                    </div>
-                    <div class="i2">
-                        <h5>價格</h5>
-                        <p>1800元</p>
-                    </div>
-                </div> -->
+                
             </div>
         </div>
     </div>

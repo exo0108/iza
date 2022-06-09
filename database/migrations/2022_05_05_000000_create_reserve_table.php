@@ -16,6 +16,7 @@ public function up()
     Schema::create('reservations', function (Blueprint $table) {
         $table->id()->unique();    
         $table->bigInteger('memberID')->unsigned();
+        $table->bigInteger('storeID')->unsigned();
         $table->bigInteger('caseID')->unsigned();
         $table->date('date');
         $table->string('period');
@@ -23,6 +24,7 @@ public function up()
         $table->timestamps();
         
         $table->foreign('memberID')->references('id')->on('users');
+        $table->foreign('storeID')->references('id')->on('stores');
         $table->foreign('caseID')->references('id')->on('cases');
     });
 }
