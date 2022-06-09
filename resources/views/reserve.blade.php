@@ -14,14 +14,7 @@
 
     <div class="reserve_content">
         <div>
-            <?php
-                $link=mysqli_connect("localhost","root","","iza")
-                or die("無法開啟資料庫連接");
-
-
-
-                mysqli_close($link);
-            ?>
+            
             <form class="choose">
                 <div class="choice">
                     選擇地點<br>
