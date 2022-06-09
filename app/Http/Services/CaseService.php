@@ -4,6 +4,7 @@ namespace App\Http\Services;
 
 use App\Models\Cases;
 use App\Models\Store;
+use Illuminate\Http\Request;
 
 class CaseService
 {

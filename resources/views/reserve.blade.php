@@ -36,9 +36,6 @@
                             <input type="radio" name="label" value="下午">
                             <span class="round button">下午</span>
                         </label>
-
-                        <!-- <label><input class="DT" type="button" value="上午">上午</label>
-                <label><input class="DT" type="button" value="下午">下午</label> -->
                     </div>
                 </div>
                 <div class="choice">
@@ -82,7 +79,7 @@
                         <p>{{$case->price}}</p>
                     </div>
                 </div>
-                <hr>
+                <hr class="introduce_hr">
                 @endforeach
 
                 

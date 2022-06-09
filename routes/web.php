@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ShopController;
 use App\Http\Controllers\CasesController;
-use App\Http\Controllers\StoreController;
+use App\Http\Controllers\ReserveController;
 use App\Http\Controllers\MemberController;
 /*
 |--------------------------------------------------------------------------
@@ -33,8 +33,8 @@ Route::get('/shop_content/{id}', [ShopController::class, 'show'])->name('shop_co
 
 
 Route::get('/reserve',[CasesController::class,'index'])->name('reserve');
+Route::get('/reserve_creat',[ReserveController::class,'store'])->name('reserve_creat');
 
-// 
 Route::get('/index', function () {
     return view('index');
 })->name('index');

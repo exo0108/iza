@@ -138,10 +138,7 @@ class ShopController extends Controller
         ]);
     }
 
-    public function AddToCar()
-    {
-        
-    }
+
 
 
     public function shop_search(Request $request)

@@ -121,17 +121,18 @@ a input{
     border-radius: 5px;
 }
 
-hr{
-    width: 70%;
-    margin: 2rem auto !important;
-    margin-bottom: 0;
-    color:rgb(120, 121, 121);
-}
+
 
 .hr{
     width: 70%;
     margin: 2rem auto;
     color:rgba(192, 194, 194);
+}
+
+.introduce_hr{
+    width: 70%;
+    margin: 2rem auto;
+    color:rgb(120, 121, 121);
 }
 
 .content_bottom{
