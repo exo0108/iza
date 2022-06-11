@@ -12,5 +12,6 @@ class Cart extends Model
     protected $fillable = [
         'memberID',
         'goodsID',
+        'count'
     ];
 }

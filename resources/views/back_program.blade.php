@@ -42,25 +42,23 @@
             <thead>
               <tr>
                 <th scope="col">#</th>
-                <th scope="col">客戶名稱</th>
-                <th scope="col">預約地點</th>
-                <th scope="col">預約日期</th>
-                <th scope="col">預約時段</th>
-                <th scope="col">預約方案</th>
+                <th scope="col">方案名稱</th>
+                <th scope="col">方案金錢</th>
+                <th scope="col">方案介紹</th>
                 <th scope="col">編輯</th>
               </tr>
             </thead>
 
             <tbody>
+            @foreach ($cases as $case)
                 <tr>
-                    <th scope="row">1</th>
-                    <th >bb</th>
-                    <th >一中店</th>
-                    <th >2022/05/08</th>
-                    <th >上午</th>
-                    <th >方案一</th>
+                    <td scope="row">{{$case->id}}</td>
+                    <td>{{$case->name}}</td>
+                    <td>{{$case->price}}</td>
+                    <td>{{$case->describe}}</td>
                     <td><button type="button" class="btn btn-outline-info">Edit</button></td>
                 </tr>
+            @endforeach
                 
             </tbody>
         </table>

@@ -17,6 +17,7 @@ public function up()
         $table->id()->unique();
         $table->bigInteger('memberID')->unsigned();
         $table->bigInteger('goodsID')->unsigned();
+        $table->string('count');
         $table->timestamps();
 
         $table->foreign('memberID')->references('id')->on('users');

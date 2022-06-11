@@ -1,6 +1,7 @@
 <?php
 
 namespace Database\Seeders;
+
 use App\Models\OrderItem;
 
 use Illuminate\Database\Seeder;
@@ -21,7 +22,7 @@ class OrderItemsSeeder extends Seeder
             'amount' => 2,
             'total' => 500,
         ]);
-        
+
         $OrderItems = OrderItem::create([
             'orderID' => 1,
             'goodsID' => 21,
@@ -45,7 +46,7 @@ class OrderItemsSeeder extends Seeder
 
         $OrderItems = OrderItem::create([
             'orderID' => 2,
-            'goodsID' => 25,
+            'goodsID' => 21,
             'amount' => 1,
             'total' => 419,
         ]);
@@ -94,7 +95,7 @@ class OrderItemsSeeder extends Seeder
 
         $OrderItems = OrderItem::create([
             'orderID' => 5,
-            'goodsID' => 23,
+            'goodsID' => 21,
             'amount' => 5,
             'total' => 600,
         ]);

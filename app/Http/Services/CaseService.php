@@ -15,7 +15,17 @@ class CaseService
   public function get_store(){
     return Store::get();
   }
-
+  public function updateCase( Request $request)
+  {
+    $result = Cases::find($request->id)->update(
+      [
+      'name' => $request->name, 
+      'price' => $request->price,
+      'describe' => $request->describe,
+      ]
+    );
+    return $result;
+  }
   public function createCase($request)
   {
     $request->all();

@@ -6,7 +6,7 @@
 
 }
 .body_center{
-    height: 70%;
+    
 }
 .car_body img{
     width: 15%;
@@ -146,8 +146,12 @@
 }
 
 .p-goods .p-img {
-    float: left;
+    
     margin-right: 10px;
+    display: flex;
+    justify-content: center;
+    width: 100px;
+
 }
 
 .p-goods .p-name {
@@ -162,7 +166,7 @@
 
 .p-goods .p-img img {
     height: 82px;
-    margin-left: 30%;
+    
 }
 
 .item .p-shop {
@@ -170,7 +174,7 @@
     width: 350px;
     color: #333;
     font-size: 14px;
-    padding-left: 45px;
+   
 }
 
 .item .p-price {
