@@ -15,6 +15,17 @@ class OrderService
         return Order::get();
     }
 
+    public function getPersonalOrder()
+    {
+        $memberID = Auth::user()->id;
+        $orders = DB::table('orders')
+                    ->select('orders.id', 'orders.memberID', 'orders.created_at', 'orders.payWay', 'orders.total', 'orders.status')
+                    ->where('memberID',  $memberID)
+                    ->get();
+        dd($orders);
+        return $orders;
+    }
+
     // https://docfunc.com/posts/52/%E9%81%BF%E5%85%8D-laravel-orm-%E7%9A%84-n1-%E5%95%8F%E9%A1%8C-post
     // public function search($phone)
     // {
@@ -27,7 +38,7 @@ class OrderService
     //     return $orders;
     // }
 
-    public function search($phone, $date)
+    public function backSearch($phone, $date)
     {
         $orders = DB::table('orders')
                     ->join('users', 'users.id', '=', 'orders.memberID')

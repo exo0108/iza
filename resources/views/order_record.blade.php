@@ -12,13 +12,13 @@
 
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-        {{ __('IZY Furry') }}
+            {{ __('IZY Furry') }}
         </h2>
     </x-slot>
 
     <div class="menu">
-        <button id="btnReserve" onclick="showReserve()"><h3>預約紀錄</h3></button>
-        <button id="btnOrder" onclick="showOrder()"><h3>訂單紀錄</h3></button>
+        <button id="btnReserve" onclick="showReserve()"><h4>預約紀錄</h4></button>
+        <button id="btnOrder" onclick="showOrder()"><h4>訂單紀錄</h4></button>
     </div>
 
     <div class="reserve" id="reserve">
@@ -130,113 +130,47 @@
         <hr style="margin: 10px;">
         <div class="order-info">
         <div style="display: flex;">
-            <div style="width: 20%; text-align: center;">訂單編號</div>
-            <div style="width: 20%; text-align: center;">訂單日期</div>
-            <div style="width: 20%; text-align: center;">付款方式</div>
-            <div style="width: 20%; text-align: center;">總額</div>              
-            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" style="background-color: rgb(133, 127, 84, 0.8); margin: auto; padding: 3px 8px; font-size: 18px; border: none; box-shadow: none;">
-            詳細資訊
-            </button>
-        </div>            
+            @foreach($orders as $order)
+                <div style="width: 20%; text-align: center;">{{date('Y-m-d', strtotime($order->created_at))}}</div>
+                <div style="width: 20%; text-align: center;">{{$order->payWay}}</div>
+                <div style="width: 20%; text-align: center;">{{$order->total}}</div>
+                <div style="width: 20%; text-align: center;">{{$order->status}}</div>
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" style="background-color: rgb(133, 127, 84, 0.8); margin: auto; padding: 3px 8px; font-size: 18px; border: none; box-shadow: none;">
+                    詳細資訊
+                </button>
+            @endforeach            
         </div>
-        <div class="order-info">
-        <div style="display: flex;">
-            <div style="width: 20%; text-align: center;">訂單編號</div>
-            <div style="width: 20%; text-align: center;">訂單日期</div>
-            <div style="width: 20%; text-align: center;">付款方式</div>
-            <div style="width: 20%; text-align: center;">總額</div>              
-            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" style="background-color: rgb(133, 127, 84, 0.8); margin: auto; padding: 3px 8px; font-size: 18px; border: none; box-shadow: none;">
-            詳細資訊
-            </button>
-        </div>            
-        </div>
-        <div class="order-info">
-        <div style="display: flex;">
-            <div style="width: 20%; text-align: center;">訂單編號</div>
-            <div style="width: 20%; text-align: center;">訂單日期</div>
-            <div style="width: 20%; text-align: center;">付款方式</div>
-            <div style="width: 20%; text-align: center;">總額</div>              
-            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" style="background-color: rgb(133, 127, 84, 0.8); margin: auto; padding: 3px 8px; font-size: 18px; border: none; box-shadow: none;">
-            詳細資訊
-            </button>
-        </div>            
-        </div>
-        <div class="order-info">
-        <div style="display: flex;">
-            <div style="width: 20%; text-align: center;">訂單編號</div>
-            <div style="width: 20%; text-align: center;">訂單日期</div>
-            <div style="width: 20%; text-align: center;">付款方式</div>
-            <div style="width: 20%; text-align: center;">總額</div>              
-            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" style="background-color: rgb(133, 127, 84, 0.8); margin: auto; padding: 3px 8px; font-size: 18px; border: none; box-shadow: none;">
-            詳細資訊
-            </button>
-        </div>            
-        </div>
-        <div class="order-info">
-        <div style="display: flex;">
-            <div style="width: 20%; text-align: center;">訂單編號</div>
-            <div style="width: 20%; text-align: center;">訂單日期</div>
-            <div style="width: 20%; text-align: center;">付款方式</div>
-            <div style="width: 20%; text-align: center;">總額</div>              
-            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" style="background-color: rgb(133, 127, 84, 0.8); margin: auto; padding: 3px 8px; font-size: 18px; border: none; box-shadow: none;">
-            詳細資訊
-            </button>
-        </div>            
-        </div>
-        <div class="order-info">
-        <div style="display: flex;">
-            <div style="width: 20%; text-align: center;">訂單編號</div>
-            <div style="width: 20%; text-align: center;">訂單日期</div>
-            <div style="width: 20%; text-align: center;">付款方式</div>
-            <div style="width: 20%; text-align: center;">總額</div>
-            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" style="background-color: rgb(133, 127, 84, 0.8); margin: auto; padding: 3px 8px; font-size: 18px; border: none; box-shadow: none;">
-            詳細資訊
-            </button>
-        </div>
-        </div>
-        <div class="order-info">
-        <div style="display: flex;">
-            <div style="width: 20%; text-align: center;">訂單編號</div>
-            <div style="width: 20%; text-align: center;">訂單日期</div>
-            <div style="width: 20%; text-align: center;">付款方式</div>
-            <div style="width: 20%; text-align: center;">總額</div>
-            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" style="background-color: rgb(133, 127, 84, 0.8); margin: auto; padding: 3px 8px; font-size: 18px; border: none; box-shadow: none;">
-            詳細資訊
-            </button>
-        </div>
+        
         <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">訂單編號</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                <div style="display: flex; text-align: center; margin-bottom: 10px; justify-content: space-evenly;">
-                    <div>商品名稱</div>
-                    <div>數量</div>
-                    <div>單價</div>
-                </div>
-                <div style="display: flex; text-align: center; margin-bottom: 10px; justify-content: space-evenly;">
-                    <div>商品名稱</div>
-                    <div>數量</div>
-                    <div>單價</div>
-                </div>
-                <div style="display: flex; text-align: center; margin-bottom: 10px; justify-content: space-evenly;">
-                    <div>商品名稱</div>
-                    <div>數量</div>
-                    <div>單價</div>
-                </div>
-                </div>
-                <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">訂單編號</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                    <div style="display: flex; text-align: center; margin-bottom: 10px; justify-content: space-evenly;">
+                        <div style="width: 55%">商品名稱</div>
+                        <div>數量</div>
+                        <div>單價</div>
+                    </div>
+                    <div style="display: flex; text-align: center; margin-bottom: 10px; justify-content: space-evenly;">
+                        <div style="width: 55%">商品名稱</div>
+                        <div>數量</div>
+                        <div>單價</div>
+                    </div>
+                    <div style="display: flex; text-align: center; margin-bottom: 10px; justify-content: space-evenly;">
+                        <div style="width: 55%">商品名稱</div>
+                        <div>數量</div>
+                        <div>單價</div>
+                    </div>
+                    </div>
+                    <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
                 </div>
             </div>
-            </div>
         </div>
-        </div>
-        {{ Auth::user()->id }}
-            {{ Auth::user()->phone }}
     </div>
 
     <script>

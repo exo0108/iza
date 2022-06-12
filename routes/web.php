@@ -49,6 +49,7 @@ Route::middleware(['auth', 'back'])->group(function () {
     Route::get('/back_member', [MemberController::class, 'back_member',])->name('back_member');
     Route::get('/member_search', [MemberController::class, 'member_search',])->name('member_search');
 
+    Route::get('/order_record', [OrderController::class, 'front_order'])->name('order_record');
     Route::get('/back_checkout', [OrderController::class, 'back_order'])->name('back_checkout');
     Route::get('/back_checkout_search', [OrderController ::class, 'back_order_search',])->name('back_checkout_search');
 

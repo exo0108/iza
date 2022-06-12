@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Http\Services\OrderService;
+use Illuminate\Support\Facades\Auth;
 
 class OrderController extends Controller
 {
@@ -68,14 +69,21 @@ class OrderController extends Controller
         //
     }
 
+    public function front_order()
+    {
+        //
+        $orders = $this->service->getPersonalOrder();
+        return view('order_record', [
+            'orders' => $orders,
+        ]);
+    }
+
     public function back_order()
     {
         //
         $orders = $this->service->getAllOrder();
-        // $dates = $this->service->getCreateDate();
         return view('back_checkout', [
             'orders' => $orders,
-            // 'dates' => $dates,
         ]);
     }
 
@@ -84,7 +92,7 @@ class OrderController extends Controller
         //
         $phone = $request->phone;
         $date = $request->date;
-        $orders = $this->service->search($phone, $date);
+        $orders = $this->service->backSearch($phone, $date);
 
         // dd($orders);
         return view('back_checkout', [
