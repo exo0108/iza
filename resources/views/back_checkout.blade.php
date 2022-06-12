@@ -33,7 +33,7 @@
     <form action=" {{ route('back_checkout_search') }} " method="GET">
       @csrf
         <input type="text" name="phone" placeholder="客戶電話" class="inp">
-        <input type="text" name="date" placeholder="訂單日期" class="inp">
+        <input type="text" name="date" placeholder="成立日期" class="inp">
         <input type="submit" value="查詢" class="btn">
     </form>
   </div>          
@@ -56,7 +56,7 @@
       @foreach($orders as $order)
         <tr>
           <td scope="row">{{$order->id}}</td>
-          <td>{{$order->created_at}}</td>
+          <td>{{date('Y-m-d', strtotime($order->created_at))}}</td>
           <td>{{$order->userName}}</td>
           <td>{{$order->userPhone}}</td>
           <td>{{$order->payWay}}</td>
