@@ -51,7 +51,6 @@
                 <th scope="col">預約日期</th>
                 <th scope="col">預約時段</th>
                 <th scope="col">預約方案</th>
-                <th scope="col">編輯</th>
               </tr>
             </thead>
 
@@ -64,7 +63,7 @@
                     <td >{{$reservation->date}}</td>
                     <td >{{$reservation->period}}</td>
                     <td >{{$reservation->caseName}}</td>
-                    <td><button type="button" class="btn btn-outline-info">Edit</button></td>
+                    
                 </tr>
               @endforeach           
             </tbody>

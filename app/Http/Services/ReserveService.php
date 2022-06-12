@@ -42,7 +42,24 @@ class ReserveService{
       return  $reservation;
     }
 
+    public function deleteReservation($id)
+    {
+        $result = Reservation::where('id', $id)->delete();
+        return $result;
+    }
+
+
+
     public function search($name){
-      return Reservation::where('name'.$name.'%')->get();
+
+      $reservations = DB::table('reservations')
+        ->join('stores','stores.id', '=', 'reservations.storeID')
+        ->join('users', 'users.id', '=', 'reservations.memberID')
+        ->join('cases', 'cases.id', '=', 'reservations.caseID')
+        ->select('reservations.id', 'users.name as userName', 'stores.name as storeName', 'reservations.date', 'reservations.period', 'cases.name as caseName')
+        ->where('users.name',  'like', '%'.$name.'%')
+        ->get();
+
+      return $reservations;
     }
 }

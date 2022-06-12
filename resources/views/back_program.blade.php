@@ -33,18 +33,22 @@
             
             
             <div class="during" style="display: flex; align-items: center; justify-content: flex-start;">
-                <input type="text" value="客戶名稱" class="inp">
-                <input type="button" value="查詢" class="btn">
+                <form action=" {{ route('back_program') }} " method="GET">
+                    @csrf
+                    <input type="text" name="name" placeholder="方案名稱" class="inp">
+                    <input type="submit" value="查詢" class="btn">
+                </form>
+                
             </div>
           
           <hr class="re_hr">
           <table class="table table-sm">
             <thead>
               <tr>
-                <th scope="col">#</th>
+                <th scope="col" style="width:5%;">#</th>
                 <th scope="col">方案名稱</th>
-                <th scope="col">方案金錢</th>
-                <th scope="col">方案介紹</th>
+                <th scope="col" style="width:10%;">方案價格</th>
+                <th scope="col" style="width:60%;">方案介紹</th>
                 <th scope="col">編輯</th>
               </tr>
             </thead>
@@ -55,7 +59,7 @@
                     <td scope="row">{{$case->id}}</td>
                     <td>{{$case->name}}</td>
                     <td>{{$case->price}}</td>
-                    <td>{{$case->describe}}</td>
+                    <td style="text-align:left;">{{$case->describe}}</td>
                     <td><button type="button" class="btn btn-outline-info">Edit</button></td>
                 </tr>
             @endforeach

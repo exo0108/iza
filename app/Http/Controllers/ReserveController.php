@@ -72,16 +72,20 @@ class ReserveController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $deleteReservation = $this->service->deleteReservation($id);
+        if (!$deleteReservation) {
+            return response()->json(['status' => "刪除失敗"], 400);
+        }
+        return redirect()->route('back_reserve', $id);
     }
 
     public function reserve_search(Request $request)
     {
         $name= $request->name;
-        $reserve = $this->mservice->search($name);
+        $reservations = $this->service->search($name);
         return view('back_reserve',[
             'name' => $name,
-            'reserve' => $reserve,
+            'reservations' => $reservations,
         ]);
     }
 

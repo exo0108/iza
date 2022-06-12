@@ -94,4 +94,15 @@ class CasesController extends Controller
         $deleteCase = $this->case->deleteCase($id);
         
     }
+
+    public function case_search(Request $request)
+    {
+        $name= $request->name;
+        $cases = $this->service->search($name);
+        return view('back_program',[
+            'name' => $name,
+            'cases' => $cases,
+        ]);
+    }
+
 }

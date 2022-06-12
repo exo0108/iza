@@ -57,4 +57,10 @@ class CaseService
     $result = Cases::where('id', $id)->delete();
     return $result;
   }
+
+  public function search($name){
+
+    return Cases::where('name','like','%'.$name.'%')->get();
+  }
+
 }

@@ -43,7 +43,7 @@ Route::middleware(['auth', 'back'])->group(function () {
     Route::get('/back_reserve', function () {
         return view('back_reserve');
     });
-    Route::get('/back_reserve', [ReserveController::class, 'back_reservation',])->name('back_reservation');
+    Route::get('/back_reserve', [ReserveController::class, 'back_reservation',])->name('back_reserve');
     Route::get('/reserve_search', [ReserveController::class, 'reserve_search',])->name('reserve_search');
     
     Route::get('/back_member', [MemberController::class, 'back_member',])->name('back_member');
@@ -54,6 +54,8 @@ Route::middleware(['auth', 'back'])->group(function () {
 
     Route::get('/back_program', [CasesController::class, 'back_index',])->name('back_program');
     Route::post('back_program', [CasesController::class, 'update',]);
+    Route::get('/back_program', [CasesController::class, 'case_search',])->name('back_program');
+
 
     Route::post('back_shop', [ShopController::class, 'update']);
     Route::get('/back_shop', [ShopController::class, 'editshop'])->name('back_shop');
