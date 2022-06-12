@@ -4,13 +4,16 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Http\Services\ReserveService;
+use App\Http\Services\MemberService;
 class ReserveController extends Controller
 {
 
     public function __construct(
-        ReserveService $service
+        ReserveService $service,
+        MemberService $mservice
     ) {
         $this->service = $service;
+        $this->mservice = $mservice;
     }
     /**
      * Display a listing of the resource.
@@ -70,5 +73,22 @@ class ReserveController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    public function reserve_search(Request $request)
+    {
+        $name= $request->name;
+        $reserve = $this->mservice->search($name);
+        return view('back_reserve',[
+            'name' => $name,
+            'reserve' => $reserve,
+        ]);
+    }
+
+    public function back_reservation(){
+        $reservations=$this->service->getAllreservation();
+        return view('back_reserve',[
+            'reservations' => $reservations,
+        ]);
     }
 }

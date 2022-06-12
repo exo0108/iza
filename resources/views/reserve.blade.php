@@ -15,7 +15,7 @@
     <div class="reserve_content">
         <div>
             
-            <form class="choose">
+            <form class="choose" action=" {{ route('back_reserve') }} " method="POST">
                 <div class="choice">
                     選擇地點<br>
                     <select name="place" id="place">

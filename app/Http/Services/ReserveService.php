@@ -3,7 +3,7 @@
 namespace App\Http\Services;
 
 use App\Models\Reservation;
-
+use Illuminate\Support\Facades\DB;
 
 
 class ReserveService{ 
@@ -22,5 +22,27 @@ class ReserveService{
       );
   
       return $result;
+    }
+
+    public function indexReserve()
+    {
+        
+    }
+
+
+    public function getAllreservation(){
+
+      $reservation = DB::table('reservations')
+        ->join('stores','stores.id', '=', 'reservations.storeID')
+        ->join('users', 'users.id', '=', 'reservations.memberID')
+        ->join('cases', 'cases.id', '=', 'reservations.caseID')
+        ->select('reservations.id', 'users.name as userName', 'stores.name as storeName', 'reservations.date', 'reservations.period', 'cases.name as caseName')
+        ->get();
+
+      return  $reservation;
+    }
+
+    public function search($name){
+      return Reservation::where('name'.$name.'%')->get();
     }
 }

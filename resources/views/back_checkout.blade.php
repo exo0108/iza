@@ -14,7 +14,7 @@
 
     <div class="header">
             <div class="logo"> 
-              <a href="index.html"><h1>客戶預約紀錄</h1></a>
+              <a href="index.html"><h1>客戶訂單紀錄</h1></a>
             </div>
             <hr>
             <div style="display: flex;align-items: center;" >

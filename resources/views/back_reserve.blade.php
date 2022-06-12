@@ -33,8 +33,12 @@
             
             
             <div class="during" style="display: flex; align-items: center; justify-content: flex-start;">
-                <input type="text" value="客戶名稱" class="inp">
-                <input type="button" value="查詢" class="btn">
+                <form action=" {{ route('reserve_search') }} " method="GET">
+                    @csrf
+                    <input type="text" name="name" placeholder="客戶名稱" class="inp">
+                    <input type="submit" value="查詢" class="btn">
+                </form>
+                
             </div>
           
           <hr class="re_hr">
@@ -52,33 +56,17 @@
             </thead>
 
             <tbody>
+              @foreach($reservations as $reservation)
                 <tr>
-                    <th scope="row">1</th>
-                    <th >bb</th>
-                    <th >一中店</th>
-                    <th >2022/05/08</th>
-                    <th >上午</th>
-                    <th >方案一</th>
+                    <td scope="row">{{$reservation->id}}</td>
+                    <td >{{$reservation->userName}}</td>
+                    <td >{{$reservation->storeName}}</td>
+                    <td >{{$reservation->date}}</td>
+                    <td >{{$reservation->period}}</td>
+                    <td >{{$reservation->caseName}}</td>
                     <td><button type="button" class="btn btn-outline-info">Edit</button></td>
                 </tr>
-                <tr>
-                    <th scope="row">1</th>
-                    <th >bb</th>
-                    <th >一中店</th>
-                    <th >2022/05/08</th>
-                    <th >上午</th>
-                    <th >方案一</th>
-                    <td><button type="button" class="btn btn-outline-info">Edit</button></td>
-                </tr>
-                <tr>
-                    <th scope="row">1</th>
-                    <th >bb</th>
-                    <th >一中店</th>
-                    <th >2022/05/08</th>
-                    <th >上午</th>
-                    <th >方案一</th>
-                    <td><button type="button" class="btn btn-outline-info">Edit</button></td>
-                </tr>
+              @endforeach           
             </tbody>
         </table>
 </div>
