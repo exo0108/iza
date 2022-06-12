@@ -55,13 +55,13 @@
     <tbody>
       @foreach($orders as $order)
         <tr>
-          <th scope="row">{{$order->id}}</th>
-          <th>{{$order->created_at->format('Y-m-d')}}</th>
-          <th>{{$order->user_name}}</th>
-          <th>{{$order->user_phone}}</th>
-          <th>{{$order->payWay}}</th>
-          <th>{{$order->total}}</th>
-          <th>{{$order->status}}</th>
+          <td scope="row">{{$order->id}}</td>
+          <td>{{$order->created_at}}</td>
+          <td>{{$order->userName}}</td>
+          <td>{{$order->userPhone}}</td>
+          <td>{{$order->payWay}}</td>
+          <td>{{$order->total}}</td>
+          <td>{{$order->status}}</td>
           <td>
             <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" style="background-color: rgb(133, 127, 84, 0.8); margin: auto; padding: 3px 8px; font-size: 18px; border: none; box-shadow: none;">
             詳細資訊

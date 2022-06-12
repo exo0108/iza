@@ -84,7 +84,7 @@ class OrderController extends Controller
         //
         $phone = $request->phone;
         $date = $request->date;
-        $orders = $this->service->search($phone);
+        $orders = $this->service->search($phone, $date);
 
         // dd($orders);
         return view('back_checkout', [

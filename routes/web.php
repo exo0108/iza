@@ -45,6 +45,7 @@ Route::middleware(['auth', 'back'])->group(function () {
     });
     Route::get('/back_reserve', [ReserveController::class, 'back_reservation',])->name('back_reservation');
     Route::get('/reserve_search', [ReserveController::class, 'reserve_search',])->name('reserve_search');
+    
     Route::get('/back_member', [MemberController::class, 'back_member',])->name('back_member');
     Route::get('/member_search', [MemberController::class, 'member_search',])->name('member_search');
 
@@ -58,24 +59,19 @@ Route::middleware(['auth', 'back'])->group(function () {
     Route::get('/back_shop', [ShopController::class, 'editshop'])->name('back_shop');
     Route::get('/shop_search', [ShopController::class, 'shop_search',])->name('shop_search');
 });
+
 Route::middleware('auth')->group(function () {
 
     Route::get('/dashboard', function () {
         return view('index');
     })->name('dashboard');
 
-
     Route::get('/member_a', [MemberController::class, 'index'])->name('member_a');
-
-
+    Route::get('/member', [MemberController::class, 'edit'])->name('member');
     Route::post('member', [MemberController::class, 'update'])->name('membr_update');
 
-    Route::get('/member', [MemberController::class, 'edit'])->name('member');
-
-    Route::post('car/add/{id}', [CartController::class, 'store'])->name('AddToCar');
-
-
     Route::get('car', [CartController::class, 'index'])->name('car');
+    Route::post('car/add/{id}', [CartController::class, 'store'])->name('AddToCar');
     Route::delete('car/deleteCart/{id}', [CartController::class, 'destroy'])->name('deleteCart');
 
     Route::get('/order_record', function () {
