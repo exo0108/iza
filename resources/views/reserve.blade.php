@@ -28,13 +28,13 @@
                 <div class="choicedt">
                     選擇日期與時間<br>
                     <div class="time">
-                        <input class="DTime" type="date" name="dateTime" style="height: 66px;">
+                        <input class="DTime" type="date" name="date" style="height: 66px;">
                         <label>
-                            <input type="radio" name="label" value="上午">
+                            <input type="radio" name="period" value="上午">
                             <span class="round button">上午</span>
                         </label>
                         <label>
-                            <input type="radio" name="label" value="下午">
+                            <input type="radio" name="period" value="下午">
                             <span class="round button">下午</span>
                         </label>
                     </div>
@@ -47,6 +47,8 @@
                         @endforeach
                     </select>
                 </div>
+                <input type="hidden" name="storeID" value="{{$store->id}}">
+                <input type="hidden" name="caseID" value="{{$case->id}}">
                 @if(Auth::user())
                 <div class="choice">
                     <a href="javascript:alert('已送出預約!')"><input type="submit" value="立即預約"></a>

@@ -15,17 +15,17 @@ class ReserveService
     {
 
 
-        $case = Cases::where('id', $request->id)->first();
-        $store = Cases::where('id', $request->id)->first();
+
+
         $user = Auth::user();
         $result = Reservation::create(
             [
                 'memberID' => $user->id,
-                'storeID' =>  $store,
-                'caseID' =>  $case,
+                'storeID' =>  $request->storeID,
+                'caseID' =>  $request->caseID,
                 'date' => $request->date,
                 'period' => $request->period,
-                'status' => $request->status,
+
             ]
         );
         return $result;

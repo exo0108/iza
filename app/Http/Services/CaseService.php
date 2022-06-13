@@ -5,6 +5,7 @@ namespace App\Http\Services;
 use App\Models\Cases;
 use App\Models\Store;
 use Illuminate\Http\Request;
+use App\Models\Reservation;
 
 class CaseService
 {
@@ -56,8 +57,17 @@ class CaseService
     }
     public function deleteCase($id)
     {
-        $result = Cases::where('id', $id)->delete();
-        return $result;
+
+        $result = Cases::where('id', $id);
+
+        $check = Reservation::where('caseID', $id)->first();
+
+        if ($check) {
+            return false;
+        }
+        Cases::where('id', $id)->delete();
+
+        return true;
     }
 
     public function search($name)
