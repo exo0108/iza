@@ -25,7 +25,7 @@ class CartService
             [
                 'memberID' => $user->id,
                 'goodsID' => $id,
-                'count' => $request->count,
+                'amount' => $request->amount,
             ]
         );
         return   $result;
