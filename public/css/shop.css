@@ -1,6 +1,7 @@
 .body_center{
     display: flex;
     bottom: 0;
+    min-height: 59%;
 }
 
 .body_left{
@@ -41,17 +42,19 @@
     margin: 0;
 }
 .card-bag{
-    width: 100%;
-    margin: auto;
+    min-width: 100%;
+
     display: flex;
     justify-content:flex-start;
     align-items: flex-start;
+    margin-right: auto;
 }
 .card{
     margin: 10px 20px 10px 20px;
     text-decoration: none;
     color: rgb(0, 0, 0);
-    width: 18em;
+    width: 250px;
+    height: 28em;
 }
 .card:hover{
     color: rgb(0, 0, 0);

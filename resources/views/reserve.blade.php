@@ -14,8 +14,9 @@
 
     <div class="reserve_content">
         <div>
-            
-            <form class="choose" action=" {{ route('back_reserve') }} " method="POST">
+
+            <form class="choose" action=" {{ route('AddToReserve' ) }} " method="POST">
+                @csrf
                 <div class="choice">
                     選擇地點<br>
                     <select name="place" id="place">
@@ -48,7 +49,7 @@
                 </div>
                 @if(Auth::user())
                 <div class="choice">
-                    <a href="javascript:alert('已送出預約!')"><input type="button" value="立即預約"></a>
+                    <a href="javascript:alert('已送出預約!')"><input type="submit" value="立即預約"></a>
                 </div>
                 @else
                 <div class="choice">
@@ -56,6 +57,7 @@
                 </div>
                 @endif
             </form>
+
         </div>
         <div class="casepic_other">
             <div class="casepic">
@@ -82,7 +84,7 @@
                 <hr class="introduce_hr">
                 @endforeach
 
-                
+
             </div>
         </div>
     </div>

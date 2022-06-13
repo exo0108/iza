@@ -3,6 +3,7 @@
 .cont{
     width: 70%;
     margin: auto;
+    min-height: 65%;
 
 }
 .body_center{
@@ -20,7 +21,7 @@
     align-items: center;
     background-color: rgb(255, 255, 255);
     border: 1px solid rgb(220, 219, 219);
-    
+   
 }
 
 .car_text:hover{
@@ -111,7 +112,7 @@
 }
 .goshop a{
     text-decoration:none;
-    color: rgb(255, 255, 255);
+    color: rgb(255, 255, 255) !important;
     font-weight:bold;
 
     

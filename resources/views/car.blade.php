@@ -18,12 +18,7 @@
     <div class="body_center">
         <div class="cont">
             <div class="bar">
-                <div class="t-checkbox">
-                    <div class="cart-checkbox">
-                        <input type="checkbox" id="allchecked" onclick="setAll()">
-                        <label for></label>
-                    </div>全選
-                </div>
+
 
             </div>
 
@@ -34,7 +29,7 @@
 
                 <div class="item" id="007">
                     <div class="p-checkbox">
-                        <input type="checkbox" name="p-radio" value="120" class="calculate"><label for></label>
+                        <input type="checkbox" name="p-radio" value="{{$Carts->price}}" class="calculate"><label for></label>
                     </div>
 
                     <div class="p-goods">
@@ -47,7 +42,7 @@
 
                     <div class="p-quantity">
                         <input type="button" class="decrease" value="-">
-                        <input type="text" class="quantity" value="1" />
+                        <input type="text" class="quantity" value="{{$Carts->count}}" />
                         <input type="button" class="increase" value="+">
                     </div>
 
@@ -58,7 +53,7 @@
 
                         <div class="p-action">
 
-                            <input type="submit" class="deleteItem" value="删除" />
+                            <input type="submit" class="deleteItem" value="刪除" />
 
                         </div>
                     </form>

@@ -35,30 +35,31 @@ Route::get('/shopSearch', [ShopController::class, 'searchType']);
 Route::get('/shop_content/{id}', [ShopController::class, 'show'])->name('shop_content');
 
 Route::get('/reserve', [CasesController::class, 'index'])->name('reserve');
-Route::get('/reserve_creat', [ReserveController::class, 'store'])->name('reserve_creat');
+
+Route::post('/reserve/add', [ReserveController::class, 'store'])->name('AddToReserve');
 
 Route::middleware(['auth', 'back'])->group(function () {
 
-    Route::get('/back_reserve', function () {
-        return view('back_reserve');
-    });
     Route::get('/back_reserve', [ReserveController::class, 'back_reservation',])->name('back_reserve');
     Route::get('/reserve_search', [ReserveController::class, 'reserve_search',])->name('reserve_search');
-    
+    Route::delete('/back_reserve/deleteReservation/{id}', [ReserveController::class, 'destroy'])->name('deleteReservation');
+
     Route::get('/back_member', [MemberController::class, 'back_member',])->name('back_member');
     Route::get('/member_search', [MemberController::class, 'member_search',])->name('member_search');
 
     Route::get('/back_checkout', [OrderController::class, 'back_order'])->name('back_checkout');
-    Route::get('/back_checkout_search', [OrderController ::class, 'back_order_search',])->name('back_checkout_search');
+    Route::get('/back_checkout_search', [OrderController::class, 'back_order_search',])->name('back_checkout_search');
 
     Route::get('/back_program', [CasesController::class, 'back_index',])->name('back_program');
     Route::post('back_program', [CasesController::class, 'update',]);
+    Route::post('back_program/add/{id}', [CasesController::class, 'store',])->name('AddToProgram');
     Route::get('/back_program', [CasesController::class, 'case_search',])->name('back_program');
-
+    Route::delete('/back_program/deleteCase/{id}', [CasesController::class, 'destroy'])->name('deleteCase');
 
     Route::post('back_shop', [ShopController::class, 'update']);
     Route::get('/back_shop', [ShopController::class, 'editshop'])->name('back_shop');
     Route::get('/shop_search', [ShopController::class, 'shop_search',])->name('shop_search');
+    Route::post('/back_shop/add/{id}', [ShopController::class, 'store'])->name('AddToShop');
 });
 
 Route::middleware('auth')->group(function () {

@@ -25,7 +25,7 @@ class CartService
             [
                 'memberID' => $user->id,
                 'goodsID' => $id,
-                'amount' => $request->amount,
+                'count' => $request->count,
             ]
         );
         return   $result;
@@ -36,7 +36,7 @@ class CartService
         $menberid = Auth::user()->id;
         $cart = DB::table('carts')
             ->join('goods', 'goods.id', '=', 'carts.goodsID')
-            ->select('carts.id', 'carts.memberID', 'goods.name', 'carts.amount', 'goods.price', 'goods.img')
+            ->select('carts.id', 'carts.memberID', 'goods.name', 'carts.count', 'goods.price', 'goods.img')
             ->where('memberID',  $menberid)
             ->get();
 

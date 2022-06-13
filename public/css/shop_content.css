@@ -82,7 +82,7 @@
     width: 250px;
     height: 50px;
     color: rgb(236, 236, 236);
-    background-color:rgb(133, 127, 84) ;
+    background-color:rgb(133, 127, 84) !important;
     margin-right: 30px;
     border-color:rgb(255, 255, 255);
     font-size: 18px;
@@ -90,7 +90,7 @@
 
 }
 .car:active{
-    background-color:rgb(85, 77, 20) ;
+    background-color:rgb(85, 77, 20) !important;
       
 }
 

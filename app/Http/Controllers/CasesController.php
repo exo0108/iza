@@ -19,19 +19,19 @@ class CasesController extends Controller
     }
     public function index()
     {
-        $cases = $this->service->get_case(); 
+        $cases = $this->service->get_case();
         $stores = $this->service->get_store();
-        return view('reserve',[
-            
-            'cases'=>$cases,
-            'stores'=>$stores
+        return view('reserve', [
+
+            'cases' => $cases,
+            'stores' => $stores
         ]);
     }
     public function back_index()
     {
-        $cases = $this->service->get_case(); 
-        return view('back_program',[
-            'cases'=>$cases,
+        $cases = $this->service->get_case();
+        return view('back_program', [
+            'cases' => $cases,
         ]);
     }
     /**
@@ -40,9 +40,11 @@ class CasesController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $request, $id)
     {
-        //TODO
+        $cases = $this->service->createCase($request, $id);
+
+        return redirect()->route('back_program', $id);
     }
 
     /**
@@ -59,8 +61,8 @@ class CasesController extends Controller
     public function edit()
     {
         $back_program = $this->service->updateCase();
-        
-        return view('back_program',[
+
+        return view('back_program', [
             'back_program' => $back_program,
 
         ]);
@@ -73,14 +75,12 @@ class CasesController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request )
+    public function update(Request $request)
     {
-        
-        $result = $this->service->updateCase($request);
-        
-        return redirect()->route('back_program', ['result'=>$result]);
 
-        
+        $result = $this->service->updateCase($request);
+
+        return redirect()->route('back_program', ['result' => $result]);
     }
 
     /**
@@ -91,18 +91,20 @@ class CasesController extends Controller
      */
     public function destroy($id)
     {
-        $deleteCase = $this->case->deleteCase($id);
-        
+        $deleteCase = $this->service->deleteCase($id);
+        if (!$deleteCase) {
+            return response()->json(['status' => "刪除失敗"], 400);
+        }
+        return redirect()->route('back_program', $id);
     }
 
     public function case_search(Request $request)
     {
-        $name= $request->name;
+        $name = $request->name;
         $cases = $this->service->search($name);
-        return view('back_program',[
+        return view('back_program', [
             'name' => $name,
             'cases' => $cases,
         ]);
     }
-
 }

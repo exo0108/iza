@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Services\ReserveService;
 use App\Http\Services\MemberService;
+
 class ReserveController extends Controller
 {
 
@@ -33,12 +34,9 @@ class ReserveController extends Controller
      */
     public function store(Request $request)
     {
-        $reserve=$this->service->create($request);
+        $reserve = $this->service->create($request);
 
-        return Response()->json([
-            'status' => '正常',
-            'reserve' => $reserve,
-        ]);
+        return redirect()->route('reserve');
     }
 
     /**
@@ -81,17 +79,18 @@ class ReserveController extends Controller
 
     public function reserve_search(Request $request)
     {
-        $name= $request->name;
+        $name = $request->name;
         $reservations = $this->service->search($name);
-        return view('back_reserve',[
+        return view('back_reserve', [
             'name' => $name,
             'reservations' => $reservations,
         ]);
     }
 
-    public function back_reservation(){
-        $reservations=$this->service->getAllreservation();
-        return view('back_reserve',[
+    public function back_reservation()
+    {
+        $reservations = $this->service->getAllreservation();
+        return view('back_reserve', [
             'reservations' => $reservations,
         ]);
     }
