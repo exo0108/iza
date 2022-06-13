@@ -16,40 +16,41 @@ class CartsSeeder extends Seeder
     public function run()
     {
         //
-        $Cart = Cart::create([
+        $Cart = Cart::create([            
+            'amount' => 2,
             'memberID' => 1,
             'goodsID' => 1,
-            'count' => 2,
         ]);
 
         $Cart = Cart::create([
+            
+            'amount' => 6,
             'memberID' => 1,
             'goodsID' => 5,
-            'count' => 6,
         ]);
 
-        $Cart = Cart::create([
+        $Cart = Cart::create([            
+            'amount' => 2,
             'memberID' => 1,
             'goodsID' => 21,
-            'count' => 2,
         ]);
 
-        $Cart = Cart::create([
+        $Cart = Cart::create([            
+            'amount' => 4,
             'memberID' => 2,
             'goodsID' => 12,
-            'count' => 4,
         ]);
 
-        $Cart = Cart::create([
+        $Cart = Cart::create([            
+            'amount' => 2,
             'memberID' => 2,
             'goodsID' => 1,
-            'count' => 2,
         ]);
 
-        $Cart = Cart::create([
+        $Cart = Cart::create([            
+            'amount' => 5,
             'memberID' => 3,
             'goodsID' => 1,
-            'count' => 5,
         ]);
     }
 }

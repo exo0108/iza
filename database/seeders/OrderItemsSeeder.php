@@ -17,87 +17,87 @@ class OrderItemsSeeder extends Seeder
     {
         //
         $OrderItems = OrderItem::create([
-            'orderID' => 1,
-            'goodsID' => 4,
             'amount' => 2,
             'total' => 500,
+            'orderID' => 1,
+            'goodsID' => 4,
         ]);
 
         $OrderItems = OrderItem::create([
-            'orderID' => 1,
-            'goodsID' => 21,
             'amount' => 1,
             'total' => 450,
+            'orderID' => 1,
+            'goodsID' => 21,
         ]);
 
         $OrderItems = OrderItem::create([
-            'orderID' => 1,
-            'goodsID' => 13,
             'amount' => 1,
             'total' => 280,
+            'orderID' => 1,
+            'goodsID' => 13,
         ]);
 
         $OrderItems = OrderItem::create([
-            'orderID' => 2,
-            'goodsID' => 14,
             'amount' => 1,
             'total' => 630,
+            'orderID' => 2,
+            'goodsID' => 14,
         ]);
 
         $OrderItems = OrderItem::create([
-            'orderID' => 2,
-            'goodsID' => 21,
             'amount' => 1,
             'total' => 419,
+            'orderID' => 2,
+            'goodsID' => 21,
         ]);
 
         $OrderItems = OrderItem::create([
-            'orderID' => 3,
-            'goodsID' => 9,
             'amount' => 2,
             'total' => 740,
+            'orderID' => 3,
+            'goodsID' => 9,
         ]);
 
         $OrderItems = OrderItem::create([
-            'orderID' => 4,
-            'goodsID' => 1,
             'amount' => 2,
             'total' => 120,
+            'orderID' => 4,
+            'goodsID' => 1,
         ]);
 
         $OrderItems = OrderItem::create([
-            'orderID' => 4,
-            'goodsID' => 7,
             'amount' => 1,
             'total' => 550,
+            'orderID' => 4,
+            'goodsID' => 7,
         ]);
 
         $OrderItems = OrderItem::create([
-            'orderID' => 4,
-            'goodsID' => 5,
             'amount' => 1,
             'total' => 315,
+            'orderID' => 4,
+            'goodsID' => 5,
         ]);
 
         $OrderItems = OrderItem::create([
-            'orderID' => 4,
-            'goodsID' => 19,
             'amount' => 1,
             'total' => 370,
+            'orderID' => 4,
+            'goodsID' => 19,
         ]);
 
         $OrderItems = OrderItem::create([
-            'orderID' => 4,
-            'goodsID' => 10,
             'amount' => 1,
             'total' => 270,
+            'orderID' => 4,
+            'goodsID' => 10,
         ]);
 
         $OrderItems = OrderItem::create([
-            'orderID' => 5,
-            'goodsID' => 21,
             'amount' => 5,
             'total' => 600,
+            'orderID' => 5,
+            'goodsID' => 21,
         ]);
     }
 }

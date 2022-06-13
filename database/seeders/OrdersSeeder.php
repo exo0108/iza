@@ -17,38 +17,38 @@ class OrdersSeeder extends Seeder
     {
         // 
         $Order = Order::create([
-            'memberID' => 1,
             'payWay' => "貨到付款",
             'total' => 1230,
             'status' => "配送中",
+            'memberID' => 1,
         ]);
 
         $Order = Order::create([
-            'memberID' => 2,
             'payWay' => "貨到付款",
             'total' => 1049,
             'status' => "已送達",
+            'memberID' => 2,
         ]);
 
         $Order = Order::create([
-            'memberID' => 1,
             'payWay' => "貨到付款",
             'total' => 740,
             'status' => "配送中",
+            'memberID' => 1,
         ]);
 
         $Order = Order::create([
-            'memberID' => 2,
             'payWay' => "貨到付款",
             'total' => 1625,
             'status' => "配送中",
+            'memberID' => 2,
         ]);
 
         $Order = Order::create([
-            'memberID' => 3,
             'payWay' => "貨到付款",
             'total' => 600,
             'status' => "已送達",
+            'memberID' => 3,
         ]);
     }
 }
