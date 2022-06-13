@@ -18,8 +18,7 @@ class ReservationsSeeder extends Seeder
         //
         $Reservation = Reservation::create([            
             'date' => '2022-07-01',
-            'period' => '上午',
-            'status' => '未完成',
+            'period' => '上午',           
             'memberID' => 1,
             'storeID' => 1,
             'caseID' => 4,
@@ -27,8 +26,7 @@ class ReservationsSeeder extends Seeder
         
         $Reservation = Reservation::create([
             'date' => '2022-07-10',
-            'period' => '下午',
-            'status' => '未完成',
+            'period' => '下午',            
             'memberID' => 2,
             'storeID' => 2,
             'caseID' => 1,
@@ -36,8 +34,7 @@ class ReservationsSeeder extends Seeder
         
         $Reservation = Reservation::create([            
             'date' => '2022-08-15',
-            'period' => '上午',
-            'status' => '未完成',
+            'period' => '上午',            
             'memberID' => 2,
             'storeID' => 2,
             'caseID' => 2,
@@ -45,8 +42,7 @@ class ReservationsSeeder extends Seeder
         
         $Reservation = Reservation::create([
             'date' => '2022-09-07',
-            'period' => '下午',
-            'status' => '未完成',
+            'period' => '下午',            
             'memberID' => 2,
             'storeID' => 1,
             'caseID' => 3,
@@ -54,8 +50,7 @@ class ReservationsSeeder extends Seeder
         
         $Reservation = Reservation::create([            
             'date' => '2022-07-25',
-            'period' => '上午',
-            'status' => '未完成',
+            'period' => '上午',            
             'memberID' => 3,
             'storeID' => 1,
             'caseID' => 3,
@@ -63,8 +58,7 @@ class ReservationsSeeder extends Seeder
         
         $Reservation = Reservation::create([            
             'date' => '2022-09-22',
-            'period' => '上午',
-            'status' => '未完成',
+            'period' => '上午',            
             'memberID' => 3,
             'storeID' => 2,
             'caseID' => 2,

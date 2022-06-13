@@ -37,7 +37,6 @@ Route::get('/shop_content/{id}', [ShopController::class, 'show'])->name('shop_co
 Route::get('/reserve', [CasesController::class, 'index'])->name('reserve');
 Route::get('/reserve_creat', [ReserveController::class, 'store'])->name('reserve_creat');
 
-
 Route::middleware(['auth', 'back'])->group(function () {
 
     Route::get('/back_reserve', function () {
@@ -67,6 +66,10 @@ Route::middleware('auth')->group(function () {
     Route::get('/dashboard', function () {
         return view('index');
     })->name('dashboard');
+
+    Route::get('/checkout', function () {
+        return view('checkout');
+    })->name('checkout');
 
     Route::get('/member_a', [MemberController::class, 'index'])->name('member_a');
     Route::get('/member', [MemberController::class, 'edit'])->name('member');

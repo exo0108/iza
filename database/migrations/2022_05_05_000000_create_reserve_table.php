@@ -17,7 +17,6 @@ public function up()
         $table->id()->unique();    
         $table->date('date');
         $table->string('period');
-        $table->string('status');
         $table->bigInteger('memberID')->unsigned();
         $table->bigInteger('storeID')->unsigned();
         $table->bigInteger('caseID')->unsigned();
