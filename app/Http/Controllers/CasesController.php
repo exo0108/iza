@@ -100,7 +100,7 @@ class CasesController extends Controller
     {
         $deleteCase = $this->service->deleteCase($id);
         if (!$deleteCase) {
-            return response()->json(['status' => 'spider_man'], 400);
+            return response()->json(['status' => "刪除失敗"], 400);
         }
         return redirect()->route('back_program', $id);
     }
