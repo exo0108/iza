@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 // use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Http\Services\CaseService;
+use App\Models\Reservation;
 
 class CasesController extends Controller
 {
@@ -30,8 +31,14 @@ class CasesController extends Controller
     public function back_index()
     {
         $cases = $this->service->get_case();
+        $hasCases = Reservation::select('caseID')->distinct()->get();
+        $casesArray = array();
+        foreach ($hasCases as $item) {
+            array_push($casesArray, $item->caseID);
+        }
         return view('back_program', [
             'cases' => $cases,
+            'hasCases' => $casesArray,
         ]);
     }
     /**
@@ -93,7 +100,7 @@ class CasesController extends Controller
     {
         $deleteCase = $this->service->deleteCase($id);
         if (!$deleteCase) {
-            return response()->json(['status' => "刪除失敗,因為有人預約過"], 400);
+            return response()->json(['status' => 'spider_man'], 400);
         }
         return redirect()->route('back_program', $id);
     }
@@ -101,10 +108,16 @@ class CasesController extends Controller
     public function case_search(Request $request)
     {
         $name = $request->name;
+        $hasCases = Reservation::select('caseID')->distinct()->get();
+        $casesArray = array();
+        foreach ($hasCases as $item) {
+            array_push($casesArray, $item->caseID);
+        }
         $cases = $this->service->search($name);
         return view('back_program', [
             'name' => $name,
             'cases' => $cases,
+            'hasCases' => $casesArray,
         ]);
     }
 }

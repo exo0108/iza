@@ -4,8 +4,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-  <link rel="stylesheet" href="css/Format.css">
-  <link rel="stylesheet" href="css/back_reserve.css">
+  <link rel="stylesheet" href="{{asset('css/Format.css') }}">
+  <link rel="stylesheet" href="{{asset('css/back_reserve.css') }}">
 
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
@@ -43,11 +43,11 @@
     <nav>
       <a class="back" href="index">返回</a>
       <ul>
-        <li><a href="back_reserve">客戶預約紀錄</a> </li>
-        <li><a href="back_checkout">客戶訂單紀錄</a> </li>
-        <li><a href="back_shop">商品資料</a></li>
-        <li><a href="back_member">會員資料</a></li>
-        <li><a href="back_program">美容方案</a></li>
+        <li><a href="{{asset('back_reserve') }}">客戶預約紀錄</a> </li>
+        <li><a href="{{asset('back_checkout') }}">客戶訂單紀錄</a> </li>
+        <li><a href="{{asset('back_shop') }}">商品資料</a></li>
+        <li><a href="{{asset('back_member') }}">會員資料</a></li>
+        <li><a href="{{asset('back_program') }}">美容方案</a></li>
       </ul>
     </nav>
   </div>
@@ -55,7 +55,7 @@
 
     <div style="display: flex;justify-content: flex-start;">
       <div class="during">
-        <form action=" {{ route('back_program') }} " method="GET">
+        <form action=" {{ route('programSearch') }} " method="GET">
           @csrf
           <input type="text" name="name" placeholder="方案名稱" class="inp">
           <input type="submit" value="查詢" class="btn">
@@ -82,6 +82,8 @@
       </thead>
 
       <tbody>
+
+
         @foreach ($cases as $case)
         <tr>
 
@@ -95,10 +97,13 @@
               @method('delete')
               <button data id="btn_{{$case->id}}" type="button" class="btn btn-outline-info edit_btn" data-name="{{$case->name}}" data-price="{{$case->price}}" data-describe="{{$case->describe}}" data-id="{{$case->id}}">編輯</button>
 
-              <button type="submit" class="btn btn-outline-info" style=" background-color: rgb(202, 93, 93);">刪除</button>
+              <button type="submit" class="btn btn-outline-info" style=" background-color: rgb(202, 93, 93);" {{ in_array( $case->id ,$hasCases) ? 'disabled' : '' }}>刪除</button>
             </form>
           </td>
         </tr>
+
+
+
         @endforeach
 
       </tbody>
