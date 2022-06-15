@@ -49,6 +49,9 @@ Route::middleware(['auth', 'back'])->group(function () {
 
     Route::get('/back_checkout', [OrderController::class, 'back_order'])->name('back_checkout');
     Route::get('/back_checkout_search', [OrderController::class, 'back_order_search',])->name('back_checkout_search');
+    Route::post('/back_checkout_edit/{id}', [OrderController::class, 'back_order_edit',])->name('back_checkout_edit');
+    Route::get('/back_checkout/handle/{id}', [OrderController::class, 'handle'])->name('back_checkout.handle');
+
 
     Route::get('back_program', [CasesController::class, 'back_index'])->name('back_program');
     Route::post('back_program', [CasesController::class, 'update',]);
@@ -59,7 +62,7 @@ Route::middleware(['auth', 'back'])->group(function () {
     Route::post('back_shop', [ShopController::class, 'update']);
     Route::get('/back_shop', [ShopController::class, 'editshop'])->name('back_shop');
     Route::get('/shop_search', [ShopController::class, 'shop_search'])->name('shop_search');
-    // Route::post('/back_shop/add/{id}', [ShopController::class, 'store'])->name('AddToShop');
+    Route::post('/back_shop/add/{id}', [ShopController::class, 'store'])->name('AddToShop');
 });
 
 Route::middleware('auth')->group(function () {
@@ -81,6 +84,7 @@ Route::middleware('auth')->group(function () {
     Route::delete('car/deleteCart/{id}', [CartController::class, 'destroy'])->name('deleteCart');
 
     Route::get('/order_record', [OrderController::class, 'front_order'])->name('order_record');
+    Route::delete('/order_record/deleteFrontReservation/{id}', [ReserveController::class, 'front_destroy'])->name('deleteFrontReservation');
 });
 Route::get('haha', [MemberController::class, 'haha']);
 

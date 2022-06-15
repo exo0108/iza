@@ -1,4 +1,4 @@
-<head>  
+<head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
@@ -6,11 +6,14 @@
   <link rel="stylesheet" href="css/Format.css">
   <link rel="stylesheet" href="css/back_reserve.css">
   <link rel="icon" href="index_img/bgremove_logo.ico" type="image/x-icon" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  </script>
+
   <title>IZA'Furry</title>
 </head>
 
 <div class="header">
-  <div class="logo"> 
+  <div class="logo">
     <h1>客戶訂單紀錄</h1>
   </div>
   <hr>
@@ -32,11 +35,11 @@
   <div class="during" style="display: flex; align-items: center; justify-content: flex-start;">
     <form action=" {{ route('back_checkout_search') }} " method="GET">
       @csrf
-        <input type="text" name="phone" placeholder="客戶電話" class="inp">
-        <input type="text" name="date" placeholder="成立日期" class="inp">
-        <input type="submit" value="查詢" class="btn">
+      <input type="text" name="phone" placeholder="客戶電話" class="inp">
+      <input type="text" name="date" placeholder="成立日期" class="inp">
+      <input type="submit" value="查詢" class="btn">
     </form>
-  </div>          
+  </div>
   <hr class="re_hr">
   <table class="table table-sm">
     <thead>
@@ -54,54 +57,60 @@
     </thead>
     <tbody>
       @foreach($orders as $order)
-        <tr>
-          <td scope="row">{{$order->id}}</td>
-          <td>{{date('Y-m-d', strtotime($order->created_at))}}</td>
-          <td>{{$order->userName}}</td>
-          <td>{{$order->userPhone}}</td>
-          <td>{{$order->payWay}}</td>
-          <td>{{$order->total}}</td>
-          <td>{{$order->status}}</td>
-          <td>
-            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" style="background-color: rgb(133, 127, 84, 0.8); margin: auto; padding: 3px 8px; font-size: 18px; border: none; box-shadow: none;">
+      <tr>
+        <td scope="row">{{$order->id}}</td>
+        <td>{{date('Y-m-d', strtotime($order->created_at))}}</td>
+        <td>{{$order->userName}}</td>
+        <td>{{$order->userPhone}}</td>
+        <td>{{$order->payWay}}</td>
+        <td>{{$order->total}}</td>
+        <td>{{$order->status}}</td>
+        <td>
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal{{$order->id}}" style="background-color: rgb(133, 127, 84, 0.8); margin: auto; padding: 3px 8px; font-size: 18px; border: none; box-shadow: none;">
             詳細資訊
-            </button>
-          </td>
-          @if($order->status == '配送中')
-          <!-- if(strcmp($order->status, '配送中')) -->
-            <td><button type="button" class="btn btn-outline-info">送達</button></td>
-          @endif
-        </tr>
+          </button>
+        </td>
+        @if($order->status == '配送中')
+        <!-- if(strcmp($order->status, '配送中')) -->
+        <td>
+          <form action=" {{ route('back_checkout_edit', $order->id) }} " method="POST">
+            @csrf
+            <button type="submit" class="handle btn btn-outline-info" data-id="{{$order->id}}">送達</button>
+          </form>
+        </td>
+        @endif
+      </tr>
+      <div class="modal fade" id="exampleModal{{$order->id}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" style="max-width: 700px !important;">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">訂單編號</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body" style="flex-direction: column;">
+              <div style="display: flex; margin-bottom: 10px; justify-content: space-evenly; width:100%">
+                <div style="width: 50%; text-align:center;">商品名稱</div>
+                <div style="width: 10%; text-align:center;">數量</div>
+                <div style="width: 10%; text-align:center;">單價</div>
+              </div>
+              @foreach($order->orderitems as $orderitem)
+              <div style="display: flex; margin-bottom: 10px; justify-content: space-evenly; width:100%;">
+                <div style="width: 50%">{{$orderitem->goodName}}</div>
+                <div style="width: 10%; text-align:center;">{{$orderitem->amount}}</div>
+                <div style="width: 10%; text-align:center;">{{$orderitem->goodPrice}}</div>
+              </div>
+              @endforeach
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
       @endforeach
     </tbody>
   </table>
-  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-    <div class="modal-content">
-        <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">訂單編號</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body" style="flex-direction: column;">
-          <div style="display: flex; margin-bottom: 10px; justify-content: space-evenly; width:100%">
-            <div>商品名稱</div>
-            <div>數量</div>
-            <div>單價</div>
-            <div>總價</div>
-          </div>
-          <div style="display: flex; margin-bottom: 10px; justify-content: space-evenly; width:100%">
-            <div>商品名稱</div>
-            <div>數量</div>
-            <div>單價</div>
-            <div>總價</div>
-          </div>
-        </div>
-        <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        </div>
-    </div>
-    </div>
-</div>
+
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>

@@ -187,6 +187,7 @@ h4{
     justify-content: flex-end;
     align-items: center;
     padding-right: 20px;
+    background-color: rgb(199, 0, 0);
 }
 .recordInfo{
     width: 16%;    

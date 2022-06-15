@@ -41,7 +41,7 @@
   <hr>
   <div style="display: flex;align-items: center;">
     <nav>
-      <a class="back" href="index">返回</a>
+      <a class="back" href="{{asset('index') }}">返回</a>
       <ul>
         <li><a href="{{asset('back_reserve') }}">客戶預約紀錄</a> </li>
         <li><a href="{{asset('back_checkout') }}">客戶訂單紀錄</a> </li>

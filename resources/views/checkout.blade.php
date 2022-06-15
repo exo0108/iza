@@ -19,7 +19,7 @@
     <div class="orders">
         <div class="order-title">
             <img src="img/OrderRecordImg/list.png" alt="訂單" width="60px" height="60px">
-            <h2 style="font-weight: 450; margin: 0; padding-left: 10px;">訂單確認</h2>訂單編號
+            <h2 style="font-weight: 450; margin: 0; padding-left: 10px;">訂單確認</h2>
         </div>
         <div style="height: 4px; background-color: rgb(133,127,84,0.7); margin: 0;"></div>
         <div class="orderInfo">
@@ -31,7 +31,7 @@
             </div>
             <div class="items">
                 <div class="items-center">
-                <img src="" alt="商品圖片">
+                    <img src="" alt="商品圖片">
                 </div>
                 <div class="items-center">商品名稱</div>
                 <div class="items-center">單價</div>
@@ -72,7 +72,7 @@
                 取貨人姓名：<input type="text" name="pickerName" id="pickerName">&emsp;&emsp;
                 聯絡電話：<input type="text" name="pickerPhone" id="pickerPhone">
             </div>
-            <div class="a">
+            <!-- <div class="a">
                 縣市&nbsp;
                 <select name="" id="">
                 
@@ -82,7 +82,7 @@
                 
                 </select>&emsp;&emsp;
                 詳細地址：<input type="text" name="address" id="address" size="50">
-            </div>
+            </div> -->
             <div class="a">
                 <input type="radio" name="payType" id="" onclick="show1();">&nbsp;貨到付款&emsp;&emsp;
                 <input type="radio" name="payType" id="" onclick="show2();">&nbsp;信用卡支付
