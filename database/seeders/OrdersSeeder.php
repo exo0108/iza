@@ -15,7 +15,14 @@ class OrdersSeeder extends Seeder
      */
     public function run()
     {
-        // 
+        //
+        $Order = Order::create([
+            'payWay' => "貨到付款",
+            'total' => 1388,
+            'status' => "配送中",
+            'memberID' => 2,
+        ]);
+
         $Order = Order::create([
             'payWay' => "貨到付款",
             'total' => 1230,
@@ -39,7 +46,7 @@ class OrdersSeeder extends Seeder
 
         $Order = Order::create([
             'payWay' => "貨到付款",
-            'total' => 1625,
+            'total' => 1745,
             'status' => "配送中",
             'memberID' => 2,
         ]);
