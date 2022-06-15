@@ -53,7 +53,7 @@
 
                         <div class="p-action">
 
-                            <input type="submit" class="deleteItem" value="刪除" />
+                            <input style="font-size: 14.5px;" type="submit" class="deleteItem" value="刪除" />
 
                         </div>
                     </form>

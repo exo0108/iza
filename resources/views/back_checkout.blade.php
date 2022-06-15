@@ -72,8 +72,8 @@
         </td>
         @if($order->status == '配送中')
         <!-- if(strcmp($order->status, '配送中')) -->
-        <td>
-          <form action=" {{ route('back_checkout_edit', $order->id) }} " method="POST">
+        <td style="display: flex; align-items: center;">
+          <form style="margin: 0;" action=" {{ route('back_checkout_edit', $order->id) }} " method="POST">
             @csrf
             <button type="submit" class="handle btn btn-outline-info" data-id="{{$order->id}}">送達</button>
           </form>

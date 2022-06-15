@@ -76,7 +76,7 @@
           <th scope="col" style="width:5%;">#</th>
           <th scope="col">方案名稱</th>
           <th scope="col" style="width:10%;">方案價格</th>
-          <th scope="col" style="width:60%;">方案介紹</th>
+          <th scope="col" style="width:50%;">方案介紹</th>
           <th scope="col">編輯</th>
         </tr>
       </thead>
@@ -110,7 +110,7 @@
     </table>
 
     <div class="modal fade bd-example-modal-lg" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-lg" style="  width: 25%;">
+      <div class="modal-dialog modal-lg" style="  width: 30%;">
         <form action=" {{ route('back_program') }} " method="POST">
           @csrf
           <div id="tmpModal" class="modal-content">

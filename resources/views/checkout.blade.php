@@ -104,8 +104,8 @@
             </div>
         </div>
         <div class="total-price">
-            <a href="index "  onclick="javascript:alert('下單成功!')"><input type="button" value="確定付款" style="color: white; background-color: rgb(133,127,84); border: transparent; padding: 2px 15px;"></a>
-            <div style="color: rgb(217,177,116); font-weight: bolder;margin-right: 20px; ">NT.969</div>
+            <a href="shop "  onclick="javascript:alert('下單成功!')"><input type="button" value="確定付款" style="color: white; background-color: rgb(133,127,84); border: transparent; padding: 2px 15px;"></a>
+            <div style="color: rgb(217,177,116); font-weight: bolder;margin-right: 20px; ">NT.1388</div>
         </div>
     </div>
 

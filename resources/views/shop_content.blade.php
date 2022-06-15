@@ -58,12 +58,12 @@
                     @if(Auth::user())
                     <div class="button">
                         <button type="submit" class="car">加入購物車</button>
-                        <button class="buy"><a href="{{ route('checkout')}}">立即購買</a></button>
+                        <!-- <button class="buy"><a href="{{ route('checkout')}}">立即購買</a></button> -->
                     </div>
                     @else
                     <div class="button">
                         <button class="car">加入購物車</button>
-                        <button class="buy"><a href="{{ route('login')}}">立即購買</a></button>
+                        <!-- <button class="buy"><a href="{{ route('login')}}">立即購買</a></button> -->
                     </div>
                     @endif
                 </form>

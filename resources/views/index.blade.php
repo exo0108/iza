@@ -110,25 +110,25 @@
                   <div class="img__wrap">
                     <img class="img__img" src="img/index_img/exhibit1.jpg" />
                     <div class="img__description_layer">
-                      <p class="img__description">This image looks super neat.</p>
+                      <p class="img__description">工作人員服務很親切，狗狗剪髮美容後，成品很滿意。<br>好棒棒，值得推薦給大家。</p>
                     </div>
                   </div>
                   <div class="img__wrap">
                     <img class="img__img" src="img/index_img/exhibit2.jpg" />
                     <div class="img__description_layer">
-                      <p class="img__description">This image looks super neat.</p>
+                      <p class="img__description">固定在這邊洗很久了，美容師們都很親切，都能完成指定的要求！</p>
                     </div>
                   </div>
                   <div class="img__wrap">
                     <img class="img__img" src="img/index_img/exhibit3.jpg" />
                     <div class="img__description_layer">
-                      <p class="img__description">This image looks super neat.</p>
+                      <p class="img__description">店長店員都很正很nice 狗狗交給他們就對了！</p>
                     </div>
                   </div>
                   <div class="img__wrap">
                     <img class="img__img" src="img/index_img/exhibit4.jpg" />
                     <div class="img__description_layer">
-                      <p class="img__description">This image looks super neat.</p>
+                      <p class="img__description">試過好多間，家裡三寶只來這洗澡，美容師對貓狗都蠻有耐心的，也會每次說明狗狗的一些變化或提醒狗爸媽可以注意的地方，真心推薦也謝謝美容師</p>
                     </div>
                   </div>
 

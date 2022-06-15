@@ -63,11 +63,11 @@
         </form>
       </div>
 
-      <div class="edit">
+      <!-- <div class="edit">
         <button type="button" class="btn btn-primary " data-bs-toggle="modal" data-bs-target="#exampleModal" style="  background-color: rgb(102, 141, 127);">
           新增
         </button>
-      </div>
+      </div> -->
     </div>
     <hr class="re_hr">
     <table class="table table-sm">
