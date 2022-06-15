@@ -122,7 +122,7 @@
     align-items: center;
 }
 .orderConnect{
-    width: 85%;
+    width: 70%;
     margin: auto;
     padding: 30px 50px 10px 50px;
     background-color: rgb(249, 249, 249);
@@ -136,16 +136,15 @@
 .orderInfo{
     margin: auto;
     margin-top: 20px;
-    width: 85%;
+    width: 70%;
     font-size: large;
     /* border: 3px solid green; */
 }
 .info-title{
-    color: white;
-    display: flex;
+  
     background-color: rgb(133,127,84);
-    padding: 3px 0px;
-    /* border: 3px solid rgb(217,177,116); */
+    color: rgb(255, 255, 255);
+  
 }
 .info-center{
     width: 15%;
@@ -170,7 +169,7 @@
     width: 25%;
 }
 .total-price{
-    width: 85%;
+    width: 70%;
     margin: auto;
     margin-top: 30px;
     padding-right: 30px;
@@ -181,3 +180,16 @@
 .hide{
     display: none;
 }
+
+.items-center-img img{
+    height: 82px;
+    
+}
+
+.items-center-img{
+
+    display: flex;
+    justify-content: center;
+  
+}
+

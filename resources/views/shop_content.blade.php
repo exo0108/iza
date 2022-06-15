@@ -77,7 +77,7 @@
                 <hr>
                 <h3>商品說明</h3>
                 <br>
-                <h6>
+                <h6 class="content_txt">
                     {!!$good->describe!!}
                 </h6>
             </div>

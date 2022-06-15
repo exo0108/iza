@@ -12,7 +12,7 @@
 
             <nav>
                 @if(Auth::user() && Auth::user()->name === 'admin')
-                    <a class="back" href="back_reserve">後台管理</a>
+                    <a class="back" href="{{ route('back_reserve')}}">後台管理</a>
                 @endif
                 <ul>
                     @if(Auth::user() && Auth::user()->name === 'admin')

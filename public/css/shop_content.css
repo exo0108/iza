@@ -123,9 +123,9 @@
 .txt h3{
     padding-left: 5%;
 }
-h6{
+.content_txt{
     padding-left: 5%;
     width: 80%;
-    line-height: 30px !important;
+    line-height: 30px ;
 }
 

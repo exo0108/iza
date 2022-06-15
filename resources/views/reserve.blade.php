@@ -86,7 +86,6 @@
                 <hr class="introduce_hr">
                 @endforeach
 
-
             </div>
         </div>
     </div>

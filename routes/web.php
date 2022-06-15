@@ -3,10 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ShopController;
 use App\Http\Controllers\CasesController;
-use App\Http\Controllers\ReserveController;
 use App\Http\Controllers\MemberController;
-use App\Http\Controllers\CartController;
-use App\Http\Controllers\OrderController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -26,9 +23,7 @@ Route::get('/index', function () {
     return view('index');
 })->name('index');
 
-// Route::middleware('auth')->group( function() {
-//     Route::get('/back_shop')->name('back_shop');
-// });
+
 
 Route::get('/shop', [ShopController::class, 'index'])->name('shop');
 Route::get('/shopSearch', [ShopController::class, 'searchType']);

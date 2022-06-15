@@ -153,7 +153,7 @@
           <form action=" {{ route('AddToProgram',$case->id) }} " method="POST">
             @csrf
             <div class="itembody2" style="  width: 85%;   margin:auto ; height: 80%;">
-              <div class="itemNot">方案編號：<input type="text" name="id" id="modal_id" readonly></div>
+
               <div class="item">方案名稱<input type="text" name="name" id="modal_name" required></div>
               <div class="item">方案價格<input type="text" name="price" id="modal_price" required></div>
               <div class="item">方案介紹<input type="text" name="describe" id="modal_describe" required></div>
