@@ -28,4 +28,8 @@ class Order extends Model
     public function getUserPhoneAttribute(){
         return $this->user->phone;
     }
+
+    public function orderItems(){
+        return $this->hasMany(OrderItem::class, 'orderID');
+    }
 }

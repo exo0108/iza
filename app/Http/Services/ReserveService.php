@@ -21,7 +21,6 @@ class ReserveService
                 'caseID' =>  $request->caseID,
                 'date' => $request->date,
                 'period' => $request->period,
-
             ]
         );
         return $result;
@@ -41,7 +40,6 @@ class ReserveService
             ->join('cases', 'cases.id', '=', 'reservations.caseID')
             ->select('reservations.id', 'users.name as userName', 'stores.name as storeName', 'reservations.date', 'reservations.period', 'cases.name as caseName')
             ->get();
-
         return  $reservation;
     }
 
@@ -51,11 +49,8 @@ class ReserveService
         return $result;
     }
 
-
-
     public function search($name)
     {
-
         $reservations = DB::table('reservations')
             ->join('stores', 'stores.id', '=', 'reservations.storeID')
             ->join('users', 'users.id', '=', 'reservations.memberID')
@@ -63,7 +58,19 @@ class ReserveService
             ->select('reservations.id', 'users.name as userName', 'stores.name as storeName', 'reservations.date', 'reservations.period', 'cases.name as caseName')
             ->where('users.name',  'like', '%' . $name . '%')
             ->get();
+        return $reservations;
+    }
 
+    public function getPersonalReservation()
+    {
+        $memberID = Auth::user()->id;
+        $reservations = DB::table('reservations')
+                    ->join('stores', 'stores.id', '=', 'reservations.storeID')
+                    ->join('cases', 'cases.id', '=', 'reservations.storeID')
+                    ->select('reservations.id', 'stores.name as storeName', 'reservations.date', 'reservations.period', 'cases.name as caseName', 'cases.price as casePrice')
+                    ->where('reservations.memberID',  $memberID)
+                    ->get();
+        // dd($orders);
         return $reservations;
     }
 }

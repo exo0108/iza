@@ -8,10 +8,9 @@ use App\Http\Services\MemberService;
 
 class ReserveController extends Controller
 {
-
     public function __construct(
         ReserveService $service,
-        MemberService $mservice
+        MemberService $mservice,
     ) {
         $this->service = $service;
         $this->mservice = $mservice;
@@ -77,6 +76,15 @@ class ReserveController extends Controller
         return redirect()->route('back_reserve', $id);
     }
 
+    public function front_destroy($id)
+    {
+        $deleteReservation = $this->service->deleteReservation($id);
+        if (!$deleteReservation) {
+            return response()->json(['status' => "刪除失敗"], 400);
+        }
+        return redirect()->route('order_record', $id);
+    }
+
     public function reserve_search(Request $request)
     {
         $name = $request->name;
@@ -91,6 +99,15 @@ class ReserveController extends Controller
     {
         $reservations = $this->service->getAllreservation();
         return view('back_reserve', [
+            'reservations' => $reservations,
+        ]);
+    }
+
+    public function front_reservation()
+    {
+        //
+        $reservations = $this->service->getPersonalReservation();
+        return view('order_record', [
             'reservations' => $reservations,
         ]);
     }

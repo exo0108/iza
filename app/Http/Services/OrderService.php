@@ -5,6 +5,7 @@ namespace App\Http\Services;
 use App\Models\Order;
 use App\Models\User;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Auth;
 
 class OrderService
 {
@@ -17,13 +18,7 @@ class OrderService
 
     public function getPersonalOrder()
     {
-        $memberID = Auth::user()->id;
-        $orders = DB::table('orders')
-                    ->select('orders.id', 'orders.memberID', 'orders.created_at', 'orders.payWay', 'orders.total', 'orders.status')
-                    ->where('memberID',  $memberID)
-                    ->get();
-        dd($orders);
-        return $orders;
+        return Auth::user()->orders;
     }
 
     // https://docfunc.com/posts/52/%E9%81%BF%E5%85%8D-laravel-orm-%E7%9A%84-n1-%E5%95%8F%E9%A1%8C-post
@@ -40,12 +35,22 @@ class OrderService
 
     public function backSearch($phone, $date)
     {
-        $orders = DB::table('orders')
-                    ->join('users', 'users.id', '=', 'orders.memberID')
-                    ->select('orders.id', 'orders.created_at', 'users.name as userName', 'users.phone as userPhone', 'orders.payWay', 'orders.total', 'orders.status')
-                    ->where('users.phone', 'like', '%'.$phone.'%')
-                    ->where('orders.created_at',  'like', '%'.$date.'%')
-                    ->get();
+        $orders = Order::join('users', 'orders.memberID', '=', 'users.id')
+                        ->select('orders.*')
+                        ->where('users.phone', 'like', '%' . $phone . '%')
+                        ->where('orders.created_at',  'like', '%' . $date . '%')
+                        ->get();
+        // dd($orders);
         return $orders;
+    }
+
+    public function arrive($id)
+    {
+        $result = Order::where('id', $id)->update(
+            [
+                'status' => '已送達'
+            ]
+        );
+        return $result;
     }
 }

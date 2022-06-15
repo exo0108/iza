@@ -15,4 +15,19 @@ class OrderItem extends Model
         'amount',
         'total',
     ];
+
+    public function good()
+    {
+        return $this->belongsTo(Good::class, 'goodsID');
+    }
+
+    public function getGoodNameAttribute()
+    {
+        return $this->good->name;
+    }
+
+    public function getGoodPriceAttribute()
+    {
+        return $this->good->price;
+    }
 }

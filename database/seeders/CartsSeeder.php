@@ -36,13 +36,13 @@ class CartsSeeder extends Seeder
         ]);
 
         $Cart = Cart::create([
-            'count' => 4,
+            'count' => 1,
             'memberID' => 2,
             'goodsID' => 12,
         ]);
 
         $Cart = Cart::create([
-            'count' => 2,
+            'count' => 1,
             'memberID' => 2,
             'goodsID' => 1,
         ]);
