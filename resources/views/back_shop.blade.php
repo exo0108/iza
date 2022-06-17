@@ -90,7 +90,7 @@
           <td>{{$good->type}}</td>
           <td>NT.{{$good->price}}</td>
           <td>
-            <button data id="btn_{{$good->id}}" type="button" class="btn btn-outline-info edit_btn" data-name="{{$good->name}}" data-price="{{$good->price}}" data-img="{{$good->img}}" data-id="{{$good->id}}">Edit</button>
+            <button data id="btn_{{$good->id}}" type="button" class="btn btn-outline-info edit_btn" data-name="{{$good->name}}" data-price="{{$good->price}}" data-img="{{$good->img}}" data-id="{{$good->id}}">編輯</button>
           </td>
         </tr>
         @endforeach

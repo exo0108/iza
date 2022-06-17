@@ -34,7 +34,7 @@ class CaseService
 
   public function update_case( Request $request)
     {
-      $result = Cases::find($request->user()->id)->update(
+      $result = Cases::find($request->id)->update(
         [
         'name' => $request->name, 
         'price' => $request->price,
@@ -48,4 +48,10 @@ class CaseService
     $result = Cases::where('id', $id)->delete();
     return $result;
   }
+
+  public function search($name)
+    {
+
+        return Cases::where('name', 'like', '%' . $name . '%')->get();
+    }
 }

@@ -4,6 +4,11 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ShopController;
 use App\Http\Controllers\CasesController;
 use App\Http\Controllers\MemberController;
+use App\Http\Controllers\CartController;
+use App\Http\Controllers\ReserveController;
+use App\Http\Controllers\OrderController;
+
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes

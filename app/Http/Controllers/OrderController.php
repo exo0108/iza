@@ -14,7 +14,7 @@ class OrderController extends Controller
 
     public function __construct(
         OrderService $service,
-        ReserveService $reserveService,
+        ReserveService $reserveService
     ) {
         $this->service = $service;
         $this->reserveService = $reserveService;

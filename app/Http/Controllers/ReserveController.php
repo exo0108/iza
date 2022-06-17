@@ -10,7 +10,7 @@ class ReserveController extends Controller
 {
     public function __construct(
         ReserveService $service,
-        MemberService $mservice,
+        MemberService $mservice
     ) {
         $this->service = $service;
         $this->mservice = $mservice;

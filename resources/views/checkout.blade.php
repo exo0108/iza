@@ -32,7 +32,7 @@
                 <thead>
                     <tr class="info-title">
                         <th scope="col"></th>
-                        <th scope="col" style="width:50%;">商品</th>
+                        <th scope="col" style="width: 50%; ">商品</th>
                         <th scope="col">單價</th>
                         <th scope="col">數量</th>
                         <th scope="col">金額</th>
@@ -79,17 +79,17 @@
                 取貨人姓名：<input type="text" name="pickerName" id="pickerName">&emsp;&emsp;
                 聯絡電話：<input type="text" name="pickerPhone" id="pickerPhone">
             </div>
-            <!-- <div class="a">
-                縣市&nbsp;
+            <div class="a">
+                <!-- 縣市&nbsp;
                 <select name="" id="">
                 
                 </select>&emsp;&emsp;
                 地區&nbsp;
                 <select name="" id="">
                 
-                </select>&emsp;&emsp;
-                詳細地址：<input type="text" name="address" id="address" size="50">
-            </div> -->
+                </select>&emsp;&emsp; -->
+                地址：<input type="text" name="address" id="address" size="50">
+            </div>
             <div class="a">
                 <input type="radio" name="payType" id="" onclick="show1();">&nbsp;貨到付款&emsp;&emsp;
                 <input type="radio" name="payType" id="" onclick="show2();">&nbsp;信用卡支付

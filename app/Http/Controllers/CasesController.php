@@ -85,7 +85,7 @@ class CasesController extends Controller
     public function update(Request $request)
     {
 
-        $result = $this->service->updateCase($request);
+        $result = $this->service->update_case($request);
 
         return redirect()->route('back_program', ['result' => $result]);
     }
